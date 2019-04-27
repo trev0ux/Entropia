@@ -11,13 +11,13 @@
         <script type="text/javascript" src="_js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/campanha.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>ENTROPIA</title>
+        <title>entropia</title>
 </head>
 <body>
     <?php include'menuSuper.php'?>
 	
     <div id="interface">
-		<h3>Área de Campanhas</h3>
+		<div class="titulo"><img src="img/titulo-campanha.jpg"></div>
 		<section id="esquerda">
 			<table class="table">
 				<thead class="thead-light">

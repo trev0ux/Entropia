@@ -11,7 +11,7 @@
         <script type="text/javascript" src="_js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/campanha.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>ENTROPIA</title>
+        <title>entropia</title>
         <?php
 			session_start();
 			if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
@@ -26,7 +26,7 @@
 <body>
     <?php include 'menu.php'?>
 		<div class="principal">
-			<h1>Mande uma ideia Genial</h1>
+			<div class="titulo"><img src="img/titulo-c-ideia.jpg"></div><h1>
 			<form action="ideiacampanhasalvar.php" method="post">
 				<p>
 					<label for="campanha" class="sr-only">Campanha</label>
@@ -51,7 +51,7 @@
 					<input type="text" class="form-control" id="beneficio-ic" name="beneficio-ic" placeholder="Benefícios da solução proposta" required>
 				</p>
 				<p>
-					<label for="anexo-ic">Anexo</label>
+					<label for="anexo-ic" class="sr-only">Anexo</label>
 					<input type="file" class="form-control-file" id="anexo-ic" name="anexo-ic">
 				</p>
 				

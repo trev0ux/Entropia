@@ -29,3 +29,6 @@ div#interface h1{
 	overflow: auto;
 	text-align: center;
 }
+
+.titulo{width: 380px;height: 45px;margin-bottom: 30px;margin-left: 230px;}
+.titulo img{width: 100%; height: 100%;}

@@ -10,7 +10,7 @@
         <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="_js/bootstrap.min.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>ENTROPIA</title>
+        <title>entropia</title>
     </head>
     <body>      
         <?php include'menuSuper.php'?>
@@ -19,30 +19,31 @@
 			
         	<div id="principal">
 				<table class="table text-center">
-					<thead class="thead-light">
-						<tr>
-							<th scope="col">Metodologias Disponíveis</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php
-                            $conexao = mysqli_connect('localhost', 'root', '', 'entropia');
-                            $sql = "SELECT * FROM metodologia";
-                            $resultado = mysqli_query($conexao, $sql);
+				<thead class="thead-light">
+					<tr>
+						<th scope="col">Metotodologias Disponíveis</th>
+						<th scope="col">Estruturar sua Ideia</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+						$conexao = mysqli_connect('localhost', 'root', '', 'entropia');
+						$sql = "SELECT * FROM metodologia";
+						$resultado = mysqli_query($conexao, $sql);
 
-                            while ($registro = mysqli_fetch_array($resultado)) {
-                                $titulo = $registro['titulo'];
-                                $anexo = $registro['anexo'];
-                                echo"<tr>";
-                                echo "<td><a href='#' data-toggle='modal' data-target='#metodo-modal'>".$titulo."</a></td>";
-                                echo "</tr>";
-                            }
-                        ?>
-                        <tr>
-                            <td>...</td>
-                        </tr> 
-					</tbody>
-				</table>
+						while ($registro = mysqli_fetch_array($resultado)) {
+							$titulo = $registro['titulo'];
+							echo "<tr>";
+							echo "<td><a href='#' data-toggle='modal' data-target='#metodo-modal'>" . $titulo . "</a></td>";
+							echo "<td><a href='' class='btn btn-success'><i class='fa fa-pencil'></i></a></td>";
+							echo "</tr>";
+						}
+					?>
+					<tr>
+						<td colspan="2">...</td>
+					</tr>
+				</tbody>
+			</table>
 			        			
 			<!-- Modal -->
             <div class="modal fade" id="metodo-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

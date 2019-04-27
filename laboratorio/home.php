@@ -4,7 +4,7 @@
 
 
 	<?php 
-# Para evitar a entrada no site sem login tlgd ------------0-
+	# Para evitar a entrada no site sem login tlgd ------------0-
 	session_start();
 	if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
 	{
@@ -25,7 +25,7 @@
 	<!--<link rel="stylesheet" type="text/css" href="css/estilo-home.min.css">-->
 	<script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="_js/bootstrap.min.js"></script>
-	<link rel="shortcut icon" type="image/x-icon" href="img/logo3.png">
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
 	<script type="text/javascript">
 		$('.carousel').carousel({interval: 2000});
 
@@ -37,7 +37,7 @@
 			}         
 		}
 	</script>
-	<title>ENTROPIA</title>
+	<title>entropia</title>
 
 </head>
 <body>
@@ -119,7 +119,7 @@
 										<div class="carousel-caption d-none d-md-block">
 											<h3>Titulo</h3>
 											<p>Descrição</p>
-											<a class="btn btn-info" href="ideiaCampanha.php">Mande sua Ideia</a>
+											<a class="btn btn-info" href="campIdeia.php">Mande sua Ideia</a>
 										</div>
 									</div>
 
@@ -128,7 +128,16 @@
 										<div class="carousel-caption d-none d-md-block">
 											<h3>Titulo</h3>
 											<p>Descrição</p>
-											<a class="btn btn-info" href="ideiaCampanha.php">Mande sua Ideia</a>
+											<a class="btn btn-info" href="campIdeia.php">Mande sua Ideia</a>
+										</div>
+									</div>
+									
+									<div class="carousel-item">
+										<img src="img/slide.jpg" class="img-fluid d-block w-100">
+										<div class="carousel-caption d-none d-md-block">
+											<h3>Titulo</h3>
+											<p>Descrição</p>
+											<a class="btn btn-info" href="campIdeia.php">Mande sua Ideia</a>
 										</div>
 									</div>
 								</div>
@@ -228,7 +237,7 @@
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="img/esteves1.png" alt="">
+										<img class="rounded-circle" width="45" src="img/melo1.png" alt="">
 									</div>
 									<div class="ml-2">
 										<div class="h5 m-0">@Vitório</div>
@@ -272,11 +281,11 @@
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="" alt="">
+										<img class="rounded-circle" width="45" src="img/esteves1.png" alt="">
 									</div>
 									<div class="ml-2">
-										<div class="h5 m-0">@Amorim</div>
-										<div class="h7 text-muted">Lucas Amorim Lopes</div>
+										<div class="h5 m-0">@Benjamin</div>
+										<div class="h7 text-muted">Thiago Benjamin</div>
 									</div>
 								</div>
 								<div>

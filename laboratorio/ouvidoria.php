@@ -8,30 +8,30 @@
     <link rel="stylesheet" type="text/css" href="">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" id="bootstrap-css">
     <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="_js/bootstrap.min.js"></script>a
+    <script type="text/javascript" src="_js/bootstrap.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-    <title>Entropia</title>
+    <title>entropia</title>
     <?php
-session_start();
-if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
-	unset($_SESSION['login']);
-	unset($_SESSION['senha']);
-	header('location:index.php');
-}
+		session_start();
+		if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
+			unset($_SESSION['login']);
+			unset($_SESSION['senha']);
+			header('location:index.php');
+		}
 
-$logado = $_SESSION['login'];
+		$logado = $_SESSION['login'];
 
-?>
+	?>
 </head>
 <body>
-    <?php include 'menu.php'?>
+    <?php include 'menu.php' ?>
     <div id="interface">
         <aside id="secun">
-            <h1>Mande uma Mensagem</h1>
+            <div class="titulo"><img src="img/titulo-sugestao.jpg"></div>
             <form method="post" action="ouvidoria.php">
                 <p>
                     Assunto
-                    <select name="assunto" class="form-control" id="assunto">
+                    <select name="assunto-sug" class="form-control" id="assunto">
                         <option>Sobre o que deseja falar hoje?</option>
                         <option>Sugestão</option>
                         <option>Reclamação</option>
@@ -41,9 +41,9 @@ $logado = $_SESSION['login'];
                         <option>Denúncia</option>
                     </select>
                 </p>
-                <p>
+				<p>
                     Setor
-                    <select name="setor-sugestao" class="form-control" id="setor">
+                    <select name="setor-sug" class="form-control" id="setor-sug">
                         <option>Selecione para qual setor será a mensagem</option>
                         <option>Administrativo</option>
                         <option>Financeiro</option>
@@ -57,11 +57,11 @@ $logado = $_SESSION['login'];
                     <textarea name="mensagem" required="required"  placeholder="Comentário..." class="form-control"></textarea>
                 </p>
                 <p id="arquivo">
-                    Adicionar arquivo em anexo<br>
+                    Adicionar arquivo em anexo
                     <input type="file" id="saida-anexo" name="anexo-projeto" class="form-control-file">
                 </p>
                 <div id="enviar">
-                    <button name="cancelar" class="btn btn-primary mb-2">Cancelar</button>
+                    <a name="cancelar" href="home.php" class="btn btn-primary mb-2">Cancelar</a>
                     <input type="submit" id="salva" value="enviar" class="btn btn-primary mb-2">
                 </div>
             </form>
@@ -76,9 +76,9 @@ if ($_POST) {
 	$sugestaoDAO = new sugestaoDAO();
 	$sugestao = new sugestao();
 
-	$assunto = $_POST['assunto'];
+	$assunto = $_POST['assunto-sug'];
 	$mensagem = $_POST['mensagem'];
-	$setor = $_POST['setor-sugestao'];
+	$setor = $_POST['setor-sug'];
 
 	$sugestao->setAssunto($assunto);
 	$sugestao->setMensagem($mensagem);

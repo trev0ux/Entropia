@@ -9,43 +9,46 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" id="bootstrap-css">
     <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="_js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo3.png">
-    <title>ENTROPIA</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+    <title>entropia</title>
     <?php
-session_start();
-if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
-	unset($_SESSION['login']);
-	unset($_SESSION['senha']);
-	header('location:index.php');
-}
+		session_start();
+		if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
+			unset($_SESSION['login']);
+			unset($_SESSION['senha']);
+			header('location:index.php');
+		}
 
-$logado = $_SESSION['login'];
+		$logado = $_SESSION['login'];
 
-?>
+	?>
 </head>
 <body>
     <?php
-
-include 'menu.php';
-
-?>
-    <div id="interface">
-        <div id="titulo"><h1>Ideias Enviadas por você</h1></div>
+		include 'menu.php';
+	?>
+    
+	<div id="interface">
+		<div class="titulo"><img src="img/titulo-ideia.jpg"></div>
         <section id="princ">
-            <table id="tabela">
-                <?php
-$conexao = mysqli_connect('localhost', 'root', '', 'entropia');
-$sql = "SELECT * FROM ideia";
-$resultado = mysqli_query($conexao, $sql);
+            <table id="tabela" class="table text-center">
+					<thead class="thead-light">
+					<tr>
+						<th scope="col">Ideias Enviadas por você</th>
+					</tr>
+            		<?php
+						$conexao = mysqli_connect('localhost', 'root', '', 'entropia');
+						$sql = "SELECT * FROM ideia";
+						$resultado = mysqli_query($conexao, $sql);
 
-while ($registro = mysqli_fetch_array($resultado)) {
-	$titulo = $registro['titulo'];
-	echo "<tr>";
-	echo "<td><a href='#' data-toggle='modal' data-target='#ideia-modal'>" . $titulo . "</a></td>";
-	echo "</tr>";
-}
-?>
-               <tr>
+						while ($registro = mysqli_fetch_array($resultado)) {
+							$titulo = $registro['titulo'];
+							echo "<tr>";
+							echo "<td><a href='#' data-toggle='modal' data-target='#ideia-modal'>" . $titulo . "</a></td>";
+							echo "</tr>";
+						}
+					?>
+            <tr>
                 <td>...</td>
             </tr>
         </table>

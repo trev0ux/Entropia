@@ -37,9 +37,6 @@
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Sobre</a>
           </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contato</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -88,7 +85,7 @@
                 <i class="fas fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/circus.png" alt="">
+            <img class="img-fluid" src="img/melo.png" alt="">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -98,7 +95,7 @@
                 <i class="fas fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/game.png" alt="">
+            <img class="img-fluid" src="img/ariel.png" alt="">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -125,7 +122,7 @@
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- Área de Descrição -->
   <section class="bg-primary text-white mb-0" id="about">
     <div class="container">
       <h2 class="text-center text-uppercase text-white">Sobre</h2>
@@ -140,62 +137,14 @@
       </div>
     </div>
   </section>
+<!-- /Área de Descrição -->
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2 class="text-center text-uppercase text-secondary mb-0">Fale Conosco</h2>
-      <hr class="star-dark mb-5">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-          <form name="sentMessage" id="contactForm" novalidate="novalidate">
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Nome</label>
-                <input class="form-control" id="name" type="text" placeholder="Nome" required="required" data-validation-required-message="Por favor informe seu nome.">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Email</label>
-                <input class="form-control" id="email" type="email" placeholder="Email" required="required" data-validation-required-message="Por favor informe seu email.">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Telefone</label>
-                <input class="form-control" id="phone" type="tel" placeholder="Telefone" required="required" data-validation-required-message="Por favor informe seu telefone.">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Mensagem</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Mensagem" required="required" data-validation-required-message="Por favor digite sua mensagem."></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <br>
-            <div id="success"></div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Enviar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- Rodapé -->
   <footer class="footer text-center">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Criadores</h4>
+          <h4 class="text-uppercase mb-4">Desenvolvedores</h4>
           <p class="lead mb-0">André Luis, Andreza Vitório, Dilton Costa
             <br>Lucas Amorim, Ruan Felipe e Thiago Benjamin</p>
           </div>
@@ -203,28 +152,18 @@
             <h4 class="text-uppercase mb-4">Ta na rede</h4>
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="#">
                   <i class="fab fa-fw fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-google-plus-g"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="#">
                   <i class="fab fa-fw fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-dribbble"></i>
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="#">
+                  <i class="fab fa-fw fa-instagram"></i>
                 </a>
               </li>
             </ul>
@@ -237,12 +176,7 @@
           </div>
         </div>
       </footer>
-
-      <div class="copyright py-4 text-center text-white">
-        <div class="container">
-          <small>Copyright &copy; Entropia Inovações 2019</small>
-        </div>
-      </div>
+	<!-- /Rodapé -->
 
       <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
       <div class="scroll-to-top d-lg-none position-fixed ">
@@ -308,7 +242,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">Melo</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
+                <img class="img-fluid mb-5" src="img/melo-mini.png" alt="">
                 <p class="mb-5">Esse é Melo, o personagem do Entropia. Suas qualidades mais marcante é a sua lábia e o pensamento analítico e estratégico, também destaca-se por ser visionário. Se for escolhido, será sua identidade no novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
@@ -330,7 +264,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">Ariel</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
+                <img class="img-fluid mb-5" src="img/ariel-mini.png" alt="">
                 <p class="mb-5">Esse é Ariel, o personagem do Entropia. Suas qualidades mais marcantes são: pensamento crítico, paciência e persistência, também destaca-se por ser planejador. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>

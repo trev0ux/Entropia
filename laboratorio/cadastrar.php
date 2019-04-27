@@ -4,14 +4,14 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" id="bootstrap-css">
         <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="_js/bootstrap.min.js"></script>
-        <link rel="shortcut icon" type="image/x-icon" href="img/logo3.png" sizes="20">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png" sizes="20">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="stylesheet" type="text/css" href="css/estilo-cadastro.css">
 		<script type="text/javascript" src="js/cadastro.js"></script>
-        <title>ENTROPIA</title>
+        <title>entropia</title>
     </head>
     <body>
 
@@ -33,8 +33,14 @@
                         <input type="text"  class="data form-control" id="reg_data" name="data" placeholder="Data de Nascimento*" required>
                     </p>
                     <p>
-                        <label for="reg_matricula" class="sr-only">Nº de matrícula</label>
-                        <input type="text" class="form-control" id="reg_matricula" name="matricula" placeholder="Nº de matrícula">
+                        <label for="reg_inscricao" class="sr-only">Nº de inscrição</label>
+                        <input type="text" class="form-control" id="reg_inscricao" name="inscricao" placeholder="Nº de inscrição">
+                    </p>
+					<p>
+                        <label for="reg_cargo" class="sr-only">Cargo</label>
+						<select class="form-control" id="reg_cargo" name="cargo">
+							<option value="0">Selecione seu cargo na empresa...</option>
+						</select>
                     </p>
                     <p>
                         <label for="reg_email" class="sr-only">Email*</label>
@@ -52,10 +58,6 @@
                         <label for="reg_confirma_senha" class="sr-only">Confirmar senha</label>
                         <input type="password" class="form-control" id="reg_confirma_senha" name="reg_confirma_senha" placeholder="confirmar senha*" required>
                     </p>         
-                    <div class="form-group login-group-checkbox">
-                        <input type="checkbox" class="" id="reg_termos" name="reg_robo" required>
-                        <label class="form-check-label" for="defaultCheck1">Não sou um robô</label>
-                    </div>
 					<small class="form-text text-muted">(*)Campos Obrigatórios</small>
                 </section>
                 <aside id="secun">
@@ -68,10 +70,10 @@
                     <label class="avatar" for="a2"><img src="img/muriel1.png" alt="avatar Muriel"></label><br>
                   
                     <input type="radio" name="avatar" id="a3">
-                    <label class="avatar" for="a3"><img src="img/esteves1.png" alt="avatar Melo"></label>
+                    <label class="avatar" for="a3"><img src="img/melo1.png" alt="avatar Melo"></label>
                  
                     <input type="radio" name="avatar" id="a4">
-                    <label class="avatar" for="a4"><img src="img/muriel1.png" alt="avatar Ariel"></label><br>
+                    <label class="avatar" for="a4"><img src="img/ariel.png" alt="avatar Ariel"></label><br>
                   
                     <input type="radio" name="avatar" id="a5">
                     <label class="avatar" for="a5"><img src="img/esteves1.png" alt="avatar César"></label>

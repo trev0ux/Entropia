@@ -10,13 +10,13 @@
         <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="_js/bootstrap.min.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>ENTROPIA</title>
+        <title>entropia</title>
     </head>
     <body>      
         <?php include'menuSuper.php'?>
 		
         <div id="interface">
-			<h1>Comitê Avaliativo</h1>
+			<div class="titulo"><img src="img/titulo-comite.jpg"></div>
 			<div id="tab">
 				<table class="table">
 						<thead class="thead-light">

@@ -11,7 +11,7 @@
         <script type="text/javascript" src="_js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/campanha.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>ENTROPIA</title>
+        <title>entropia</title>
 </head>
 <body>
 	<?php include'menuSuper.php'?>
@@ -26,7 +26,7 @@
 				<option value="c2">Campanha y</option>
 				<option value="c3">Campanha z</option>
 			</select>
-
+<br>
 			<select id="form-campanha" onchange="mudarForm()" class="form-control">
 				<option value="0">Selecione um ideia para ser avaliada...</option>
 				<option value="1" id="r1">Ideia 1</option>

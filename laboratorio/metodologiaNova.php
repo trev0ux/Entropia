@@ -10,7 +10,7 @@
         <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="_js/bootstrap.min.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>ENTROPIA</title>
+        <title>entropia</title>
     </head>
     <body>      
         <?php include'menuSuper.php'?>
@@ -39,20 +39,19 @@
                         Anexar Exemplo
                         <input type="file" name="anexo-metodo" class="form-control-file">
 					</p>
-                </form>
 			</section>
 			<aside id="secun">
 				<h1>Tópicos de utilização da Metodologia</h1>
-				<input type="text" class="form-control" name="topico1">
-				<input type="text" class="form-control" name="topico2">
-				<input type="text" class="form-control" name="topico3">
-				<input type="text" class="form-control" name="topico4">
-				<input type="text" class="form-control" name="topico5">
-				<input type="text" class="form-control" name="topico6">
-				<input type="text" class="form-control" name="topico7">
+				<input type="text" class="form-control" name="topico1"><br>
+				<input type="text" class="form-control" name="topico2"><br>
+				<input type="text" class="form-control" name="topico3"><br>
+				<input type="text" class="form-control" name="topico4"><br>
+				<input type="text" class="form-control" name="topico5"><br>
+				<input type="text" class="form-control" name="topico6"><br>
+				<input type="text" class="form-control" name="topico7"><br>
 				<input type="text" class="form-control" name="topico8">
 			</aside>
-			
+			</form>
 			<div id="enviar">
 				<a href="metodologiaSuper.php" class="btn btn-primary mb-2">Voltar</a>
 				<input type="submit" value="Salvar" class="btn btn-primary mb-2">
