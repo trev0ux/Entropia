@@ -56,7 +56,7 @@
 				</div>
 			</div>
 			<!-- Fim Modal -->
-
+			<a class="btn btn-primary mb-2" href="home.php" id="volta">Voltar</a>
 		</div>
     </body>
 </html>

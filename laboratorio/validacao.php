@@ -138,7 +138,7 @@
 			<!-- Fim Modal -->
 
 			</aside>
-            <button class="btn btn-primary mb-2" id="volta">Voltar</button>
+            <a class="btn btn-primary mb-2" href="home.php" id="volta">Voltar</a>
         </div>
     </body>
 </html>

@@ -54,7 +54,7 @@ aside table#tabela td{
 }
 
 /*Reposicionamento do input para voltar ao menu*/
-button#volta{
+#volta{
     margin-left: 50px;
     position: absolute;
     top: 780px;

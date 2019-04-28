@@ -78,6 +78,7 @@
 		</aside>
 		
 		<div id="botao">
+			<a class="btn btn-primary" href="home.php">Voltar</a>
 			<a href="campAvalia.php" class="btn btn-primary">Avaliar ideias enviadas</a>
 			<a href="campNova.php" class="btn btn-primary">Nova Campanha</a>
 		</div>
@@ -136,7 +137,7 @@
 				</div>
 			</div>
 			<!-- /Modal -->
-		
+
     </div>
 </body>
 </html>

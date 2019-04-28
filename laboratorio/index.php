@@ -7,7 +7,7 @@
   <meta name="author" content="">
   <link rel="stylesheet" href="css/estilo-login.css">
   <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
-  <title>ENTROPIA</title>
+  <title>entropia</title>
   <!-- Bootstrap core CSS --> 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
