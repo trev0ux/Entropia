@@ -59,7 +59,7 @@
       <hr class="star-dark mb-5">
       <div class="row">
         <div class="col-md-6 col-lg-4">
-          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+          <a class="portfolio-item d-block mx-auto" href="#avatar1">
             <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
               <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                 <i class="fas fa-search-plus fa-3x"></i>
@@ -185,10 +185,10 @@
         </a>
       </div>
 
-      <!-- Portfolio Modals -->
-
-      <!-- Portfolio Modal 1 -->
-      <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+      <!-- Modals Avatars -->
+      
+      <!-- Avatar Modal 1 -->
+      <div class="portfolio-modal mfp-hide" id="avatar1">
         <div class="portfolio-modal-dialog bg-white">
           <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
             <i class="fa fa-3x fa-times"></i>

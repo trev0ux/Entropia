@@ -73,7 +73,7 @@
                     <label class="avatar" for="a3"><img src="img/melo1.png" alt="avatar Melo"></label>
                  
                     <input type="radio" name="avatar" id="a4">
-                    <label class="avatar" for="a4"><img src="img/ariel.png" alt="avatar Ariel"></label><br>
+                    <label class="avatar" for="a4"><img src="img/ariel1.png" alt="avatar Ariel"></label><br>
                   
                     <input type="radio" name="avatar" id="a5">
                     <label class="avatar" for="a5"><img src="img/esteves1.png" alt="avatar César"></label>

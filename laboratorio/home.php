@@ -48,12 +48,13 @@
 			<div class="col-md-3">
 				<div class="card">
 					<div class="card-body">
-						<img src="img/muriel-avatar.png" alt="">
+						<img src="img/melo-avatar.png" alt="">
 						<div class="h5">
 							@
 							<?php 
 							echo $_SESSION['login'];
-							?></div>
+							?>
+						</div>
 							<div class="h7 text-muted">
 							Nome Completo: Lucas Amorim Lopes
 
@@ -191,7 +192,7 @@
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="img/muriel1.png" alt="">
+										<img class="rounded-circle" width="45" src="img/ariel1.png" alt="">
 									</div>
 									<div class="ml-2">
 										<div class="h5 m-0">@Amorim</div>
@@ -210,16 +211,13 @@
 
 						<div class="card-body">
 							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10min</div>
-							<a class="card-link" href="#">
-								<h5 class="card-title">Titulo aqui</h5>
-							</a>
-
+							<h5 class="card-title">Titulo aqui</h5>
 							<p class="card-text">
 								[Descrição]
 							</p>
 						</div>
 						<div class="card-footer">
-							<a href="#" class="card-link"><i class="fa fa-gittip"></i>Curtir</a>
+							<a href="#" class="card-link"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Curtir</a>
 							<a class="card-link" onclick="mostrar('a')"><i class="fa fa-comment"></i>Comentar</a>
 						</div>
 						<div class="hidden" id="a">
@@ -255,15 +253,13 @@
 
 						<div class="card-body">
 							<div class="text-muted h7 mb-2"><i class="fa fa-clock-o"></i>10 de fevereiro</div>
-							<a class="card-link" href="#">
-								<h5 class="card-title">Titulo aqui</h5>
-							</a>
+							<h5 class="card-title">Titulo aqui</h5>
 							<p class="card-text">
 								[Descrição]
 							</p>
 						</div>
 						<div class="card-footer">
-							<a href="#" class="card-link"><i class="fa fa-gittip"></i>Curtir</a>
+							<a href="#" class="card-link"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Curtir</a>
 							<a class="card-link" onclick="mostrar('b')"><i class="fa fa-comment"></i>Comentar</a>
 						</div>
 						<div class="hidden" id="b">
@@ -300,15 +296,13 @@
 
 						<div class="card-body">
 							<div class="text-muted h7 mb-2"><i class="fa fa-clock-o"></i>12 de janeiro</div>
-							<a class="card-link" href="#">
-								<h5 class="card-title">Titulo aqui</h5>
-							</a>
+							<h5 class="card-title">Titulo aqui</h5>
 							<p class="card-text">
 								[Descrição]
 							</p>
 						</div>
 						<div class="card-footer">
-							<a href="#" class="card-link"><i class="fa fa-gittip"></i>Curtir</a>
+							<a href="#" class="card-link"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Curtir</a>
 							<a class="card-link" onclick="mostrar('c')"><i class="fa fa-comment"></i>Comentar</a>
 						</div>
 						<div class="hidden" id="c">
