@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 
 /*Formatação do título*/
-div#interface h1{
+.interface h1{
     font-family: 'Arimo', sans-serif;;
     font-size: 20pt;
     text-align: center;
@@ -12,11 +12,11 @@ div#interface h1{
 
 /*Formatação da seção principal*/
 section#princ{
-    display: block;
-    width: 400px;
+    width: 500px;
     height: 600px;
-    float: left;
     padding: 10px;
+	margin-left: 170px;
+	margin-top: 30px;
 }
 
 #titulo{
@@ -86,7 +86,7 @@ select#setor{
 div#enviar{
     width: 500px;
     margin-top: -30px;
-    margin-left: 80px;
+    margin-left: 60px;
 }
 
 #mod h5 {font-family: 'Arimo', sans-serif;;

@@ -120,7 +120,7 @@
 										<div class="carousel-caption d-none d-md-block">
 											<h3>Titulo</h3>
 											<p>Descrição</p>
-											<a class="btn btn-info" href="campIdeia.php">Mande sua Ideia</a>
+											<a class="btn btn-info label label-primary" href="campIdeia.php">Mande sua Ideia</a>
 										</div>
 									</div>
 

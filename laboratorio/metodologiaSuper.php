@@ -67,7 +67,7 @@
                                             while ($registro = mysqli_fetch_array($resultado)) {
                                                 $definicao = $registro['definicao'];
                                                 echo"<tr>";
-                                                echo "<td><a href='#' data-toggle='modal' data-target='#metodo-modal'>".$definicao."</a></td>";
+                                                echo "<td>".$definicao."</td>";
                                                 echo "</tr>";
                                             }
                                         ?>
@@ -87,7 +87,7 @@
                                             while ($registro = mysqli_fetch_array($resultado)) {
                                                 $anexo = $registro['anexo'];
                                                 echo"<tr>";
-                                                echo "<td><a href='#' data-toggle='modal' data-target='#m-modal'>".$anexo."</a></td>";
+                                                echo "<td>".$anexo."</td>";
                                                 echo "</tr>";
                                             }
                                         ?>

@@ -86,7 +86,7 @@
 					<div class="modal-body">
 						<center>
 							<img src="img/criatividade.png">
-							<p>....</p>
+							<p>Parabéns! Essa medalha é por suas ideias inovadoras.</p>
 							<small>TOTAL: 1</small>
 						</center>
 					</div>
