@@ -27,7 +27,7 @@
 	<script type="text/javascript" src="_js/bootstrap.min.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
 	<script type="text/javascript">
-		$('.carousel').carousel({interval: 2000});
+		$('.carousel').carousel({interval: 1000});
 
 		function mostrar(id){
 			if(document.getElementById(id).style.display == 'none'){
@@ -108,15 +108,10 @@
 					<div class="card gedf-card">
 						<div class="card-body">
 							<div id="carouselCampanha" class="carousel slide" data-ride="carousel">
-								<ol class="carousel-indicators">
-									<li data-target="#carouselCampanha" data-slide-to="0" class="active"></li>
-									<li data-target="#carouselCampanha" data-slide-to="1"></li>
-									<li data-target="#carouselCampanha" data-slide-to="2"></li>
-								</ol>
-
+							
 								<div class="carousel-inner">
 									<div class="carousel-item active">
-										<img src="img/slide.jpg" class="img-fluid d-block w-100">
+										<img src="img/download.png" class="img-fluid d-block w-100">
 										<div class="carousel-caption d-none d-md-block">
 											<h3>Titulo</h3>
 											<p>Descrição</p>
@@ -125,7 +120,7 @@
 									</div>
 
 									<div class="carousel-item">
-										<img src="img/slide.jpg" class="img-fluid d-block w-100">
+										<img src="img/download.jpg" class="img-fluid d-block w-100">
 										<div class="carousel-caption d-none d-md-block">
 											<h3>Titulo</h3>
 											<p>Descrição</p>
@@ -134,7 +129,7 @@
 									</div>
 									
 									<div class="carousel-item">
-										<img src="img/slide.jpg" class="img-fluid d-block w-100">
+										<img src="img/download%20(1).png" class="img-fluid d-block w-100">
 										<div class="carousel-caption d-none d-md-block">
 											<h3>Titulo</h3>
 											<p>Descrição</p>

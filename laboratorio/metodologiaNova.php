@@ -42,8 +42,8 @@
 			</section>
 			</form>
 			<div id="enviar">
-				<a href="metodologiaSuper.php" class="btn btn-primary mb-2">Voltar</a>
-				<input type="submit" value="Salvar" class="btn btn-primary mb-2">
+				<a href="metodologiaSuper.php" class="btn btn-primary">Voltar</a>
+				<input type="submit" value="Salvar" class="btn btn-primary">
 			</div>
         </div>
     </body>   

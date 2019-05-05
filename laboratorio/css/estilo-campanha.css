@@ -35,7 +35,16 @@ aside#direita{
 
 #princ{
 	width: 600px;
-	height: 700px;
+	min-height: 700px;
+	background-color: #ffffff;
+	margin: -10px auto 0px auto;
+	padding: 30px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
+#princ_{
+	width: 600px;
+	min-height: 500px;
 	background-color: #ffffff;
 	margin: -10px auto 0px auto;
 	padding: 30px;
@@ -62,5 +71,8 @@ aside#direita{
 
 .titulo{width: 400px;height: 50px;margin-bottom: 30px;margin-left: 230px;}
 .titulo img{width: 100%; height: 100%;}
+
+.tt{width: 400px;height: 50px;margin-bottom: 30px;margin-left: 80px;}
+.tt img{width: 100%; height: 100%;}
 
 .princ{width: 400px; height: 600px;margin-left: 230px;}
