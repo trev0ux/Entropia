@@ -105,7 +105,7 @@
 								<p>...</p>
 						</div>
 						<div class="modal-footer">
-							<a href="" class="btn btn-success">Editar<i class="fa fa-pencil"></i></a>
+							<a href="campEdita.php" class="btn btn-success">Editar<i class="fa fa-pencil"></i></a>
 							<input type="submit" id="publica" value="Publicar" class="btn btn-primary">
 						</div>
 					</form>
@@ -130,7 +130,7 @@
 							</div>
 							<div class="modal-footer">
 								<button class="btn btn-danger">Cancelar</i></button>
-								<input type="submit" id="publica" value="Confirmar" class="btn btn-primary mb-2">
+								<input type="submit" id="publica" value="Confirmar" class="btn btn-primary">
 							</div>
 						</form>
 					</div>

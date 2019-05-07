@@ -48,7 +48,7 @@
 			<div class="col-md-3">
 				<div class="card">
 					<div class="card-body">
-						<img src="img/melo-avatar.png" alt="">
+						<img src="img/melo-avatar.png">
 						<div class="h5">
 							@
 							<?php 

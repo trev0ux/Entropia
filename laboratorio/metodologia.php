@@ -30,7 +30,6 @@
 				<thead class="thead-light">
 					<tr>
 						<th scope="col">Metotodologias Disponíveis</th>
-						<th scope="col">Estruturar sua Ideia</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -43,12 +42,11 @@
 							$titulo = $registro['titulo'];
 							echo "<tr>";
 							echo "<td><a href='#' data-toggle='modal' data-target='#metodo-modal'>" . $titulo . "</a></td>";
-							echo "<td><a href='' class='btn btn-success'><i class='fa fa-pencil'></i></a></td>";
 							echo "</tr>";
 						}
 					?>
 					<tr>
-						<td colspan="2">...</td>
+						<td>...</td>
 					</tr>
 				</tbody>
 			</table>

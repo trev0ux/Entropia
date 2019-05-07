@@ -43,8 +43,9 @@
                 	<label for="foto-campanha">Imagem da Campanha</label>
 					<input type="file" class="form-control-file" id="foto-campanha" name="foto-campanha" required>
                	</p>
+               	<a href="campanha.php" class="btn btn-primary">Voltar</a>
                	<button class="btn btn-primary" type="submit">Salvar</button>
-               	<input type="submit" value="Publicar" class="btn btn-info">
+               	<input type="submit" value="Publicar" class="btn btn-primary">
     		</form>
     	</div>
 

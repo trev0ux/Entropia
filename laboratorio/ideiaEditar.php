@@ -25,10 +25,9 @@
     </head>
     <body>      
         <?php include'menu.php'?> 
-        <div id="interface">
-            <div id="tamanho">
-                <h1>Atualizando...</h1>
-                <form method="post" action="projetos.php">
+        <div id="principal">
+               <div class="tt"><img src="img/atualizando.jpg"></div>
+               <form method="post" action="projetos.php">
                     <p>
                         Título
                         <input type="text" name="titulo-ideia" class="form-control">
@@ -58,8 +57,7 @@
                         <input type="submit" id="salva" value="Salvar" class="btn btn-primary mb-2">
                         <input type="submit" id="publica" value="Publicar" class="btn btn-primary mb-2">
                     </div> 
-                </form>
-            </div>
-        </div>
+            	</form>
+       </div>
     </body>  
 </html>

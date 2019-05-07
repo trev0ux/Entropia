@@ -110,7 +110,7 @@
                         </div>
                         <div class="modal-footer">
                             <a href="ideiaEditar.php" class="btn btn-success">Editar<i class="fa fa-pencil"></i></a>
-                            <input type="submit" id="publica" value="Publicar" class="btn btn-primary mb-2">
+                            <input type="submit" id="publica" value="Publicar" class="btn btn-primary">
                         </div>
                     </form>
                 </div>

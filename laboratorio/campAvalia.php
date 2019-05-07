@@ -17,8 +17,8 @@
 	<?php include'menuSuper.php'?>
 	
 	<div id="princ">
+		<div class="tt"><img src="img/avalia.jpg"></div>
 		<div id="tabela">
-			<h4>Avalie as ideias enviadas</h4>
 
 			<select name="camp" id="camp_id" onchange="mudaIdeia()" class="form-control">
 				<option value="0">Selecione a campanha...</option>

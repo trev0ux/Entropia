@@ -33,7 +33,7 @@
                         </div>
                     </li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-chart-bar"></i>Central de Supervisão</a>
+						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bar-chart"></i>Central de Supervisão</a>
 						<div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
 							<a class="dropdown-item" href="premios.php">Prêmios da Loja</a>
 							<a class="dropdown-item" href="validacao.php">Validação de Ideias</a>

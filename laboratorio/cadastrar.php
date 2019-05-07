@@ -76,10 +76,10 @@
                     <label class="avatar" for="a4"><img src="img/ariel1.png" alt="avatar Ariel"></label><br>
                   
                     <input type="radio" name="avatar" id="a5">
-                    <label class="avatar" for="a5"><img src="img/esteves1.png" alt="avatar César"></label>
+                    <label class="avatar" for="a5"><img src="img/cesar1.png" alt="avatar César"></label>
                 
                     <input type="radio" name="avatar" id="a6">
-                    <label class="avatar" for="a6"><img src="img/muriel1.png" alt="avatar James"></label>
+                    <label class="avatar" for="a6"><img src="img/James1.png" alt="avatar James"></label>
 					</div>
                 </aside>
                 <button type="submit" class="btn btn-primary">
