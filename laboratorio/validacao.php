@@ -19,7 +19,7 @@
 		{
 
 ?>
-        >
+    
 		
         <div id="interface">
             <div class="titulo"><img src="img/titulo-validacao.jpg"></div>
