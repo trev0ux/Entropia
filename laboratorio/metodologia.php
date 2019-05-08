@@ -20,6 +20,10 @@
 		}
 
 		$logado = $_SESSION['login'];
+
+		
+		if (isset ($_SESSION['tipo_usuario']) == 1) ;
+		{
 	?>
 </head>
 <body>
@@ -73,7 +77,7 @@
 								<h6>Saiba Mais</h6>
 									<p>[arquivo anexado para download]</p>
 							</div>
-						</form>
+						</form
 					</div>
 				</div>
 			</div>
@@ -82,3 +86,15 @@
 	</div>
 </body>
 </html>
+
+
+<?php
+{
+
+	else
+}
+
+echo 'Acesso negado'
+session_destroy();
+
+?>
