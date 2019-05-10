@@ -20,9 +20,8 @@
 		}
 
 		$logado = $_SESSION['login'];
-
-		{
-	?>
+		
+		?>
 </head>
 <body>
 	<?php include 'menu.php'?>
