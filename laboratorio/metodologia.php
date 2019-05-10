@@ -21,8 +21,6 @@
 
 		$logado = $_SESSION['login'];
 
-		
-		if (isset ($_SESSION['tipo_usuario']) == 1) ;
 		{
 	?>
 </head>
@@ -88,13 +86,3 @@
 </html>
 
 
-<?php
-{
-
-	else
-}
-
-echo 'Acesso negado'
-session_destroy();
-
-?>
