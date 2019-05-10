@@ -13,10 +13,7 @@
         <title>entropia</title>
     </head>
     <body>      
-        <?php include'menuSuper.php'
-		if (isset ($_SESSION['tipo_usuario']) == 2) ;
-		{
-		?>
+        <?php include'menuSuper.php'?>
 		
 			<div class="principal">	
 				<div class="titulo"><img src="img/titulo-premio.jpg"></div>
@@ -40,13 +37,3 @@
 	</body>
 </html>
 
-<?php
-{
-
-	else
-}
-
-echo 'Acesso negado'
-session_destroy();
-
-?>
