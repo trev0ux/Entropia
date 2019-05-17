@@ -9,8 +9,14 @@
  $beneficio = $_POST['beneficio'];
  $participante = $_POST['participante'];
  $anexo = $_POST['anexo'];
+ $hora = $_POST['hora'];
+ $data = $_POST['data'];
 
- $query = "INSERT INTO ideia(titulo, descricao, beneficio, participante, anexo) VALUES('$titulo', '$descricao', '$beneficio', '$participante', '$anexo')";
+date_default_timezone_set('America/Bahia');
+$hora = date("H:i:s");
+$data = date("Y-m-d");
+
+ $query = "INSERT INTO ideia(titulo, descricao, beneficio, participante, anexo, hora, data) VALUES('$titulo', '$descricao', '$beneficio', '$participante', '$anexo', '$hora', '$data')";
 
 
  mysqli_query($conexao, $query);

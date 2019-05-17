@@ -1,3 +1,4 @@
+<?php include 'conexaobanco/conexaobanco.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -182,6 +183,24 @@
 					<!-- /Post -->
 
 					<!-- Post -->
+
+
+						<?php
+						
+						$conexao = mysqli_connect('localhost', 'root', '', 'entropia');
+						$sql =  "SELECT * FROM ideia ORDER BY id_ideia DESC";
+						$resultado = mysqli_query($conexao, $sql);
+							
+
+						date_default_timezone_set('America/Bahia');
+
+						
+
+						while ($registro = mysqli_fetch_array($resultado)) {
+
+							?>
+
+
 					<div class="card gedf-card">
 						<div class="card-header">
 							<div class="d-flex justify-content-between align-items-center">
@@ -190,8 +209,8 @@
 										<img class="rounded-circle" width="45" src="img/ariel1.png" alt="">
 									</div>
 									<div class="ml-2">
-										<div class="h5 m-0">@Amorim</div>
-										<div class="h7 text-muted">Lucas Amorim Lopes</div>
+										<div class="h5 m-0">@<? echo $_SESSION['login']; ?></div>
+										<div class="h7 text-muted"><?php echo $_SESSION['login']; ?></div>
 									</div>
 								</div>
 								<div>
@@ -205,16 +224,17 @@
 						</div>
 
 						<div class="card-body">
-							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10min</div>
-							<h5 class="card-title">Titulo aqui</h5>
+							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>Postado ás <?php echo $hora = $registro['hora'];?> de <?php echo $data = $registro['data']; ?></div>
+							<h5 class="card-title"><?php echo $titulo = $registro['titulo']; ?></h5>
 							<p class="card-text">
-								[Descrição]
+								<?php echo $descricao = $registro['descricao']; ?>
 							</p>
 						</div>
 						<div class="card-footer">
 							<a href="#" class="card-link"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Curtir</a>
 							<a class="card-link" onclick="mostrar('a')"><i class="fa fa-comment"></i>Comentar</a>
 						</div>
+						<?php }?>
 						<div class="hidden" id="a">
 							<form class="search" method="post" action="">
 								<input type="text" class="form-control" placeholder="Escreva seu comentário...">
