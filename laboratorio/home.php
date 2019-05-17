@@ -38,7 +38,7 @@
 			}         
 		}
 	</script>
-	<title>entropia</title>
+	<title>Entropia</title>
 
 </head>
 <body>
@@ -192,7 +192,7 @@
 						$resultado = mysqli_query($conexao, $sql);
 							
 
-						date_default_timezone_set('America/Bahia');
+						
 
 						
 
@@ -209,8 +209,8 @@
 										<img class="rounded-circle" width="45" src="img/ariel1.png" alt="">
 									</div>
 									<div class="ml-2">
-										<div class="h5 m-0">@<? echo $_SESSION['login']; ?></div>
-										<div class="h7 text-muted"><?php echo $_SESSION['login']; ?></div>
+										<div class="h5 m-0">@<?php echo $_SESSION['login'];?></div>
+										<div class="h7 text-muted"><?php echo $_SESSION['login'];?></div>
 									</div>
 								</div>
 								<div>
@@ -234,14 +234,16 @@
 							<a href="#" class="card-link"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Curtir</a>
 							<a class="card-link" onclick="mostrar('a')"><i class="fa fa-comment"></i>Comentar</a>
 						</div>
-						<?php }?>
+						
 						<div class="hidden" id="a">
 							<form class="search" method="post" action="">
 								<input type="text" class="form-control" placeholder="Escreva seu comentário...">
 								<input id="comentar" type="submit" value="Comentar" class="btn btn-primary btn-sm">
 							</form>
 						</div>
+						
 					</div>
+					<?php }?>
 					<!-- /Post -->
 
 					<!-- Post -->

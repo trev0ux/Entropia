@@ -7,7 +7,7 @@
   <meta name="author" content="">
   <link rel="stylesheet" href="css/estilo-login.css">
   <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
-  <title>entropia</title>
+  <title>Entropia</title>
   <!-- Bootstrap core CSS --> 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
@@ -337,11 +337,11 @@
                           <div class="login-group">
                             <div class="form-group">
                               <label for="lg_username" class="sr-only">Login</label>
-                              <input type="text" class="form-control" id="lg_username" name="login" placeholder="nome de usuário">
+                              <input type="text" class="form-control" id="lg_username" name="login" placeholder="Nome de usuário">
                             </div>
                             <div class="form-group">
                              <label for="lg_password" class="sr-only">Senha</label>
-                             <input type="password" class="form-control" id="lg_password" name="senha" placeholder="senha">
+                             <input type="password" class="form-control" id="lg_password" name="senha" placeholder="Senha">
                            </div>
                          </div>
                          <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>

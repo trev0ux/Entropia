@@ -10,18 +10,18 @@
         <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="_js/bootstrap.min.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>entropia</title>
-		<?php
-			session_start();
-			if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
-				unset($_SESSION['login']);
-				unset($_SESSION['senha']);
-				header('location:index.php');
-			}
+        <title>Entropia</title>
+        <?php
+            session_start();
+            if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
+                unset($_SESSION['login']);
+                unset($_SESSION['senha']);
+                header('location:index.php');
+            }
 
-			$logado = $_SESSION['login'];
+            $logado = $_SESSION['login'];
 
-		?>
+        ?>
     </head>
     <body>      
         <?php include'menu.php'?> 
@@ -36,7 +36,7 @@
                         Descrição
                         <textarea name="descricao-ideia" class="form-control"></textarea>
                     </p>
-					<p>
+                    <p>
                         Objetivo
                         <textarea name="objetivo-ideia" class="form-control"></textarea>
                     </p>
@@ -57,7 +57,7 @@
                         <input type="submit" id="salva" value="Salvar" class="btn btn-primary mb-2">
                         <input type="submit" id="publica" value="Publicar" class="btn btn-primary mb-2">
                     </div> 
-            	</form>
+                </form>
        </div>
     </body>  
 </html>

@@ -10,8 +10,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="stylesheet" type="text/css" href="css/estilo-cadastro.css">
-		<script type="text/javascript" src="js/cadastro.js"></script>
-        <title>entropia</title>
+        <script type="text/javascript" src="js/cadastro.js"></script>
+        <title>Entropia</title>
     </head>
     <body>
 
@@ -28,7 +28,7 @@
                         <label for="reg_sobrenome" class="sr-only">Sobrenome</label>
                         <input type="text" class="form-control" id="reg_sobrenome" name="sobrenome" placeholder="Sobrenome*" required>
                     </p>
-					<p>
+                    <p>
                         <label for="reg_data" class="sr-only">Data de Nascimento</label>
                         <input type="text"  class="data form-control" id="reg_data" name="data" placeholder="Data de Nascimento*" required>
                     </p>
@@ -36,11 +36,11 @@
                         <label for="reg_inscricao" class="sr-only">Nº de inscrição</label>
                         <input type="text" class="form-control" id="reg_inscricao" name="inscricao" placeholder="Nº de inscrição">
                     </p>
-					<p>
+                    <p>
                         <label for="reg_cargo" class="sr-only">Cargo</label>
-						<select class="form-control" id="reg_cargo" name="cargo">
-							<option value="0">Selecione seu cargo na empresa...</option>
-						</select>
+                        <select class="form-control" id="reg_cargo" name="cargo">
+                            <option value="0">Selecione seu cargo na empresa...</option>
+                        </select>
                     </p>
                     <p>
                         <label for="reg_email" class="sr-only">Email*</label>
@@ -58,12 +58,12 @@
                         <label for="reg_confirma_senha" class="sr-only">Confirmar senha</label>
                         <input type="password" class="form-control" id="reg_confirma_senha" name="reg_confirma_senha" placeholder="confirmar senha*" required>
                     </p>         
-					<small class="form-text text-muted">(*)Campos Obrigatórios</small>
+                    <small class="form-text text-muted">(*)Campos Obrigatórios</small>
                 </section>
                 <aside id="secun">
                     <div class="foto-t"><img src="img/titulo-avatar.png" alt="Escolha seu avatar"></div>
-					<div id=avt>
-						<input type="radio" name="avatar" id="a1">
+                    <div id=avt>
+                        <input type="radio" name="avatar" id="a1">
                     <label class="avatar" for="a1"><img src="img/esteves1.png" alt="avatar Esteves"></label>
 
                     <input type="radio" name="avatar" id="a2">
@@ -80,11 +80,11 @@
                 
                     <input type="radio" name="avatar" id="a6">
                     <label class="avatar" for="a6"><img src="img/James1.png" alt="avatar James"></label>
-					</div>
+                    </div>
                 </aside>
                 <button type="submit" class="btn btn-primary">
-					<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>
-				</button>
+                    <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>
+                </button>
             </form>
             
         </div>   
