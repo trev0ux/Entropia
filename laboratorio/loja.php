@@ -35,7 +35,7 @@
         </div>
 
         <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="img/portfolio/game.png" alt="Card image cap">
+            <img class="card-img-top" src="img/game.png" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Produto 2</h5>
                 <p class="card-text">100 pontos</p>
@@ -53,7 +53,7 @@
         </div>
 
         <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="img/portfolio/game.png" alt="Card image cap">
+            <img class="card-img-top" src="img/game.png" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Produto 4</h5>
                 <p class="card-text">100 pontos</p>
@@ -73,7 +73,7 @@
         </div>
 
         <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="img/portfolio/game.png" alt="Card image cap">
+            <img class="card-img-top" src="img/game.png" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Produto 6</h5>
                 <p class="card-text">100 pontos</p>
@@ -90,7 +90,7 @@
             </div>
         </div>
         <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="img/portfolio/game.png" alt="Card image cap">
+            <img class="card-img-top" src="img/game.png" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Produto 8</h5>
                 <p class="card-text">100 pontos</p>

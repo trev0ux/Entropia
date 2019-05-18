@@ -112,7 +112,7 @@
 							
 								<div class="carousel-inner">
 									<div class="carousel-item active">
-										<img src="img/download.png" class="img-fluid d-block w-100">
+										<img src="img/slide1.png" class="img-fluid d-block w-100">
 										<div class="carousel-caption d-none d-md-block">
 											<h3>Titulo</h3>
 											<p>Descrição</p>
@@ -121,7 +121,7 @@
 									</div>
 
 									<div class="carousel-item">
-										<img src="img/download.jpg" class="img-fluid d-block w-100">
+										<img src="img/slide2.jpg" class="img-fluid d-block w-100">
 										<div class="carousel-caption d-none d-md-block">
 											<h3>Titulo</h3>
 											<p>Descrição</p>
@@ -130,7 +130,7 @@
 									</div>
 									
 									<div class="carousel-item">
-										<img src="img/download%20(1).png" class="img-fluid d-block w-100">
+										<img src="img/slide3.png" class="img-fluid d-block w-100">
 										<div class="carousel-caption d-none d-md-block">
 											<h3>Titulo</h3>
 											<p>Descrição</p>
