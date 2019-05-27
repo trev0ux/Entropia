@@ -33,17 +33,13 @@
                         <input type="text"  class="data form-control" id="reg_data" name="data" placeholder="Data de Nascimento*" required>
                     </p>
                     <p>
-                        <label for="reg_inscricao" class="sr-only">Nº de inscrição</label>
-                        <input type="text" class="form-control" id="reg_inscricao" name="inscricao" placeholder="Nº de inscrição">
-                    </p>
-                    <p>
                         <label for="reg_cargo" class="sr-only">Cargo</label>
                         <select class="form-control" id="reg_cargo" name="cargo">
                             <option value="0">Selecione seu cargo na empresa...</option>
                         </select>
                     </p>
                     <p>
-                        <label for="reg_email" class="sr-only">Email*</label>
+                        <label for="reg_email" class="sr-only">Email</label>
                         <input type="text" class="form-control" id="reg_email" name="email" placeholder="E-mail*" required>
                     </p>
                     <p>
