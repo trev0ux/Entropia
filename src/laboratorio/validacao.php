@@ -1,103 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="css/estilo-validacao.css">
-        <link rel="stylesheet" type="text/css" href="">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" id="bootstrap-css">
-        <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="_js/bootstrap.min.js"></script>
-        <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>Entropia</title>
+        <link rel="stylesheet" type="text/css" href="css/padrao.css">
+        <link href="css/datatables.min.css" rel="stylesheet">
     </head>
     <body>      
-        <?php include'menuSuper.php'?>
-    
-		
-        <div id="interface">
-            <div class="titulo"><img src="img/titulo-validacao.jpg"></div>
-            <aside id="secun">
-                <table class="table">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Avaliação</th>
-                            <th scope="col">Responsável técnico</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Atualizar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>358</td>
-                            <td>Concluída</td>
-                            <td>Dilton Costa</td>
-                            <td>Enviado ao comitê</td>
-                            <td><a href="" class="btn btn-success disabled" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>362</td>
-                            <td>Em andamento</td>
-                            <td>André Luís</td>
-                            <td>Em análise</td>
-                            <td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
-                        </tr>
-                        <td>417</td>
-                            <td>Em andamento</td>
-                            <td>Thiago Benjamin</td>
-                            <td>Em análise</td>
-                            <td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
-                        </tr>
-				<td>417</td>
-                            <td>Em andamento</td>
-                            <td>Thiago Benjamin</td>
-                            <td>Em análise</td>
-                            <td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
-                        </tr>
-			<td>417</td>
-                            <td>Em andamento</td>
-                            <td>Thiago Benjamin</td>
-                            <td>Em análise</td>
-                            <td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
-                        </tr>
-		<td>417</td>
-                            <td>Em andamento</td>
-                            <td>Thiago Benjamin</td>
-                            <td>Em análise</td>
-                            <td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
-                        </tr>
-	<td>417</td>
-                            <td>Em andamento</td>
-                            <td>Thiago Benjamin</td>
-                            <td>Em análise</td>
-                            <td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
-                        </tr>
-<td>417</td>
-                            <td>Em andamento</td>
-                            <td>Thiago Benjamin</td>
-                            <td>Em análise</td>
-                            <td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
-                        </tr>
-<td>417</td>
-                            <td>Em andamento</td>
-                            <td>Thiago Benjamin</td>
-                            <td>Em análise</td>
-                            <td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
-                        </tr>
-<td>417</td>
-                            <td>Em andamento</td>
-                            <td>Thiago Benjamin</td>
-                            <td>Em análise</td>
-                            <td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
-                        </tr>
+        <?php include'menuSuper.php' ?>
+        
+        <div class="container" id="cor">
+            <img src="img/titulo-validacao.jpg" class="rounded mx-auto d-block" id="foto">
+        	<div class="row justify-content-center">
+        		<div class="col-md-8">
+        			<table id="minhaTabela" class="table text-center">
+						<thead class="thead-light">
+							<tr>
+								<th scope="col">ID</th>
+								<th scope="col">Avaliação</th>
+								<th scope="col">Responsável técnico</th>
+								<th scope="col">Status</th>
+								<th scope="col">Atualizar</th>
+							</tr>
 
-                    </tbody>
-                </table>
-                
-		<!-- Modal -->
+						</thead>
+						<tbody>
+							<tr>
+								<td>358</td>
+								<td>Concluída</td>
+								<td>Dilton Costa</td>
+								<td>Enviado ao comitê</td>
+								<td><a href="" class="btn btn-success disabled" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
+							</tr>
+							<tr>
+								<td>362</td>
+								<td>Em andamento</td>
+								<td>André Luís</td>
+								<td>Em análise</td>
+								<td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
+							</tr>
+                       		<tr>
+								<td>417</td>
+								<td>Em andamento</td>
+								<td>Thiago Benjamin</td>
+								<td>Em análise</td>
+								<td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
+							</tr>
+                   			<tr>
+								<td>535</td>
+								<td>Em andamento</td>
+								<td>Ruan Barbosa</td>
+								<td>Em análise</td>
+								<td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
+							</tr>
+						</tbody>
+					</table>
+                	
+                	
+                	<!-- Modal -->
 		<div class="modal fade" id="vali-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -137,10 +96,29 @@
 				</div>
 			</div>
 			<!-- Fim Modal -->
-
-			</aside>
-            <a class="btn btn-primary mb-2" href="home.php" id="volta">Voltar</a>
+        		</div>
+        	</div>
+        	<div class="row">
+				<div class="col-sm-6">
+					<a class="btn btn-primary mb-2" href="home.php">Voltar</a>
+				</div>
+			</div>
         </div>
+
+        <script src="js/datatables.min.js"></script>
+        <script>
+		$(document).ready(function(){
+			$('#minhaTabela').DataTable({
+				"language": {
+					  "lengthMenu": "Mostrando _MENU_ registros por página",
+					  "zeroRecords": "Nada encontrado",
+					  "info": "Mostrando página _PAGE_ de _PAGES_",
+					  "infoEmpty": "Nenhum registro disponível",
+					  "infoFiltered": "(filtrado de _MAX_ registros no total)"
+				  }
+			  });
+		});
+	  </script>    
     </body>
 </html>
 

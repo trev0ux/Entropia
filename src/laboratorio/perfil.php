@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="css/estilo-perfil.css">
-        <link rel="stylesheet" type="text/css" href="">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" id="bootstrap-css">
-        <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="_js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/padrao.css">
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>Entropia</title>
+        <title>entropia</title>
 		<?php
 			session_start();
 			if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
@@ -20,37 +13,50 @@
 			}
 
 			$logado = $_SESSION['login'];
-
 		?>
     </head>
     <body>
+
 		<?php include 'menu.php'?>
-		<div id="interface">
-			<div id="tabela">
-				<table class="table table-borderless">
-					<thead>
-						<tr>
-							<th scope="col" colspan="2" id="texto" class="text-warning font-weight-bold">MEDALHAS</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#acesso"><img src="img/primeiro-acesso.png"><small>medalha de Primeiro Acesso</small></a></td>
-							<td><a href="#" data-toggle="modal" data-target="#criativo"><img src="img/criatividade.png"><small>medalha de Criatividade</small></a></td>
-						</tr>
-						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#assertivo"><img src="img/assertividade.png"><small>medalha de Assertividade</small></a></td>
-							<td><a href="#" data-toggle="modal" data-target="#equipe"><img src="img/trabalho-equipe.png"><small>medalha de Trabalho em Equipe</small></a></td>
-						</tr>
-						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#inovador"><img src="img/inovacao.png"><small>medalha de Inovação</small></a></td>
-							<td><a href="#" data-toggle="modal" data-target="#empreendedor"><img src="img/empreendedorismo.png"><small>medalha de Empreendedorismo</small></a></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-		
+
+		<div class="container" id="cor">
+	    	<div class="row justify-content-center">
+	    		<div class="col-sm-4">
+	    			<div id="perfil">
+		    			<img src="img/ariel-avatar.png" class="">
+		    			<h4>Nome Completo</h4>
+		    			<p>Informações do colaborador</p>
+		    			<form>
+		    				<input type="text" name="descricao" id="descricao" placeholder="Descrição de Perfil">
+		    			</form>
+	    			</div>
+	    		</div>
+	    		<div class="col-sm-4">
+	    			<table class="table table-borderless" id="tabela">
+						<thead>
+							<tr>
+								<th scope="col" colspan="2" id="texto" class="text-warning font-weight-bold">MEDALHAS</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" data-toggle="modal" data-target="#acesso"><img src="img/primeiro-acesso.png"><small>medalha de Primeiro Acesso</small></a></td>
+								<td><a href="#" data-toggle="modal" data-target="#criativo"><img src="img/criatividade.png"><small>medalha de Criatividade</small></a></td>
+							</tr>
+							<tr>
+								<td><a href="#" data-toggle="modal" data-target="#assertivo"><img src="img/assertividade.png"><small>medalha de Assertividade</small></a></td>
+								<td><a href="#" data-toggle="modal" data-target="#equipe"><img src="img/trabalho-equipe.png"><small>medalha de Trabalho em Equipe</small></a></td>
+							</tr>
+							<tr>
+								<td><a href="#" data-toggle="modal" data-target="#inovador"><img src="img/inovacao.png"><small>medalha de Inovação</small></a></td>
+								<td><a href="#" data-toggle="modal" data-target="#empreendedor"><img src="img/empreendedorismo.png"><small>medalha de Empreendedorismo</small></a></td>
+							</tr>
+						</tbody>
+					</table>
+	    		</div>
+	    	</div>
+	    </div>
+
 		<!-- Modal Acesso -->
 		<div class="modal fade" id="acesso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">

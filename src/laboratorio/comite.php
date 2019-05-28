@@ -4,21 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="css/estilo-comite.css">
+        <link rel="stylesheet" type="text/css" href="css/padrao.css">
         <link rel="stylesheet" type="text/css" href="">
         <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" id="bootstrap-css">
         <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="_js/bootstrap.min.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>Entropia</title>
+        <title>entropia</title>
     </head>
     <body>      
         <?php include'menuSuper.php'?>
-		
-        <div id="interface">
-			<div class="titulo"><img src="img/titulo-comite.jpg"></div>
-			<div id="tab">
-				<table class="table">
+        
+        <div class="container" id="cor">
+        	<img src="img/titulo-comite.jpg" class="rounded mx-auto d-block" id="foto">
+        	<div class="row justify-content-center">
+        		<div class="col-sm-6">
+        			<table class="table text-center">
 						<thead class="thead-light">
 							<tr>
 								<th scope="col">Avaliação</th>
@@ -32,10 +33,38 @@
 								<td>Dilton Costa</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
+							<tr>
+								<td>Supervisor A</td>
+								<td>Dilton Costa</td>
+								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
+							</tr>
+							<tr>
+								<td>Supervisor A</td>
+								<td>Dilton Costa</td>
+								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
+							</tr>
+							<tr>
+								<td>Supervisor A</td>
+								<td>Dilton Costa</td>
+								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
+							</tr>
+							<tr>
+								<td>Supervisor A</td>
+								<td>Dilton Costa</td>
+								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
+							</tr>
+							<tr>
+								<td>Supervisor A</td>
+								<td>Dilton Costa</td>
+								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
+							</tr>
 						</tbody>
 					</table>
-				</div>
-                
+       				<a class="btn btn-primary mb-2" href="home.php" id="volta">Voltar</a>
+        		</div>
+        	</div>
+        </div>
+		
 		<!-- Modal -->
 		<div class="modal fade" id="vali-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
@@ -56,8 +85,8 @@
 				</div>
 			</div>
 			<!-- Fim Modal -->
-			<a class="btn btn-primary mb-2" href="home.php" id="volta">Voltar</a>
-		</div>
+			
+
     </body>
 </html>
 

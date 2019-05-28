@@ -18,14 +18,8 @@
 
 	?>
 
-
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="css/estilo-home.css">
 	<!--<link rel="stylesheet" type="text/css" href="css/estilo-home.min.css">-->
-	<script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="_js/bootstrap.min.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
 	<script type="text/javascript">
 		$('.carousel').carousel({interval: 1000});
@@ -38,7 +32,7 @@
 			}         
 		}
 	</script>
-	<title>Entropia</title>
+	<title>entropia</title>
 
 </head>
 <body>

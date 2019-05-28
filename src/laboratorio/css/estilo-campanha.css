@@ -2,72 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo');
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 
-/*Formatação do conteiner interface*/
-#interface{
-	width: 900px;
-	background-color: #ffffff;
-	margin: -10px auto 0px auto;
-	padding: 30px;
-	height: 700px;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
-	text-align: center;
-}
+.principal{min-height: 600px;max-width: 900px; background-color: #ffffff; border-left: 0px 0px 5px rgba(0,0,0,0.7);}
+.princ{max-width: 900px;background-color: #ffffff; border-bottom: 0px 0px 5px rgba(0,0,0,0.7);}
 
-#interface h3{
-	margin-bottom: 50px;
-}
 
-section#esquerda{
-	display: block;
-	float: left;
-	width: 300px;
-	height: 450px;
-	overflow: auto;
-}
-
-aside#direita{
-	display: block;
-	float: right;
-	width: 500px;
-	height: 450px;
-	overflow: auto;
-}
-
-#princ{
-	width: 600px;
-	min-height: 700px;
-	background-color: #ffffff;
-	margin: -10px auto 0px auto;
-	padding: 30px;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
-}
-
-#princ_{
-	width: 600px;
-	min-height: 500px;
-	background-color: #ffffff;
-	margin: -10px auto 0px auto;
-	padding: 30px;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
-}
-
-#tabela{
-	width: 500px;
-	height: 600px;
-	text-align: center;
-	padding: 30px;
-}
-
-#botao{
-	display: inline;
-	position: absolute;
-	margin-top: 500px;
-}
-
-#voltar{
-	margin-left:30px;
-	margin-top: 20px;
-}
 
 .titulo{width: 400px;height: 50px;margin-bottom: 30px;margin-left: 230px;}
 .titulo img{width: 100%; height: 100%;}

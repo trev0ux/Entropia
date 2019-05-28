@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="css/estilo-campanha.css">
+        <link rel="stylesheet" type="text/css" href="css/padrao.css">
         <link rel="stylesheet" type="text/css" href="">
         <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" id="bootstrap-css">
         <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
@@ -15,74 +15,84 @@
 </head>
 <body>
     <?php include'menuSuper.php'?>
-	
-    <div id="interface">
-		<div class="titulo"><img src="img/titulo-campanha.jpg"></div>
-		<section id="esquerda">
-			<table class="table">
-				<thead class="thead-light">
-					<tr>
-						<th scope="col">Campanhas Salvas</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 1</a></td>
-					</tr>
-					<tr>
-						<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 2</a></td>
-					</tr>
-					<tr>
-						<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 3</a></td>
-					</tr>
-					<tr>
-						<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 4</a></td>
-					</tr>
-					<tr>
-						<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 5</a></td>
-					</tr>
-					<tr>
-						<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 6</a></td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
-		
-		<aside id="direita">
-			<table class="table">
-				<thead class="thead-light">
-					<tr>
-						<th scope="col">Campanhas Publicadas</th>
-						<th scope="col">Finalizar</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Campanha 1.1</td>
-						<td><button class="btn btn-danger mb-2" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times"></i></button></td>
-					</tr>
-					<tr>
-						<td>Campanha 2.1</td>
-						<td><button class="btn btn-danger" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times" aria-hidden="true"></i></button></td>
-					</tr>
-					<tr>
-						<td>Campanha 3.1</td>
-						<td><button class="btn btn-danger" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times" aria-hidden="true"></i></button></td>
-					</tr>
-					<tr>
-						<td>Campanha 4.1</td>
-						<td><button class="btn btn-danger" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times" aria-hidden="true"></i></button></td>
-					</tr>
-				</tbody>
-			</table>
-		</aside>
-		
-		<div id="botao">
-			<a class="btn btn-primary" href="home.php">Voltar</a>
-			<a href="campAvalia.php" class="btn btn-primary">Avaliar ideias enviadas</a>
-			<a href="campNova.php" class="btn btn-primary">Nova Campanha</a>
-		</div>
-		
+    
+    <!--<div class="container" id="cor">
+    	<img src="img/titulo-campanha.jpg" class="rounded mx-auto d-block" id="foto">
+    	<div class="row justify-content-center">
+    		<div class="col-sm-6">
+    			
+    		</div>
+    	</div>
+    </div>-->
+    
+    <div class="container" id="cor">
+    	<img src="img/titulo-campanha.jpg" class="rounded mx-auto d-block" id="foto">
+    	<div class="row justify-content-center">
+    		<div class="col-sm-6">
+    			<table class="table text-center">
+					<thead class="thead-light">
+						<tr>
+							<th scope="col">Campanhas Salvas</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 1</a></td>
+						</tr>
+						<tr>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 2</a></td>
+						</tr>
+						<tr>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 3</a></td>
+						</tr>
+						<tr>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 4</a></td>
+						</tr>
+						<tr>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 5</a></td>
+						</tr>
+						<tr>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 6</a></td>
+						</tr>
+					</tbody>
+				</table>
+    		</div>
+    		<div class="col-sm-6">
+    			<table class="table text-center">
+					<thead class="thead-light">
+						<tr>
+							<th scope="col">Campanhas Publicadas</th>
+							<th scope="col">Finalizar</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Campanha 1.1</td>
+							<td><button class="btn btn-danger mb-2" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times"></i></button></td>
+						</tr>
+						<tr>
+							<td>Campanha 2.1</td>
+							<td><button class="btn btn-danger" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+						</tr>
+						<tr>
+							<td>Campanha 3.1</td>
+							<td><button class="btn btn-danger" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+						</tr>
+						<tr>
+							<td>Campanha 4.1</td>
+							<td><button class="btn btn-danger" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+						</tr>
+					</tbody>
+				</table>
+    		</div>
+    		<div id="enviar">
+				<a href="home.php" class="btn btn-primary" id="botao">Voltar</a>
+				<a href="campAvalia.php" class="btn btn-primary" id="botao">Avaliar ideias enviadas</a>
+				<a href="campNova.php" class="btn btn-primary" id="botao">Nova Campanha</a>
+   			</div>
+    	</div>
+    </div>
+
 		<!-- Modal -->
 		<div class="modal fade" id="camp-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
@@ -137,7 +147,5 @@
 				</div>
 			</div>
 			<!-- /Modal -->
-
-    </div>
 </body>
 </html>
