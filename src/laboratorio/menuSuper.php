@@ -8,6 +8,7 @@
     <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="_js/bootstrap.min.js"></script>
     <link type="text/css" rel="stylesheet" href="css/menu.min.css">
+    <link href="css/datatables.min.css" rel="stylesheet">
     <title>entropia</title>
 </head> 
 <body class="hm-gradient">

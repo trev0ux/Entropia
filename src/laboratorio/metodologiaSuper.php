@@ -7,10 +7,10 @@
     <body>      
         <?php include'menuSuper.php'?>
 		
-		<div class="container">
-		<div class="row justify-content-center" id="cor">
+		<div class="container" >
+		<div class="row justify-content-center" id="cor" style="padding: 20px;">
 			<div class="col-sm-6">
-				<table class="table text-center" id="tabela">
+				<table class="table text-center" id="minhaTabela" id="tabela">
 					<thead class="thead-light">
 						<tr>
 							<th scope="col">Metotodologias Disponíveis</th>
@@ -48,7 +48,7 @@
 				</table>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="color">
 			<div class="col-sm-6">
 				<a href="metodologiaNova.php" class="btn btn-info" id="metodo">Enviar Metodologia</a>
 			</div>
@@ -111,5 +111,8 @@
 			
 			</div>
 		</div>
+
+        <script src="js/datatables.min.js"></script>
+        <script src="js/listagem.min.js"></script>  
     </body>   
 </html>

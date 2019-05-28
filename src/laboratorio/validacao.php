@@ -3,7 +3,6 @@
     <head>
         <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="css/padrao.css">
-        <link href="css/datatables.min.css" rel="stylesheet">
     </head>
     <body>      
         <?php include'menuSuper.php' ?>
@@ -105,20 +104,8 @@
 			</div>
         </div>
 
-        <script src="js/datatables.min.js"></script>
-        <script>
-		$(document).ready(function(){
-			$('#minhaTabela').DataTable({
-				"language": {
-					  "lengthMenu": "Mostrando _MENU_ registros por página",
-					  "zeroRecords": "Nada encontrado",
-					  "info": "Mostrando página _PAGE_ de _PAGES_",
-					  "infoEmpty": "Nenhum registro disponível",
-					  "infoFiltered": "(filtrado de _MAX_ registros no total)"
-				  }
-			  });
-		});
-	  </script>    
+    <script src="js/datatables.min.js"></script>
+    <script src="js/listagem.min.js"></script>   
     </body>
 </html>
 

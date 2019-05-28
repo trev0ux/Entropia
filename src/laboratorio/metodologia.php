@@ -19,9 +19,9 @@
 	<?php include'menu.php' ?>
 	
 	<div class="container">
-		<div class="row justify-content-center" id="cor">
+		<div class="row justify-content-center" id="cor" style="padding: 20px;">
 			<div class="col-sm-6">
-				<table class="table text-center" id="tabela">
+				<table class="table text-center" id="minhaTabela1">
 					<thead class="thead-light">
 						<tr>
 							<th scope="col">Metotodologias Disponíveis</th>
@@ -88,6 +88,8 @@
 	</div>
 	<!-- /Modal -->
 
+	<script src="js/datatables.min.js"></script>
+    <script src="js/listagem.min.js"></script> 
 </body>
 </html>
 

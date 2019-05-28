@@ -35,7 +35,7 @@
     					<input type="text" class="form-control" id="premio" name="premio" placeholder="Definir premiação para campanha" required>
     				</p>
     				<p>
-    					<label for="foto-campanha">Imagem da Campanha</label>
+    					<label for="foto-campanha">Imagem da Campanha <small>(Somente imagens 600x400)</small></label><br>
     					<input type="file" class="form-control-file" id="foto-campanha" name="foto-campanha" required>
     				</p>
     				<a href="campanha.php" class="btn btn-primary" id="botao">Voltar</a>

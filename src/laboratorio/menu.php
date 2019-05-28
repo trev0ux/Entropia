@@ -8,6 +8,7 @@
     <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="_js/bootstrap.min.js"></script>
     <link type="text/css" rel="stylesheet" href="css/menu.min.css">
+    <link href="css/datatables.min.css" rel="stylesheet">
     <title>entropia</title>
 </head> 
 <body class="hm-gradient">
@@ -27,7 +28,7 @@
 						<a class="nav-link" href="ouvidoria.php"><i class="fa fa-commenting-o"></i>Fale conosco</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="metodologiaSuper.php"><i class="fa fa-book"></i>Metodologias</a>
+						<a class="nav-link" href="metodologia.php"><i class="fa fa-book"></i>Metodologias</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i>

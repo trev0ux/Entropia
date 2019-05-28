@@ -348,7 +348,7 @@
                        </div>
                        <div class="etc-login-form">
                         <p>É novo por aqui?<a href="cadastrar.php">Cadastre-se aqui</a></p>
-                        <p>Esqueceu sua senha?<a href="recuperar-senha.php">Clique aqui</a></p>
+                        <p>Esqueceu sua senha?<a href="alterarSenha.php">Clique aqui</a></p>
                         <p>
                           <br>
                           <?php if (isset($_GET['erro'])) { ?>

@@ -1,18 +1,11 @@
 
 html,
 body {
-  background-image: url(../img/fundo.png);
+  background-image: url(../img/fundo1.png);
   padding: 10px;
   font-family: 'Varela Round';
 }
-#interface{
-    background-color: #ffffff;
-    width: 400px;
-    margin-left: 450px;
-    margin-top: 130px;
-    padding: 50px;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.5);
-}
+
 /*=== 2. Anchor Link ===*/
 a {
   color: #aaaaaa;
@@ -78,7 +71,7 @@ a:hover {
 /*=== 5. Login Button ===*/
 .login-form-1 .login-button {
   position: absolute;
-  right: -25px;
+  right: -20px;
   top: 50%;
   background: #ffffff;
   color: #999999;

@@ -16,6 +16,7 @@
 <body>
     <?php include 'menu.php'?>
 
+<center>
     <div class="card-deck">
         <div class="card text-center" style="width: 18rem;">
             <img class="card-img-top" src="img/logo1.1.png" alt="Card image cap">
@@ -90,5 +91,6 @@
             </div>
         </div>
     </div>
+</center>
 </body>
 </html>

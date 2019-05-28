@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<link rel="stylesheet" type="text/css" href="css/padrao.css">
-	<link rel="stylesheet" type="text/css" href="css/estilo-campanha.css">
+	<link rel="stylesheet" type="text/css" href="css/campanha.css">
 	<script type="text/javascript" src="js/campanha.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
 	<title>entropia</title>
