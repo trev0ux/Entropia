@@ -145,8 +145,8 @@
       <div class="row">
         <div class="col-md-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Desenvolvedores</h4>
-          <p class="lead mb-0">André Luis, Andreza Vitório, Dilton Costa
-            <br>Lucas Amorim, Ruan Felipe e Thiago Benjamin</p>
+          <p class="lead mb-0">André Luis, Andreza Vitório, <br>Dilton Costa
+            <br>Lucas Amorim, Ruan Felipe e <br>Thiago Benjamin.</p>
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Ta na rede</h4>
@@ -170,8 +170,7 @@
           </div>
           <div class="col-md-4">
             <h4 class="text-uppercase mb-4">Sobre o sistema</h4>
-            <p class="lead mb-0">[pequena descrição]
-              <a href=""></a>.</p>
+            <p class="lead mb-0" id="fonte"> O Entropia é um laboratório de inovação voltado para empresas e indústrias que desejam emergir seus processos e relações na indústria 4.0, com a intenção de transformar colaboradores em fiéis stakeholders, tornando o seu branding cada vez mais robusto e gerando vantagens competitivas no cenário econômico.</p>
             </div>
           </div>
         </div>
