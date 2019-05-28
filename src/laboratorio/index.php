@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Avatars</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Avatares</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Sobre</a>
@@ -48,7 +48,7 @@
       <img class="img-fluid mb-5 d-block mx-auto" src="img/Logo5.png" width="400px" height="50px" alt="">
       <h1 class="text-uppercase mb-0">ENTROPIA</h1>
       <hr class="star-light">
-      <h2 class="font-weight-light mb-0">Descobrir - Criar - Expandir</h2>
+      <h2 class="font-weight-light mb-0">O laboratório de inovação da sua empresa.</h2>
     </div>
   </header>
 
