@@ -26,7 +26,6 @@
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#" data-toggle="modal" data-target="#login-modal">Iniciar o Laboratório</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -55,7 +54,7 @@
   <!-- Portfolio Grid Section -->
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <h2 class="text-center text-uppercase text-secondary mb-0">Avatars</h2>
+      <h2 class="text-center text-uppercase text-secondary mb-0">Avatares</h2>
       <hr class="star-dark mb-5">
       <div class="row">
         <div class="col-md-6 col-lg-4">
@@ -170,7 +169,7 @@
           </div>
           <div class="col-md-4">
             <h4 class="text-uppercase mb-4">Sobre o sistema</h4>
-            <p class="lead mb-0" id="fonte"> O Entropia é um laboratório de inovação voltado para empresas e indústrias que desejam emergir seus processos e relações na indústria 4.0, com a intenção de transformar colaboradores em fiéis stakeholders, tornando o seu branding cada vez mais robusto e gerando vantagens competitivas no cenário econômico.</p>
+            <p id="fonte"> O Entropia é um laboratório de inovação voltado para empresas e indústrias que desejam emergir seus processos e relações na indústria 4.0, com a intenção de transformar colaboradores em fiéis stakeholders, tornando o seu branding cada vez mais robusto e gerando vantagens competitivas no cenário econômico.</p>
             </div>
           </div>
         </div>

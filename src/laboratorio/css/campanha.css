@@ -4,20 +4,5 @@
 
 .principal{min-height: 600px;max-width: 900px; background-color: #ffffff; border-left: 0px 0px 5px rgba(0,0,0,0.7);}
 .princ{max-width: 900px;background-color: #ffffff; border-bottom: 0px 0px 5px rgba(0,0,0,0.7);}
-
-
-
 .titulo{width: 400px;height: 50px;margin-bottom: 30px;margin-left: 230px;}
-.titulo img{width: 100%; height: 100%;}
 
-.tt{width: 400px;height: 50px;margin-bottom: 10px;margin-left: 70px;}
-.tt img{width: 100%; height: 100%;}
-
-.ttt{width: 300px;height: 50px;margin-bottom: 30px;margin-left: 130px;}
-.ttt img{width: 100%; height: 100%;}
-
-<<<<<<< HEAD
-
-.princ{width: 400px; height: 600px;margin-left: 230px;}
-=======
->>>>>>> 89c27a2c40dc2fc362deac2bc1171a67e0f2c711

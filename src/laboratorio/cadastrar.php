@@ -4,13 +4,13 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" id="bootstrap-css">
         <script type="text/javascript" src="_js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="_js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+        <script src="_js/jquery.validate.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" type="text/css" href="css/padrao.css">
         <link rel="stylesheet" type="text/css" href="css/cadastro.css">
         <script type="text/javascript" src="js/cadastro.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>entropia</title>
+        <title>Cadastro</title>
     </head>
     <body>
         <!--FORMULÁRIO DE CADASTRO-->

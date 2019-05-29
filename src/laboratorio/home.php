@@ -2,24 +2,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
-
 	<?php 
-	# Para evitar a entrada no site sem login tlgd ------------0-
-	session_start();
-	if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
-	{
-		unset($_SESSION['login']);
-		unset($_SESSION['senha']);
-		header('location:index.php');
-	}
+		# Para evitar a entrada no site sem login tlgd ------------0-
+		session_start();
+		if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+		{
+			unset($_SESSION['login']);
+			unset($_SESSION['senha']);
+			header('location:index.php');
+		}
 
-	$logado = $_SESSION['login'];
-
+		$logado = $_SESSION['login'];
 	?>
 
-	<link rel="stylesheet" type="text/css" href="css/estilo-home.css">
-	<!--<link rel="stylesheet" type="text/css" href="css/estilo-home.min.css">-->
+	<<link rel="stylesheet" type="text/css" href="css/estilo-home.css">
 	<link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
 	<script type="text/javascript">
 		$('.carousel').carousel({interval: 1000});
