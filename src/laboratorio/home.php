@@ -15,7 +15,7 @@
 		$logado = $_SESSION['login'];
 	?>
 
-	<<link rel="stylesheet" type="text/css" href="css/estilo-home.css">
+	<link rel="stylesheet" type="text/css" href="css/home.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
 	<script type="text/javascript">
 		$('.carousel').carousel({interval: 1000});

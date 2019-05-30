@@ -7,7 +7,7 @@
         <script src="_js/jquery.validate.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" type="text/css" href="css/padrao.css">
-        <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+        <link rel="stylesheet" type="text/css" href="css/cadastro.min.css">
         <script type="text/javascript" src="js/cadastro.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
         <title>Cadastro</title>

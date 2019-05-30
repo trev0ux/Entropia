@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/premios.css">
+		<style>
+			.principal{
+				max-width: 590px;
+				max-height: 400px;
+				background-color: #ffffff;
+				box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+				padding: 20px;
+			}
+			p{
+				text-align: justify;
+			}
+		</style>
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-        <title>entropia</title>
     </head>
     <body>      
         <?php include'menuSuper.php' ?>

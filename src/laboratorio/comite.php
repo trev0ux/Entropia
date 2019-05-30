@@ -2,7 +2,6 @@
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" type="text/css" href="css/padrao.css">
-        <link rel="stylesheet" type="text/css" href="">
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
         <title>entropia</title>
     </head>
