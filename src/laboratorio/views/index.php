@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="stylesheet" href="css/estilo-login.css">
-  <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
-  <title>entropia</title>
   <!-- Bootstrap core CSS --> 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
@@ -17,7 +14,10 @@
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template -->
-  <link href="css/estilo-index.min.css" rel="stylesheet">
+  <link href="css/index.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
+  <title>entropia</title>
 </head>
 
 <body id="page-top">

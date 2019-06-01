@@ -10,15 +10,15 @@
         <div class="container" id="cor">
             <img src="img/titulo-validacao.jpg" class="rounded mx-auto d-block" id="foto">
         	<div class="row justify-content-center">
-        		<div class="col-md-8">
-        			<table id="minhaTabela" class="table text-center">
+        		<div class="col-sm-6">
+        			<table id="minhaTabela" class="table text-center table-responsive">
 						<thead class="thead-light">
 							<tr>
 								<th scope="col">ID</th>
 								<th scope="col">Avaliação</th>
 								<th scope="col">Responsável técnico</th>
 								<th scope="col">Status</th>
-								<th scope="col">Atualizar</th>
+								<th scope="col">Validar</th>
 							</tr>
 
 						</thead>
@@ -77,6 +77,7 @@
 						<form action="" method="post">
 							<p>
 								Solicitar Ajustes
+								<input type="text" name="assunto" id="assunto" placeholder="Informe o assunto da modificação"> 
 								<textarea name="ajustar" placeholder="Comentário..."  class="form-control"></textarea>
 							</p>
 							<p>

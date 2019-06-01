@@ -21,18 +21,50 @@
 
 		<div class="container" id="cor">
 	    	<div class="row justify-content-center">
-	    		<div class="col-sm-4">
-	    			<div id="perfil">
-		    			<img src="img/ariel-avatar.png" class="">
-		    			<h4>Nome Completo</h4>
-		    			<p>Informações do colaborador</p>
-		    			<form>
-		    				<input type="text" name="descricao" id="descricao" placeholder="Descrição de Perfil">
-		    			</form>
+	    		<div class="col-sm-4" id="perfil">
+	    			<img src="img/ariel-avatar.png" class="rounded mx-auto d-block">
+		    		<h4>Lucas Amorim Lopes</h4>
+		    		<h5>User: @Amorim</h5>
+		    		<p>Estudante de Desenvolvimento de Sistemas e Gestor do Projeto de Laboratório de Inovação <br>18 anos<br>Amante de livros políticos e filosóficos</p>
+		    		<form>
+		    			<input type="text" name="descricao" id="descricao" placeholder="Adicionar descrição de perfil">
+		    		</form>
+	    		</div>
+	    		<div class="col-sm-6 text-center" id="margem">
+	    			<h3 id="texto" class="text-primary font-weight-bold">NOTIFICAÇÕES</h3>
+	    			<div id="rolagem">
+	    				<table class="table table-borderless">
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    					</tr>
+	    					<tr>
+								<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    					</tr>
+	    					<tr>
+								<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    					</tr>
+	    				</table>
 	    			</div>
 	    		</div>
-	    		<div class="col-sm-4">
-	    			<table class="table table-borderless" id="tabela">
+	    	</div>
+	    	<div class="row justify-content-center">
+	    		<div class="col-sm-8">
+	    			<table class="table table-bordered text-center" id="tabela">
 						<thead>
 							<tr>
 								<th scope="col" colspan="2" id="texto" class="text-warning font-weight-bold">MEDALHAS</th>
@@ -182,6 +214,27 @@
 							<img src="img/empreendedorismo.png">
 							<p>...</p>
 							<small>TOTAL: 1</small>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Modal -->
+		
+		<!-- Modal alterar ideia -->
+		<div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title text-center" id="exampleModalLabel">Deseja fazer alguma alteração/atualização na sua ideia?</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<center>
+							<p>Ao confirmar você será redirecionado a uma tela de alteração ou atualização de ideia</p>
+							<a href="" class="btn btn-info">Confirmar</a>
 						</center>
 					</div>
 				</div>

@@ -9,15 +9,6 @@
 <body>
     <?php include'menuSuper.php'?>
     
-    <!--<div class="container" id="cor">
-    	<img src="img/titulo-campanha.jpg" class="rounded mx-auto d-block" id="foto">
-    	<div class="row justify-content-center">
-    		<div class="col-sm-6">
-    			
-    		</div>
-    	</div>
-    </div>-->
-    
     <div class="container" id="cor">
     	<img src="img/titulo-campanha.jpg" class="rounded mx-auto d-block" id="foto">
     	<div class="row justify-content-center">
