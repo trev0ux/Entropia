@@ -7,7 +7,13 @@
 	<title>entropia</title>
 </head>
 <body>
-    <?php include'menuSuper.php'?>
+    <?php 
+        if ($_SESSION['tipo'] == 1) {
+            include 'menuSuper.php';
+        }else {
+            include 'menu.php';
+        }
+    ?>
 
      <div class="container" id="cor">
     	<img src="img/campanha-nova.jpg" class="rounded mx-auto d-block" id="foto">

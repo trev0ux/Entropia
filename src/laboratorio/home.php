@@ -32,7 +32,13 @@
 
 </head>
 <body>
-	<?php include 'menu.php'?>
+	<?php 
+        if ($_SESSION['tipo'] == 1) {
+            include 'menuSuper.php';
+        }else {
+            include 'menu.php';
+        }
+    ?>
 
 	<div class="container-fluid gedf-wrapper">
 		<div class="row">

@@ -16,7 +16,13 @@
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
     </head>
     <body>      
-        <?php include'menuSuper.php' ?>
+        <?php 
+            if ($_SESSION['tipo'] == 1) {
+                include 'menuSuper.php';
+            }else {
+                include 'menu.php';
+            }
+        ?>
 		
 		<center>
 			<div class="principal">	

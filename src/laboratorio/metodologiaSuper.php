@@ -5,7 +5,13 @@
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
     </head>
     <body>      
-        <?php include'menuSuper.php'?>
+        <?php 
+            if ($_SESSION['tipo'] == 1) {
+                include 'menuSuper.php';
+            }else {
+                include 'menu.php';
+            }
+        ?>
 		
 		<div class="container" >
 		<div class="row justify-content-center" id="cor" style="padding: 20px;">

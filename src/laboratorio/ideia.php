@@ -15,7 +15,13 @@
     ?>
 </head>
 <body>
-    <?php include'menu.php'?>
+	<?php 
+        if ($_SESSION['tipo'] == 1) {
+            include 'menuSuper.php';
+        }else {
+            include 'menu.php';
+        }
+    ?>
     
     <div class="container" id="cor">
       <img src="img/titulo-ideia.jpg" class="rounded mx-auto d-block" id="foto">

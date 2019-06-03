@@ -1,8 +1,6 @@
 <?php
 include 'conexaobanco/conexaobanco.php';
 
-session_start();  #Criar sessão
-
 $login = $_POST['login'];
 $senha = $_POST['senha'];
 
@@ -12,18 +10,26 @@ $query = "SELECT * FROM cadastro WHERE usuario ='$login' and SENHA = '$senha'";
 
 $consulta = mysqli_query($conexao, $query);
 
-if (mysqli_num_rows($consulta) == 1){
+if (mysqli_num_rows($consulta) == 1){  
+	while ($percorrer = mysqli_fetch_array($consulta)){
 
-    $_SESSION['login'] = $login;
-    $_SESSION['senha'] = $senha;
+		$tipo = $percorrer['tipo'];
 
-    header('location:home.php');
+ 		session_start();  #Criar sessão
 
-}else {
+ 		$_SESSION['login'] = $login;
+ 		$_SESSION['senha'] = $senha;
+ 		$_SESSION['tipo'] = $tipo;
 
-    unset ($_SESSION['login']);
-    unset ($_SESSION['senha']);
+ 		header('location:home.php');
+ 		
+ 	}
+ }else{
 
-    header('location:index.php?erro');
-}
-?>
+ 	unset ($_SESSION['login']);
+ 	unset ($_SESSION['senha']);
+
+ 	header('location:index.php?erro');
+
+ }
+ 

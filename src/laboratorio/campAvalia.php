@@ -7,8 +7,12 @@
 </head>
 <body>
 	<?php 
-		include 'menuSuper.php';
-	?>
+        if ($_SESSION['tipo'] == 1) {
+            include 'menuSuper.php';
+        }else {
+            include 'menu.php';
+        }
+    ?>
 	
 	<div class="container" id="cor">
 		<img src="img/avalia.jpg" class="rounded mx-auto d-block" id="foto">
