@@ -3,6 +3,9 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/padrao.css">
         <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+        <style>
+			#tabela td{font-size: 15px;}
+		</style>
         <title>entropia</title>
 		<?php
 			session_start();
@@ -18,21 +21,65 @@
     <body>
 
 		<?php include 'menu.php'?>
+		
+		<div class="container-fluid gedf-wrapper">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="img/melo-avatar.png" class="rounded mx-auto d-block">
+						<div class="h5">
+							@
+							<?php 
+								echo $_SESSION['login'];
+							?>
+						</div>
+							<h4>Andreza Vitório</h4>
+							<p>[Dados referentes ao colaborador]</p>
+							<form>
+								<input type="text" name="descricao" id="descricao" placeholder="Adicionar descrição de perfil">
+							</form>
+							<br>
+							<img src="img/moeda.png"><div class="h7 text-muted">100 pontos</div>
+						</div>
+					</div>
+					<br>
 
-		<div class="container" id="cor">
-	    	<div class="row justify-content-center">
-	    		<div class="col-sm-4" id="perfil">
-	    			<img src="img/ariel-avatar.png" class="rounded mx-auto d-block">
-		    		<h4>Lucas Amorim Lopes</h4>
-		    		<h5>User: @Amorim</h5>
-		    		<p>Estudante de Desenvolvimento de Sistemas e Gestor do Projeto de Laboratório de Inovação <br>18 anos<br>Amante de livros políticos e filosóficos</p>
-		    		<form>
-		    			<input type="text" name="descricao" id="descricao" placeholder="Adicionar descrição de perfil">
-		    		</form>
-	    		</div>
-	    		<div class="col-sm-6 text-center" id="margem">
-	    			<h3 id="texto" class="text-primary font-weight-bold">NOTIFICAÇÕES</h3>
-	    			<div id="rolagem">
+					<!-- Ranking -->
+					<div class="card gedf-card">
+						<div class="card-body">
+							<h5 class="card-title text-warning font-weight-bold text-center" id="texto">MEDALHAS</h5>
+
+							<table class="d-flex justify-content-between align-items-center text-center" id="tabela">
+								<tbody>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#acesso"><img src="img/primeiro-acesso.png"><small>medalha de Primeiro Acesso</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#criativo"><img src="img/criatividade.png"><small>medalha de Criatividade</small></a></td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#assertivo"><img src="img/assertividade.png"><small>medalha de Assertividade</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#equipe"><img src="img/trabalho-equipe.png"><small>medalha de Trabalho em Equipe</small></a></td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#inovador"><img src="img/inovacao.png"><small>medalha de Inovação</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#empreendedor"><img src="img/empreendedorismo.png"><small>medalha de Empreendedorismo</small></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+			<!-- Notificações -->	
+			<div class="col-md-6 gedf-main">
+				<div class="card gedf-card">
+					<div class="card-header">
+							<div class="text-center" style="margin-top:10px;">
+								<h5 class="card-title text-primary font-weight-bold" id="texto">NOTIFICAÇÕES</h5>
+							</div>
+						</div>
+					<div class="card-body">
+						
 	    				<table class="table table-borderless">
 	    					<tr>
 	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
@@ -58,37 +105,81 @@
 	    					<tr>
 								<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
 	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    					</tr>	
 	    				</table>
-	    			</div>
-	    		</div>
-	    	</div>
-	    	<div class="row justify-content-center">
-	    		<div class="col-sm-8">
-	    			<table class="table table-bordered text-center" id="tabela">
-						<thead>
-							<tr>
-								<th scope="col" colspan="2" id="texto" class="text-warning font-weight-bold">MEDALHAS</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" data-toggle="modal" data-target="#acesso"><img src="img/primeiro-acesso.png"><small>medalha de Primeiro Acesso</small></a></td>
-								<td><a href="#" data-toggle="modal" data-target="#criativo"><img src="img/criatividade.png"><small>medalha de Criatividade</small></a></td>
-							</tr>
-							<tr>
-								<td><a href="#" data-toggle="modal" data-target="#assertivo"><img src="img/assertividade.png"><small>medalha de Assertividade</small></a></td>
-								<td><a href="#" data-toggle="modal" data-target="#equipe"><img src="img/trabalho-equipe.png"><small>medalha de Trabalho em Equipe</small></a></td>
-							</tr>
-							<tr>
-								<td><a href="#" data-toggle="modal" data-target="#inovador"><img src="img/inovacao.png"><small>medalha de Inovação</small></a></td>
-								<td><a href="#" data-toggle="modal" data-target="#empreendedor"><img src="img/empreendedorismo.png"><small>medalha de Empreendedorismo</small></a></td>
-							</tr>
-						</tbody>
-					</table>
-	    		</div>
-	    	</div>
-	    </div>
+					</div>	
+				</div>
+			</div>
+			
+			<br>
+			
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title text-warning font-weight-bold text-center" id="texto">IDEIAS ENVIADAS</h5>
+						<table class="d-flex justify-content-between align-items-center text-center" id="tabela">
+							<tbody>
+								<tr>
+									<td>IDEIA A</td>
+								</tr>
+								<tr>
+									<td>IDEIA B</td>
+								</tr>
+								<tr>
+									<td>IDEIA C</td>
+								</tr>
+								<tr>
+									<td> IDEIA D</td>
+								</tr>
+								<tr>
+									<td>IDEIA F</td>
+								</tr>
+								<tr>
+									<td>IDEIA G</td>
+								</tr>	
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
 
+
+		
 		<!-- Modal Acesso -->
 		<div class="modal fade" id="acesso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
@@ -156,7 +247,7 @@
 		<!-- /Modal Assertivo -->
 		
 		<!-- Modal Equipe -->
-		<div class="modal fade" id="equipe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	 	<div class="modal fade" id="equipe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -178,7 +269,7 @@
 		<!-- /Modal Equipe -->
 		
 		<!-- Modal Inovador -->
-		<div class="modal fade" id="inovador" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	 	<div class="modal fade" id="inovador" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -200,7 +291,7 @@
 		<!-- /Modal Inovador -->
 		
 		<!-- Modal Empreendedor -->
-		<div class="modal fade" id="empreendedor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	 	<div class="modal fade" id="empreendedor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -220,7 +311,7 @@
 			</div>
 		</div>
 		<!-- /Modal -->
-		
+	</div>	
 		<!-- Modal alterar ideia -->
 		<div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">

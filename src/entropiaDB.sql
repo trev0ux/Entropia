@@ -5,7 +5,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
-
+ALTER DATABASE entropia CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -66,7 +66,7 @@ CREATE TABLE `cadastro` (
   `usuario` varchar(45) NOT NULL,
   `senha` varchar(12) NOT NULL,
   `id_setorfk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `cadastro`
@@ -96,16 +96,33 @@ CREATE TABLE `campanha` (
   `anexo` mediumblob,
   `foto_camp` mediumblob,
   `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `campanha`
 --
 
 INSERT INTO `campanha` (`id_campanha`, `titulo`, `campanha`, `tema`, `descricao`, `beneficio`, `anexo`, `foto_camp`, `id_usuariofk`) VALUES
-(1, 'Inovações tecnológicas', '', '', 'Criar rôbos', 'Agilizar processos', NULL, NULL, NULL);
+(1, 'Inovacoes tecnologicas', '', '', 'Criar rôbos', 'Agilizar processos', NULL, NULL, NULL),
+(2, 'Consumo Consciente', '', '', 'Reduzir consumo de energia', 'Agilizar processos', NULL, NULL, NULL),
+(3, 'Desmatamento', '', '', 'Aumentar ganho sustentavel', 'Agilizar processos', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
+
+CREATE TABLE `ideiaCamp` (
+  `id_ideiaCamp` int(11) NOT NULL,
+  `titulo` varchar(45) NOT NULL,
+  `descricao` mediumtext NOT NULL,
+  `beneficio` mediumtext NOT NULL,
+  `anexo` mediumblob,
+  `id_campanhafk` int(11) DEFAULT NULL,
+  `id_usuariofk` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
+
+INSERT INTO `ideiaCamp` VALUES 
+(1,'realidade aumentada','aumenta capacidade de testes','ganho financeiro',NULL,1,NULL),
+(2,'parceria com ecoluz','aumenta capacidade de testes','ganho financeiro',NULL,2,NULL),
+(3,'casas sensiveis','aumenta capacidade de testes','ganho financeiro',NULL,1,NULL);
 
 --
 -- Estrutura da tabela `feed`
@@ -141,7 +158,7 @@ CREATE TABLE `ideia` (
   `id_feedfk` int(11) DEFAULT NULL,
   `id_rankingfk` int(11) DEFAULT NULL,
   `id_validacaofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `ideia`
@@ -166,7 +183,7 @@ CREATE TABLE `medalhas` (
   `id_ideiafk` int(11) DEFAULT NULL,
   `id_sugestoesfk` int(11) DEFAULT NULL,
   `id_feedfk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `medalhas`
@@ -189,8 +206,7 @@ CREATE TABLE `metodologia` (
   `objetivo` mediumtext NOT NULL,
   `anexo` mediumblob,
   `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 --
 -- Extraindo dados da tabela `metodologia`
 --
@@ -211,7 +227,7 @@ CREATE TABLE `pontos` (
   `id_sugestoesfk` int(11) DEFAULT NULL,
   `id_premiofk` int(11) DEFAULT NULL,
   `id_feedfk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `pontos`
@@ -230,7 +246,7 @@ CREATE TABLE `pontos_medalhas` (
   `id_pontos_medalhas` int(11) NOT NULL,
   `id_pontosfk` int(11) DEFAULT NULL,
   `id_medalhasfk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `pontos_medalhas`
@@ -251,7 +267,7 @@ CREATE TABLE `premios` (
   `Descricao` mediumtext,
   `qtde_pontos_premios` int(11) NOT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `premios`
@@ -273,7 +289,7 @@ CREATE TABLE `publicações` (
   `qtde_reacoes` int(11) DEFAULT NULL,
   `id_feedfk` int(11) DEFAULT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `publicações`
@@ -292,7 +308,7 @@ CREATE TABLE `ranking` (
   `id_ranking` int(11) NOT NULL,
   `Posicoes_pub` varchar(300) DEFAULT NULL,
   `Posicoes_prod` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `ranking`
@@ -312,7 +328,7 @@ CREATE TABLE `setor` (
   `Setor` varchar(45) NOT NULL,
   `Cargo` varchar(45) NOT NULL,
   `Resp_tecnico` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `setor`
@@ -334,7 +350,7 @@ CREATE TABLE `sugestoes` (
   `tipo` mediumtext NOT NULL,
   `anexo` mediumblob,
   `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `sugestoes`
@@ -354,7 +370,7 @@ CREATE TABLE `usuario` (
   `tipo_usuario` tinyint(1) DEFAULT NULL,
   `id_feedfk` int(11) DEFAULT NULL,
   `id_cadastrofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `usuario`
@@ -373,7 +389,7 @@ CREATE TABLE `validacao` (
   `id_validacao` int(11) NOT NULL,
   `ajustes` mediumtext,
   `status_ideia` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `validacao`
@@ -403,6 +419,7 @@ ALTER TABLE `cadastro`
   ADD UNIQUE KEY `email` (`email`),
   ADD KEY `id_setorfk` (`id_setorfk`);
 
+
 --
 -- Indexes for table `campanha`
 --
@@ -411,6 +428,10 @@ ALTER TABLE `campanha`
   ADD UNIQUE KEY `id_campanha` (`id_campanha`),
   ADD KEY `id_usuariofk` (`id_usuariofk`);
 
+ALTER TABLE `ideiaCamp`
+	ADD PRIMARY KEY (`id_ideiaCamp`),
+    ADD UNIQUE KEY `id_ideiaCamp` (`id_ideiaCamp`),
+    ADD KEY `id_campanhafk` (`id_campanhafk`);
 --
 -- Indexes for table `feed`
 --
@@ -700,6 +721,9 @@ ALTER TABLE `sugestoes`
 ALTER TABLE `usuario`
   ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_cadastrofk`) REFERENCES `cadastro` (`id_cadastro`),
   ADD CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`id_feedfk`) REFERENCES `feed` (`id_feed`);
+
+ALTER TABLE `ideiaCamp`
+  ADD CONSTRAINT `ideiaCamp_ibfk_1` FOREIGN KEY (`id_campanhafk`) REFERENCES `campanha` (`id_campanha`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

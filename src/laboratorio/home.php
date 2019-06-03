@@ -242,53 +242,10 @@
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="img/melo1.png" alt="">
+										<img class="rounded-circle" width="45" src="img/logo1.png" alt="">
 									</div>
 									<div class="ml-2">
-										<div class="h5 m-0">@Vitório</div>
-										<div class="h7 text-muted">Andreza Vitório</div>
-									</div>
-								</div>
-								<div>
-									<button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<i class="fa fa-ellipsis-h"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="card-body">
-							<div class="text-muted h7 mb-2"><i class="fa fa-clock-o"></i>10 de fevereiro</div>
-							<h5 class="card-title">Titulo aqui</h5>
-							<p class="card-text">
-								[Descrição]
-							</p>
-						</div>
-						<div class="card-footer">
-							<a href="#" class="card-link"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Curtir</a>
-							<a class="card-link" onclick="mostrar('b')"><i class="fa fa-comment"></i>Comentar</a>
-						</div>
-						<div class="hidden" id="b">
-							<form class="search" method="post" action="">
-								<input type="text" class="form-control" placeholder="Escreva seu comentário...">
-								<input id="comentar" type="submit" value="Comentar" class="btn btn-primary btn-sm">
-							</form>			
-						</div>  
-					</div>
-					<!-- /Post -->
-
-					<!-- Post -->
-					<div class="card gedf-card">
-						<div class="card-header">
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="img/esteves1.png" alt="">
-									</div>
-									<div class="ml-2">
-										<div class="h5 m-0">@Benjamin</div>
-										<div class="h7 text-muted">Thiago Benjamin</div>
+										<div class="h5 m-0">ENTROPIA</div>
 									</div>
 								</div>
 								<div>
@@ -302,28 +259,21 @@
 						</div>
 
 						<div class="card-body">
-							<div class="text-muted h7 mb-2"><i class="fa fa-clock-o"></i>12 de janeiro</div>
-							<h5 class="card-title">Titulo aqui</h5>
+							<h5 class="card-title">BEM-VINDO!!!</h5>
 							<p class="card-text">
-								[Descrição]
+								SEJA BEM-VINDO AO SEU LABORATÓRIO DE INOVAÇÃO PREFERIDO!
 							</p>
 						</div>
 						<div class="card-footer">
 							<a href="#" class="card-link"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Curtir</a>
-							<a class="card-link" onclick="mostrar('c')"><i class="fa fa-comment"></i>Comentar</a>
-						</div>
-						<div class="hidden" id="c">
-							<form class="search" method="post" action="">
-								<input type="text" class="form-control" placeholder="Escreva seu comentário...">
-								<input id="comentar" type="submit" value="Comentar" class="btn btn-primary btn-sm">
-							</form>
 						</div>
 					</div>
 					<!-- /Post -->
 				</div>	
 
-				<!-- Ranking -->	
-				<div class="card gedf-card" id="rankin-ideia">
+				<!-- Ranking -->
+				<div class="col-md-3">
+				<div class="card" id="rankin-ideia">
 					<div class="card-body" id="rankin">
 						<h5 class="card-title">Ranking de Ideias</h5>
 						<h6 class="card-subtitle mb-2 text-muted">Seja criativo e suba de posição</h6>
@@ -355,6 +305,8 @@
 						</table>
 					</div>
 				</div>
+				</div>
+						
 				<!-- /Ranking -->	
 
 			</div>

@@ -24,7 +24,7 @@
 				<table id="tabela" class="table text-center">
 					<thead class="thead-light">
 								<tr>
-									<th scope="col">Ideias Enviadas por você</th>
+									<th scope="col">Ideias salvas por você</th>
 								</tr>
 								<?php
 									$conexao = mysqli_connect('localhost', 'root', '', 'entropia');
