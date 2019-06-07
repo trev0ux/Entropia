@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <?php 
+        # Para evitar a entrada no site sem login tlgd ------------0-
+        session_start();
+        if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+        {
+            unset($_SESSION['login']);
+            unset($_SESSION['senha']);
+            header('location:index.php');
+        }
+
+        $logado = $_SESSION['login'];
+    ?>
 	<link rel="stylesheet" type="text/css" href="css/padrao.css">
 	<script type="text/javascript" src="js/campanha.js"></script>
-	<link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
 	<title>entropia</title>
 </head>
 <body>
@@ -16,10 +28,10 @@
     ?>
 
      <div class="container" id="cor">
-    	<img src="img/campanha-nova.jpg" class="rounded mx-auto d-block" id="foto">
+    	<img src="img/titulo/campanha-nova.jpg" class="rounded mx-auto d-block" id="foto">
     	<div class="row justify-content-center">
     		<div class="col-sm-6">
-    			<form method="post" action="">
+    			<form method="post" action="" enctype="multipart/form-data">
     				<p>
     					<label for="tema" class="sr-only">Tema</label>
     					<input type="text" class="form-control" id="tema" name="tema" placeholder="Tema da Campanha" required>

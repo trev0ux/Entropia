@@ -9,13 +9,13 @@
         <link rel="stylesheet" type="text/css" href="css/padrao.css">
         <link rel="stylesheet" type="text/css" href="css/cadastro.min.css">
         <script type="text/javascript" src="js/cadastro.js"></script>
-        <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
         <title>Cadastro</title>
     </head>
     <body>
         <!--FORMULÁRIO DE CADASTRO-->
         <div class="container" id="cor">
-            <img src="img/titulo-cadastra.png" class="rounded mx-auto d-block" id="foto">
+            <img src="img/titulo/cadastra.png" class="rounded mx-auto d-block" id="foto">
             <div class="row justify-content-center">
                 <div class="col-sm-5">
                     <form method="post" action="cadastro.php">
@@ -56,26 +56,26 @@
                         <small class="form-text text-muted">(*)Campos Obrigatórios</small>
                 </div>
                 <div class="col-sm-6">
-                    <img src="img/titulo-avatar.png" class="rounded mx-auto d-block" alt="Escolha seu avatar">
+                    <img src="img/titulo/avatar.png" class="rounded mx-auto d-block" alt="Escolha seu avatar">
                     <center>
                         <div id=avt>
                             <input type="radio" name="avatar" id="a1">
-                            <label class="avatar" for="a1"><img src="img/esteves1.png" class="avt" alt="avatar Esteves"></label>
+                            <label class="avatar" for="a1"><img src="img/avatares/esteves1.png" class="avt" alt="avatar Esteves"></label>
 
                             <input type="radio" name="avatar" id="a2">
-                            <label class="avatar" for="a2"><img src="img/muriel1.png" class="avt" alt="avatar Muriel"></label><br>
+                            <label class="avatar" for="a2"><img src="img/avatares/muriel1.png" class="avt" alt="avatar Muriel"></label><br>
                           
                             <input type="radio" name="avatar" id="a3">
-                            <label class="avatar" for="a3"><img src="img/melo1.png" class="avt" alt="avatar Melo"></label>
+                            <label class="avatar" for="a3"><img src="img/avatares/melo1.png" class="avt" alt="avatar Melo"></label>
                          
                             <input type="radio" name="avatar" id="a4">
-                            <label class="avatar" for="a4"><img src="img/ariel1.png" class="avt" alt="avatar Ariel"></label><br>
+                            <label class="avatar" for="a4"><img src="img/avatares/ariel1.png" class="avt" alt="avatar Ariel"></label><br>
                           
                             <input type="radio" name="avatar" id="a5">
-                            <label class="avatar" for="a5"><img src="img/cesar1.png" class="avt" alt="avatar César"></label>
+                            <label class="avatar" for="a5"><img src="img/avatares/cesar1.png" class="avt" alt="avatar César"></label>
                         
                             <input type="radio" name="avatar" id="a6">
-                            <label class="avatar" for="a6"><img src="img/James1.png" class="avt" alt="avatar James"></label>
+                            <label class="avatar" for="a6"><img src="img/avatares/James1.png" class="avt" alt="avatar James"></label>
                         </div>
                     </center>
                 </div>

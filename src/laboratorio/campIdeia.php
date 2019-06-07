@@ -54,7 +54,7 @@
 					</p>
 					<p>
 						<label for="anexo-ic" class="sr-only">Anexo</label>
-						<input type="file" class="form-control-file" id="anexo-ic" name="anexo-ic">
+						<input type="file" class="form-control-file" id="anexo-ic" name="anexo-ic[]" multiple="multiple">
 					</p>
 					<button class="btn btn-danger" id="botao">Cancelar</button>
 					<input type="submit" class=" btn btn-primary" id="botao" value="Salvar">

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<link rel="stylesheet" type="text/css" href="css/padrao.css">
-	<link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
 	<?php
 		session_start();
 		if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
@@ -27,10 +27,11 @@
 	<div class="container">
 		<div class="row justify-content-center" id="cor" style="padding: 20px;">
 			<div class="col-sm-6">
+				<h4 class="text-primary font-weight-bold text-center">Metotodologias Disponíveis</h4>
 				<table class="table text-center" id="minhaTabela1">
 					<thead class="thead-light">
 						<tr>
-							<th scope="col">Metotodologias Disponíveis</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>

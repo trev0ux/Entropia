@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" type="text/css" href="css/padrao.css">
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
     <?php
 		session_start();
 		if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
@@ -16,10 +16,15 @@
 	?>
 </head>
 <body>
-    <?php include 'menu.php' ?>
-    
+    <?php 
+        if ($_SESSION['tipo'] == 1) {
+            include 'menuSuper.php';
+        }else {
+            include 'menu.php';
+        }
+    ?>    
     <div id="cor" class="container">
-    	<img src="img/titulo-sugestao.jpg" class="rounded mx-auto d-block">
+    	<img src="img/titulo/sugestao.jpg" class="rounded mx-auto d-block">
     	<div class="row justify-content-center">
     		<div class="col-sm-6">
     			<form method="post" action="ouvidoria.php">

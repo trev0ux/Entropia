@@ -2,8 +2,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+	<?php 
+		# Para evitar a entrada no site sem login tlgd ------------0-
+		session_start();
+		if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+		{
+			unset($_SESSION['login']);
+			unset($_SESSION['senha']);
+			header('location:index.php');
+		}
+
+		$logado = $_SESSION['login'];
+	?>
 	<link rel="stylesheet" type="text/css" href="css/padrao.css">
-	<link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
 </head>
 <body>
 	<?php 
@@ -15,18 +27,20 @@
 	?>
  
 	<div class="container" id="cor">
-		<img src="img/avalia.jpg" class="rounded mx-auto d-block" id="foto">
+		<img src="img/titulo/avalia.jpg" class="rounded mx-auto d-block" id="foto">
 		<div class="row justify-content-center">
 			<div class="col-sm-5" id="altura">
 				<select name="camp_id" id="camp_id" class="form-control">
 					<option value="0">Selecione a campanha...</option>
 					<?php
 						$conexao = mysqli_connect('localhost', 'root', '', 'entropia');
-					
-						$sql = "SELECT * FROM campanha ORDER BY titulo";
+						$sql = "SELECT * FROM campanha";
 						$resultado = mysqli_query($conexao, $sql);
-						while($row_camp = mysqli_fetch_assoc($resultado) ) {
-							echo '<option value="'.$row_camp['id_campanha'].'">'.$row_camp['titulo'].'</option>';
+
+						while ($row_camp = mysqli_fetch_assoc($resultado)) {
+							$id_campanha = $row_camp['id_campanha'];
+							$titulo = $row_camp['titulo'];
+							echo '<option value="'.$id_campanha.'">'.$titulo.'</option>';
 						}
 					?>
 				</select>

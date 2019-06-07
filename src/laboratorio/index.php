@@ -16,7 +16,7 @@
   <!-- Custom styles for this template -->
   <link href="css/index.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/login.css">
-  <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
+  <link rel="shortcut icon" href="img/logo/logo1.png" type="image/x-icon">
   <title>entropia</title>
 </head>
 
@@ -44,7 +44,7 @@
   <!-- Header -->
   <header class="masthead bg-primary text-white text-center">
     <div class="container">
-      <img class="img-fluid mb-5 d-block mx-auto" src="img/Logo5.png" width="400px" height="50px" alt="">
+      <img class="img-fluid mb-5 d-block mx-auto" src="img/logo/Logo5.png" width="400px" height="50px">
       <h1 class="text-uppercase mb-0">ENTROPIA</h1>
       <hr class="star-light">
       <h2 class="font-weight-light mb-0">O laboratório de inovação da sua empresa.</h2>
@@ -64,7 +64,7 @@
                 <i class="fas fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/esteves.png" alt="">
+            <img class="img-fluid rounded mx-auto d-block" src="img/avatares/esteves.png">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -74,7 +74,7 @@
                 <i class="fas fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/muriel.png" alt="">
+            <img class="img-fluid rounded mx-auto d-block" src="img/avatares/muriel.png">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -84,7 +84,7 @@
                 <i class="fas fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/melo.png" alt="">
+            <img class="img-fluid rounded mx-auto d-block" src="img/avatares/melo.png">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -94,7 +94,7 @@
                 <i class="fas fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/ariel.png" alt="">
+            <img class="img-fluid rounded mx-auto d-block" src="img/avatares/ariel.png">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -104,7 +104,7 @@
                 <i class="fas fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/Cesar.png" alt="">
+            <img class="img-fluid rounded mx-auto d-block" src="img/avatares/cesar.png">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -114,7 +114,7 @@
                 <i class="fas fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/James.png" alt="">
+            <img class="img-fluid rounded mx-auto d-block" src="img/avatares/james.png">
           </a>
         </div>
       </div>
@@ -196,7 +196,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">Esteves</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/esteves-mini.png" class="rounded mx-auto d-block">
+                <img class="img-fluid mb-5" src="img/avatares/esteves-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é Esteves, o personagem do Entropia. Suas características mais marcantes são: coragem, discernimento, confiança e comprometimento. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
@@ -218,7 +218,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">Muriel</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/muriel-mini.png" class="rounded mx-auto d-block">
+                <img class="img-fluid mb-5" src="img/avatares/muriel-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é Muriel, o personagem do Entropia. Suas características mais marcantes são: flexibilidade, simpatia e empatia, Muriel também se destaca por ser bastante comunicativo. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
@@ -240,7 +240,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">Melo</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/melo-mini.png" class="rounded mx-auto d-block">
+                <img class="img-fluid mb-5" src="img/avatares/melo-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é Melo, o personagem do Entropia. Suas qualidades mais marcante é a sua lábia e o pensamento analítico e estratégico, também destaca-se por ser visionário. Se for escolhido, será sua identidade no novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
@@ -262,7 +262,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">Ariel</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/ariel-mini.png" class="rounded mx-auto d-block">
+                <img class="img-fluid mb-5" src="img/avatares/ariel-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é Ariel, o personagem do Entropia. Suas qualidades mais marcantes são: pensamento crítico, paciência e persistência, também destaca-se por ser planejador. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
@@ -284,7 +284,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">César</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/Cesar-mini.png" class="rounded mx-auto d-block">
+                <img class="img-fluid mb-5" src="img/avatares/cesar-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é César, o personagem do Entropia. Suas características mais marcantes são: flexibilidade, organização e multideterminação e também destaca-se por ser pró-ativo. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!
                 </p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
@@ -307,7 +307,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">James</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/james.png">
+                <img class="img-fluid mb-5" src="img/avatares/james.png">
                 <p class="mb-5">Esse é James, o personagem do Entropia. Suas características mais marcantes são: adaptação, criatividade, paciência e trabalho em equipe. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>

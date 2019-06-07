@@ -16,7 +16,7 @@
 	?>
 
 	<link rel="stylesheet" type="text/css" href="css/home.min.css">
-	<link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
 	<script type="text/javascript">
 		$('.carousel').carousel({interval: 1000});
 
@@ -45,7 +45,7 @@
 			<div class="col-md-3">
 				<div class="card">
 					<div class="card-body">
-						<img src="img/melo-avatar.png" class="rounded mx-auto d-block">
+						<img src="img/avatares/melo-avatar.png" class="rounded mx-auto d-block">
 						<div class="h5">
 							@
 							<?php 
@@ -184,29 +184,12 @@
 
 					<!-- Post -->
 
-
-						<?php
-						
-						$conexao = mysqli_connect('localhost', 'root', '', 'entropia');
-						$sql =  "SELECT * FROM ideia ORDER BY id_ideia DESC";
-						$resultado = mysqli_query($conexao, $sql);
-							
-
-						
-
-						
-
-						while ($registro = mysqli_fetch_array($resultado)) {
-
-							?>
-
-
 					<div class="card gedf-card">
 						<div class="card-header">
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="img/ariel1.png" alt="">
+										<img class="rounded-circle" width="45" src="img/avatares/ariel1.png" alt="">
 									</div>
 									<div class="ml-2">
 										<div class="h5 m-0">@<?php echo $_SESSION['login'];?></div>
@@ -243,7 +226,7 @@
 						</div>
 						
 					</div>
-					<?php }?>
+					<?php ?>
 					<!-- /Post -->
 
 					<!-- Post -->
@@ -252,7 +235,7 @@
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="img/logo1.png" alt="">
+										<img class="rounded-circle" width="45" src="img/logo/logo1.png" alt="">
 									</div>
 									<div class="ml-2">
 										<div class="h5 m-0">ENTROPIA</div>

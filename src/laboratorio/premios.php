@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+    	<?php 
+			# Para evitar a entrada no site sem login tlgd ------------0-
+			session_start();
+			if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+			{
+				unset($_SESSION['login']);
+				unset($_SESSION['senha']);
+				header('location:index.php');
+			}
+
+			$logado = $_SESSION['login'];
+		?>
 		<style>
 			.principal{
 				max-width: 590px;
@@ -13,7 +25,7 @@
 				text-align: justify;
 			}
 		</style>
-        <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
     </head>
     <body>      
         <?php 
@@ -26,8 +38,8 @@
 		
 		<center>
 			<div class="principal">	
-				<img src="img/titulo-premio.jpg" class="rounded mx-auto d-block" id="foto">
-				<form method="post" action="">
+				<img src="img/titulo/premio.jpg" class="rounded mx-auto d-block" id="foto">
+				<form method="post" action="" enctype="multipart/form-data">
 					<p>
 						<label for="nome" class="sr-only">Nome</label>
 						<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>

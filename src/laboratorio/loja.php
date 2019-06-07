@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
     <?php
         session_start();
         if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
@@ -25,7 +25,7 @@
 <center>
     <div class="card-deck">
         <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="img/logo1.1.png" alt="Card image cap">
+            <img class="card-img-top" src="img/logo/logo1.1.png" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Produto 1</h5>
                 <p class="card-text">100 pontos</p>
@@ -43,7 +43,7 @@
         </div>
 
         <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="img/logo1.1.png" alt="Card image cap">
+            <img class="card-img-top" src="img/logo/logo1.1.png" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Produto 3</h5>
                 <p class="card-text">100 pontos</p>
@@ -63,7 +63,7 @@
     <br>
     <div class="card-deck">
         <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="img/logo1.1.png" alt="Card image cap">
+            <img class="card-img-top" src="img/logo/logo1.1.png" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Produto 5</h5>
                 <p class="card-text">100 pontos</p>
@@ -81,7 +81,7 @@
         </div>
 
         <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="img/logo1.1.png" alt="Card image cap">
+            <img class="card-img-top" src="img/logo/logo1.1.png" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Produto 7</h5>
                 <p class="card-text">100 pontos</p>

@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" type="text/css" href="css/padrao.css">
-        <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
         <style>
 			#tabela td{font-size: 15px;}
 		</style>
@@ -20,14 +20,20 @@
     </head>
     <body>
 
-		<?php include 'menu.php'?>
+		<?php 
+			if ($_SESSION['tipo'] == 1) {
+				include 'menuSuper.php';
+			}else {
+				include 'menu.php';
+			}
+		?>
 		
 		<div class="container-fluid gedf-wrapper">
 		<div class="row">
 			<div class="col-md-3">
 				<div class="card">
 					<div class="card-body">
-						<img src="img/melo-avatar.png" class="rounded mx-auto d-block">
+						<img src="img/avatares/melo-avatar.png" class="rounded mx-auto d-block">
 						<div class="h5">
 							@
 							<?php 
@@ -53,16 +59,16 @@
 							<table class="d-flex justify-content-between align-items-center text-center" id="tabela">
 								<tbody>
 									<tr>
-										<td><a href="#" data-toggle="modal" data-target="#acesso"><img src="img/primeiro-acesso.png"><small>medalha de Primeiro Acesso</small></a></td>
-										<td><a href="#" data-toggle="modal" data-target="#criativo"><img src="img/criatividade.png"><small>medalha de Criatividade</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#acesso"><img src="img/medalhas/primeiro-acesso.png"><small>medalha de Primeiro Acesso</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#criativo"><img src="img/medalhas/criatividade.png"><small>medalha de Criatividade</small></a></td>
 									</tr>
 									<tr>
-										<td><a href="#" data-toggle="modal" data-target="#assertivo"><img src="img/assertividade.png"><small>medalha de Assertividade</small></a></td>
-										<td><a href="#" data-toggle="modal" data-target="#equipe"><img src="img/trabalho-equipe.png"><small>medalha de Trabalho em Equipe</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#assertivo"><img src="img/medalhas/assertividade.png"><small>medalha de Assertividade</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#equipe"><img src="img/medalhas/trabalho-equipe.png"><small>medalha de Trabalho em Equipe</small></a></td>
 									</tr>
 									<tr>
-										<td><a href="#" data-toggle="modal" data-target="#inovador"><img src="img/inovacao.png"><small>medalha de Inovação</small></a></td>
-										<td><a href="#" data-toggle="modal" data-target="#empreendedor"><img src="img/empreendedorismo.png"><small>medalha de Empreendedorismo</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#inovador"><img src="img/medalhas/inovacao.png"><small>medalha de Inovação</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#empreendedor"><img src="img/medalhas/empreendedorismo.png"><small>medalha de Empreendedorismo</small></a></td>
 									</tr>
 								</tbody>
 							</table>

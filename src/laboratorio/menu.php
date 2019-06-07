@@ -15,7 +15,7 @@
 	<main>
 		<!--Navbar -->
 		<nav class="mb-4 navbar navbar-expand-lg navbar-dark unique-color-dark">
-			<a class="navbar-brand" href="home.php"><img src="img/logo4.png"  width="100" height="50" alt=""></a>
+			<a class="navbar-brand" href="home.php"><img src="img/logo/logo4.png"  width="100" height="50"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -33,15 +33,16 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i>
 							<?php 
-								//echo $_SESSION['login'];
-							?></a>
+								echo $_SESSION['login'];
+							?>
+						</a>
 						<div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
 							<a class="dropdown-item" href="perfil.php">Meu Perfil</a>
 							<a class="dropdown-item" href="loja.php">Lojinha Virtual</a>
 							<a class="dropdown-item" href="logout.php">       
                                 Desconectar de @
                                 <?php 
-                               // echo $_SESSION['login'];
+                               		echo $_SESSION['login'];
                                 ?>
                             </a>
 						</div>

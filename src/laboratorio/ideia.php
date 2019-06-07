@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" type="text/css" href="css/padrao.css">
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
     <?php
         session_start();
         if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
@@ -24,7 +24,7 @@
     ?>
     
     <div class="container" id="cor">
-      <img src="img/titulo-ideia.jpg" class="rounded mx-auto d-block" id="foto">
+      <img src="img/titulo/ideia.jpg" class="rounded mx-auto d-block" id="foto">
       <div class="row justify-content-center">
        		<div class="col-sm-4">
 				<table id="tabela" class="table text-center">
@@ -72,7 +72,7 @@
 						</p>
 						<p id="arquivo">
 							Adicionar arquivo em anexo<br>
-							<input type="file" id="saida-anexo" name="anexo" class="form-control-file">
+							<input type="file" id="saida-anexo" name="anexo[]" multiple="multiple" class="form-control-file">
 						</p>
 						<div id="enviar">
 							<button id="cancela"class="btn btn-primary mb-2">Cancelar</button>

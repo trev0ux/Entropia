@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="js/login.js"></script>
     <script src="_js/jquery.validate.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo1.png">
     <title>Alterar Senha</title>
 </head>
 <body>
