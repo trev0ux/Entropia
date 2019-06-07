@@ -1,7 +1,7 @@
 console.log("Rodou!");
 
 function mudarForm(){
-	var selectElement = document.querySelector("#form-campanha").value;
+	var selectElement = document.querySelector("#ideiaCamp").value;
 	console.log(selectElement);
 	var divElement = document.querySelector("#mudar");
 	if(selectElement == "1"){

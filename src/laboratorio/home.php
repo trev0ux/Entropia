@@ -1,4 +1,4 @@
-<?php include 'conexaobanco/conexaobanco.php';?>
+<?php $conexao = mysqli_connect('localhost', 'root', '', 'entropia');?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -45,7 +45,7 @@
 			<div class="col-md-3">
 				<div class="card">
 					<div class="card-body">
-						<img src="img/melo-avatar.png">
+						<img src="img/melo-avatar.png" class="rounded mx-auto d-block">
 						<div class="h5">
 							@
 							<?php 
@@ -107,33 +107,37 @@
 							<div id="carouselCampanha" class="carousel slide" data-ride="carousel">
 							
 								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<img src="img/slide1.png" class="img-fluid d-block w-100">
-										<div class="carousel-caption d-none d-md-block">
-											<h3>Titulo</h3>
-											<p>Descrição</p>
-											<a class="btn btn-info label label-primary" href="campIdeia.php">Mande sua Ideia</a>
-										</div>
-									</div>
-
-									<div class="carousel-item">
-										<img src="img/slide2.jpg" class="img-fluid d-block w-100">
-										<div class="carousel-caption d-none d-md-block">
-											<h3>Titulo</h3>
-											<p>Descrição</p>
-											<a class="btn btn-info" href="campIdeia.php">Mande sua Ideia</a>
-										</div>
-									</div>
-									
-									<div class="carousel-item">
-										<img src="img/slide3.png" class="img-fluid d-block w-100">
-										<div class="carousel-caption d-none d-md-block">
-											<h3>Titulo</h3>
-											<p>Descrição</p>
-											<a class="btn btn-info" href="campIdeia.php">Mande sua Ideia</a>
-										</div>
-									</div>
+									<?php
+										$controle_ativo = 2;						
+										$result_carousel = "SELECT * FROM campanha ORDER BY id_campanha ASC";
+										$resultado_carousel = mysqli_query($conexao, $result_carousel);
+										while($row_carousel = mysqli_fetch_assoc($resultado_carousel)){ 
+											if($controle_ativo == 2){ ?>
+												<div class="carousel-item active">
+													<img src="img/campanhas/<?php echo $row_carousel['foto_camp'];?>" class="img-fluid d-block w-100">
+													<div class="carousel-caption d-none d-md-block">
+														<h3><?php echo $row_carousel['tema']; ?></h3>
+														<p><?php echo $row_carousel['descricao']; ?></p>
+														<a class="btn btn-info label label-primary" href="campIdeia.php">Mande sua Ideia</a>
+													</div>
+												</div>
+												<?php
+												$controle_ativo = 1;
+											}else{ ?>
+												<div class="carousel-item">
+													<img src="img/campanhas/<?php echo $row_carousel['foto_camp'];?>" class="img-fluid d-block w-100">
+													<div class="carousel-caption d-none d-md-block">
+														<h3><?php echo $row_carousel['tema']; ?></h3>
+														<p><?php echo $row_carousel['descricao']; ?></p>
+														<a class="btn btn-info label label-primary" href="campIdeia.php">Mande sua Ideia</a>
+													</div>
+												</div> 
+											<?php
+											}
+										}
+									?>		
 								</div>
+
 								<a class="carousel-control-prev" href="#carouselCampanha" role="button" data-slide="prev">
 									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 									<span class="sr-only">Anterior</span>

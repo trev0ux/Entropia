@@ -1,7 +1,7 @@
 <?php 
-	include 'conexaobanco/conexaobanco.php';
+	$conexao = mysqli_connect('localhost', 'root', '', 'entropia');
 
-	$id_campanha = $_REQUEST['camp_id'];
+	$id_campanha = $_REQUEST['id_campanha'];
 	
 	$sql = "SELECT * FROM ideiaCamp WHERE id_campanhafk=$id_campanha ORDER BY titulo";
 	$resultado = mysqli_query($conexao, $sql);

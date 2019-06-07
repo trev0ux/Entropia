@@ -196,7 +196,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">Esteves</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/esteves-mini.png" alt="">
+                <img class="img-fluid mb-5" src="img/esteves-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é Esteves, o personagem do Entropia. Suas características mais marcantes são: coragem, discernimento, confiança e comprometimento. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
@@ -218,7 +218,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">Muriel</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/muriel-mini.png" alt="">
+                <img class="img-fluid mb-5" src="img/muriel-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é Muriel, o personagem do Entropia. Suas características mais marcantes são: flexibilidade, simpatia e empatia, Muriel também se destaca por ser bastante comunicativo. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
@@ -240,7 +240,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">Melo</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/melo-mini.png" alt="">
+                <img class="img-fluid mb-5" src="img/melo-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é Melo, o personagem do Entropia. Suas qualidades mais marcante é a sua lábia e o pensamento analítico e estratégico, também destaca-se por ser visionário. Se for escolhido, será sua identidade no novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
@@ -262,7 +262,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">Ariel</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/ariel-mini.png" alt="">
+                <img class="img-fluid mb-5" src="img/ariel-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é Ariel, o personagem do Entropia. Suas qualidades mais marcantes são: pensamento crítico, paciência e persistência, também destaca-se por ser planejador. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
@@ -284,7 +284,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">César</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/Cesar-mini.png" alt="">
+                <img class="img-fluid mb-5" src="img/Cesar-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é César, o personagem do Entropia. Suas características mais marcantes são: flexibilidade, organização e multideterminação e também destaca-se por ser pró-ativo. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!
                 </p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
@@ -307,7 +307,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">James</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/James-mini.png" alt="">
+                <img class="img-fluid mb-5" src="img/james.png">
                 <p class="mb-5">Esse é James, o personagem do Entropia. Suas características mais marcantes são: adaptação, criatividade, paciência e trabalho em equipe. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
@@ -319,7 +319,6 @@
       </div>
 
       <!-- Login -->
-      <form action="loginconfirm.php" method="post">
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -329,7 +328,7 @@
                     <div class="logo">CONECTE-SE</div>
                     <!-- Main Form -->
                     <div class="login-form-1">
-                      <form id="login-form" class="text-left">
+                      <form id="login-form" class="text-left" action="loginconfirm.php" method="post">
                         <div class="login-form-main-message"></div>
                         <div class="main-login-form">
                           <div class="login-group">
@@ -364,7 +363,6 @@
         </div>
       </div>
     </div>
-  </form>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

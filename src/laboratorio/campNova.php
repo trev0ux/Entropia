@@ -10,7 +10,7 @@
     <?php 
         if ($_SESSION['tipo'] == 1) {
             include 'menuSuper.php';
-        }else {
+       	}else {
             include 'menu.php';
         }
     ?>
@@ -21,8 +21,8 @@
     		<div class="col-sm-6">
     			<form method="post" action="">
     				<p>
-    					<label for="titulo" class="sr-only">Título</label>
-    					<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo da Campanha" required>
+    					<label for="tema" class="sr-only">Tema</label>
+    					<input type="text" class="form-control" id="tema" name="tema" placeholder="Tema da Campanha" required>
     				</p>
     				<p>
     					<label for="descricao" class="sr-only">Descrição</label>

@@ -21,7 +21,7 @@ if (mysqli_num_rows($consulta) == 1){
  		$_SESSION['senha'] = $senha;
  		$_SESSION['tipo'] = $tipo;
 
- 		header('location:home.php');
+ 		header('location:preloader.html');
  		
  	}
  }else{

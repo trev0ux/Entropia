@@ -88,24 +88,24 @@ INSERT INTO `cadastro` (`id_cadastro`, `nome`, `sobrenome`, `data_nasc`, `n_matr
 
 CREATE TABLE `campanha` (
   `id_campanha` int(11) NOT NULL,
-  `titulo` varchar(45) NOT NULL,
-  `campanha` mediumtext NOT NULL,
-  `tema` mediumtext NOT NULL,
+  `tema` varchar(45) NOT NULL,
   `descricao` mediumtext NOT NULL,
-  `beneficio` mediumtext NOT NULL,
-  `anexo` mediumblob,
+  `objetivo` mediumtext NOT NULL,
+  `regra` mediumtext NOT NULL,
+  `premio` varchar(45) NOT NULL,
   `foto_camp` mediumblob,
   `id_usuariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET = UTF8 COLLATE = utf8_general_ci;
 
+SELECT foto_camp FROM campanha ORDER BY id_campanha ASC;
 --
 -- Extraindo dados da tabela `campanha`
 --
 
-INSERT INTO `campanha` (`id_campanha`, `titulo`, `campanha`, `tema`, `descricao`, `beneficio`, `anexo`, `foto_camp`, `id_usuariofk`) VALUES
-(1, 'Inovacoes tecnologicas', '', '', 'Criar rôbos', 'Agilizar processos', NULL, NULL, NULL),
-(2, 'Consumo Consciente', '', '', 'Reduzir consumo de energia', 'Agilizar processos', NULL, NULL, NULL),
-(3, 'Desmatamento', '', '', 'Aumentar ganho sustentavel', 'Agilizar processos', NULL, NULL, NULL);
+INSERT INTO `campanha` VALUES
+(1, 'Inovacoes tecnologicas', 'Criar rôbos', 'Agilizar processos', '', 'geladeira', NULL, NULL),
+(2, 'Consumo Consciente', 'Reduzir consumo de energia', 'Agilizar processos', '', 'fogao', NULL, NULL),
+(3, 'Desmatamento', 'Aumentar ganho sustentavel', 'Agilizar processos', '', '100 pontos', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -124,6 +124,8 @@ INSERT INTO `ideiaCamp` VALUES
 (2,'parceria com ecoluz','aumenta capacidade de testes','ganho financeiro',NULL,2,NULL),
 (3,'casas sensiveis','aumenta capacidade de testes','ganho financeiro',NULL,1,NULL);
 
+
+SELECT ideiaCamp.titulo, ideiaCamp.descricao, ideiaCamp.beneficio FROM campanha JOIN ideiaCamp ON ideiaCamp.id_campanhafk=campanha.id_campanha WHERE ideiaCamp.id_ideiaCamp=1;
 --
 -- Estrutura da tabela `feed`
 --

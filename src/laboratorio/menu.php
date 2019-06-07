@@ -33,7 +33,7 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i>
 							<?php 
-								echo $_SESSION['login'];
+								//echo $_SESSION['login'];
 							?></a>
 						<div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
 							<a class="dropdown-item" href="perfil.php">Meu Perfil</a>
@@ -41,7 +41,7 @@
 							<a class="dropdown-item" href="logout.php">       
                                 Desconectar de @
                                 <?php 
-                                echo $_SESSION['login'];
+                               // echo $_SESSION['login'];
                                 ?>
                             </a>
 						</div>
