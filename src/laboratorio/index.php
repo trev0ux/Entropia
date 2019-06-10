@@ -104,7 +104,7 @@
                 <i class="fas fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid rounded mx-auto d-block" src="img/avatares/cesar.png">
+            <img class="img-fluid rounded mx-auto d-block" src="img/avatares/Cesar.png">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -114,7 +114,7 @@
                 <i class="fas fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid rounded mx-auto d-block" src="img/avatares/james.png">
+            <img class="img-fluid rounded mx-auto d-block" src="img/avatares/James.png">
           </a>
         </div>
       </div>
@@ -284,7 +284,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">César</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/avatares/cesar-mini.png" class="rounded mx-auto d-block">
+                <img class="img-fluid mb-5" src="img/avatares/Cesar-mini.png" class="rounded mx-auto d-block">
                 <p class="mb-5">Esse é César, o personagem do Entropia. Suas características mais marcantes são: flexibilidade, organização e multideterminação e também destaca-se por ser pró-ativo. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!
                 </p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
@@ -307,7 +307,7 @@
               <div class="col-lg-8 mx-auto">
                 <h2 class="text-secondary text-uppercase mb-0">James</h2>
                 <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/avatares/james.png">
+                <img class="img-fluid mb-5" src="img/avatares/James.png">
                 <p class="mb-5">Esse é James, o personagem do Entropia. Suas características mais marcantes são: adaptação, criatividade, paciência e trabalho em equipe. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
