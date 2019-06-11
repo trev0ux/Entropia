@@ -151,7 +151,7 @@
             <h4 class="text-uppercase mb-4">Ta na rede</h4>
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="https://www.facebook.com/entropia.inovacoes/?modal=admin_todo_tour">
                   <i class="fab fa-fw fa-facebook-f"></i>
                 </a>
               </li>

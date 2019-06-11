@@ -26,6 +26,7 @@ DELIMITER $$
 --
 -- Procedures
 --
+DROP PROCEDURE IF EXISTS `Aquisição_de_prêmios`;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Aquisição_de_prêmios` (INOUT `qtde_pontos` INT, INOUT `qtde_pontos_premios` INT)  BEGIN
     SET qtde_pontos= qtde_pontos - qtde_pontos_premios; 
 END$$
