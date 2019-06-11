@@ -156,12 +156,12 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="https://twitter.com/InovaEntropia">
                   <i class="fab fa-fw fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="https://www.instagram.com/entropia.inovacao/">
                   <i class="fab fa-fw fa-instagram"></i>
                 </a>
               </li>
