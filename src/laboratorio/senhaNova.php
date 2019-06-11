@@ -12,7 +12,7 @@
     <script src="js/login.js"></script>
     <script src="_js/jquery.validate.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-    <title>entropia - Alterar Senha</title>
+    <title>Entropia - Alterar Senha</title>
 </head>
 <body>
     

@@ -1,11 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 4.8.5
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: 10-Jun-2019 às 21:54
--- Versão do servidor: 10.1.38-MariaDB
--- versão do PHP: 7.3.4
+create database entropia;
+use entropia;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -26,7 +20,6 @@ DELIMITER $$
 --
 -- Procedures
 --
-DROP PROCEDURE IF EXISTS `Aquisição_de_prêmios`;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Aquisição_de_prêmios` (INOUT `qtde_pontos` INT, INOUT `qtde_pontos_premios` INT)  BEGIN
     SET qtde_pontos= qtde_pontos - qtde_pontos_premios; 
 END$$
@@ -71,22 +64,21 @@ CREATE TABLE `cadastro` (
   `n_matricula` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `usuario` varchar(45) NOT NULL,
-  `tipo` int(11) NOT NULL,
   `senha` varchar(12) NOT NULL,
   `id_setorfk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `cadastro`
 --
 
-INSERT INTO `cadastro` (`id_cadastro`, `nome`, `sobrenome`, `data_nasc`, `n_matricula`, `email`, `usuario`, `tipo`, `senha`, `id_setorfk`) VALUES
-(1, 'Carlito', 'Pinho', '1998-04-07', '123456', 'carl123@gmail.com', 'prole12', 0, '123456', NULL),
-(2, 'Thaigo', 'Benjamin', '2010-11-03', '34234324', 'binho.bfb@gmail.com', 'benjamin', 1, '123456', NULL),
-(3, 'Dilton', 'Costa', '2019-04-03', '5663454543543', 'dilton@gmail.com', 'dilton', 0, '123456', NULL),
-(4, 'Andreza', 'Vitório', '2019-04-10', '56435435435', 'dezavitorio@gmail.com', 'andreza', 1, '123456', NULL),
-(6, 'Andre', 'Gumacoisa', '2019-04-24', '56435435435', 'andre@gmail.com', 'andre', 0, '123456', NULL),
-(7, 'Ruan', 'Felipe', '2019-04-20', '56435435435', 'ruan@gmail.com', 'ruan', 0, '123456', NULL);
+INSERT INTO `cadastro` (`id_cadastro`, `nome`, `sobrenome`, `data_nasc`, `n_matricula`, `email`, `usuario`, `senha`, `id_setorfk`) VALUES
+(1, 'Carlito', 'Pinho', '1998-04-07', '123456', 'carl123@gmail.com', 'prole12', '123456', NULL),
+(2, 'Thaigo', 'Benjamin', '2010-11-03', '34234324', 'binho.bfb@gmail.com', 'benjamin', '123456', NULL),
+(3, 'Dilton', 'Costa', '2019-04-03', '5663454543543', 'dilton@gmail.com', 'dilton', '123456', NULL),
+(4, 'Andreza', 'Vitório', '2019-04-10', '56435435435', 'dezavitorio@gmail.com', 'andreza', '123456', NULL),
+(6, 'Andre', 'Gumacoisa', '2019-04-24', '56435435435', 'andre@gmail.com', 'andre', '123456', NULL),
+(7, 'Ruan', 'Felipe', '2019-04-20', '56435435435', 'ruan@gmail.com', 'ruan', '123456', NULL);
 
 -- --------------------------------------------------------
 
@@ -96,23 +88,22 @@ INSERT INTO `cadastro` (`id_cadastro`, `nome`, `sobrenome`, `data_nasc`, `n_matr
 
 CREATE TABLE `campanha` (
   `id_campanha` int(11) NOT NULL,
-  `tema` varchar(45) NOT NULL,
+  `titulo` varchar(45) NOT NULL,
+  `campanha` mediumtext NOT NULL,
+  `tema` mediumtext NOT NULL,
   `descricao` mediumtext NOT NULL,
-  `objetivo` mediumtext NOT NULL,
-  `regra` mediumtext NOT NULL,
-  `premio` varchar(45) NOT NULL,
-  `foto_camp` varchar(220) DEFAULT NULL,
+  `beneficio` mediumtext NOT NULL,
+  `anexo` mediumblob,
+  `foto_camp` mediumblob,
   `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `campanha`
 --
 
-INSERT INTO `campanha` (`id_campanha`, `tema`, `descricao`, `objetivo`, `regra`, `premio`, `foto_camp`, `id_usuariofk`) VALUES
-(1, 'Inovacoes tecnologicas', 'Criar rôbos', 'Agilizar processos', '', 'geladeira', 'campanha2.png', NULL),
-(2, 'Consumo Consciente', 'Reduzir consumo de energia', 'Agilizar processos', '', 'fogao', 'campanha3.jpg', NULL),
-(3, 'Desmatamento', 'Aumentar ganho sustentavel', 'Agilizar processos', '', '100 pontos', 'campanha4.png', NULL);
+INSERT INTO `campanha` (`id_campanha`, `titulo`, `campanha`, `tema`, `descricao`, `beneficio`, `anexo`, `foto_camp`, `id_usuariofk`) VALUES
+(1, 'Inovações tecnológicas', '', '', 'Criar rôbos', 'Agilizar processos', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -123,21 +114,10 @@ INSERT INTO `campanha` (`id_campanha`, `tema`, `descricao`, `objetivo`, `regra`,
 CREATE TABLE `feed` (
   `id_feed` int(11) NOT NULL,
   `comentario` mediumtext NOT NULL,
-  `comentario_data` datetime DEFAULT NULL
+  `comentario_hora` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `feed`
---
 
-INSERT INTO `feed` (`id_feed`, `comentario`, `comentario_data`) VALUES
-(1, 'KKKKKK', '2019-04-07 00:00:00');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `ideia`
---
 
 CREATE TABLE `ideia` (
   `id_ideia` int(11) NOT NULL,
@@ -147,51 +127,15 @@ CREATE TABLE `ideia` (
   `beneficio` mediumtext NOT NULL,
   `participante` varchar(45) DEFAULT NULL,
   `anexo` mediumblob,
+  `hora` time NOT NULL,
+  `data` date NOT NULL,
   `id_feedfk` int(11) DEFAULT NULL,
   `id_rankingfk` int(11) DEFAULT NULL,
   `id_validacaofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `ideia`
---
 
-INSERT INTO `ideia` (`id_ideia`, `qtde_reacoes_ideias`, `titulo`, `descricao`, `beneficio`, `participante`, `anexo`, `id_feedfk`, `id_rankingfk`, `id_validacaofk`) VALUES
-(1, NULL, 'Economizar água', 'Trazer garrafinha', 'Menos dinheiro', ' ', NULL, NULL, NULL, NULL),
-(2, NULL, 'Som de fundo', 'TOPDEMAIS', 'Bem-estar ao chegar no local criando uma boa ancora', '@dilton, @andreza', '', NULL, NULL, NULL),
-(25, NULL, 'dasd', 'dasdas', 'dasdas', 'saddsa', '', NULL, NULL, NULL),
-(26, NULL, 'tete', 'tete', 'tet', 'tetaedawa', '', NULL, NULL, NULL);
 
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `ideiacamp`
---
-
-CREATE TABLE `ideiacamp` (
-  `id_ideiaCamp` int(11) NOT NULL,
-  `titulo` varchar(45) NOT NULL,
-  `descricao` mediumtext NOT NULL,
-  `beneficio` mediumtext NOT NULL,
-  `anexo` mediumblob,
-  `id_campanhafk` int(11) DEFAULT NULL,
-  `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `ideiacamp`
---
-
-INSERT INTO `ideiacamp` (`id_ideiaCamp`, `titulo`, `descricao`, `beneficio`, `anexo`, `id_campanhafk`, `id_usuariofk`) VALUES
-(1, 'realidade aumentada', 'aumenta capacidade de testes', 'ganho financeiro', NULL, 1, NULL),
-(2, 'parceria com ecoluz', 'aumenta capacidade de testes', 'ganho financeiro', NULL, 2, NULL),
-(3, 'casas sensiveis', 'aumenta capacidade de testes', 'ganho financeiro', NULL, 1, NULL);
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `medalhas`
---
 
 CREATE TABLE `medalhas` (
   `id_medalha` int(11) NOT NULL,
@@ -200,7 +144,7 @@ CREATE TABLE `medalhas` (
   `id_ideiafk` int(11) DEFAULT NULL,
   `id_sugestoesfk` int(11) DEFAULT NULL,
   `id_feedfk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `medalhas`
@@ -223,7 +167,7 @@ CREATE TABLE `metodologia` (
   `objetivo` mediumtext NOT NULL,
   `anexo` mediumblob,
   `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `metodologia`
@@ -245,7 +189,7 @@ CREATE TABLE `pontos` (
   `id_sugestoesfk` int(11) DEFAULT NULL,
   `id_premiofk` int(11) DEFAULT NULL,
   `id_feedfk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `pontos`
@@ -264,7 +208,7 @@ CREATE TABLE `pontos_medalhas` (
   `id_pontos_medalhas` int(11) NOT NULL,
   `id_pontosfk` int(11) DEFAULT NULL,
   `id_medalhasfk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `pontos_medalhas`
@@ -285,7 +229,7 @@ CREATE TABLE `premios` (
   `Descricao` mediumtext,
   `qtde_pontos_premios` int(11) NOT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `premios`
@@ -307,7 +251,7 @@ CREATE TABLE `publicações` (
   `qtde_reacoes` int(11) DEFAULT NULL,
   `id_feedfk` int(11) DEFAULT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `publicações`
@@ -326,7 +270,7 @@ CREATE TABLE `ranking` (
   `id_ranking` int(11) NOT NULL,
   `Posicoes_pub` varchar(300) DEFAULT NULL,
   `Posicoes_prod` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `ranking`
@@ -346,7 +290,7 @@ CREATE TABLE `setor` (
   `Setor` varchar(45) NOT NULL,
   `Cargo` varchar(45) NOT NULL,
   `Resp_tecnico` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `setor`
@@ -368,7 +312,7 @@ CREATE TABLE `sugestoes` (
   `tipo` mediumtext NOT NULL,
   `anexo` mediumblob,
   `id_usuariofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `sugestoes`
@@ -388,7 +332,7 @@ CREATE TABLE `usuario` (
   `tipo_usuario` tinyint(1) DEFAULT NULL,
   `id_feedfk` int(11) DEFAULT NULL,
   `id_cadastrofk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuario`
@@ -407,7 +351,7 @@ CREATE TABLE `validacao` (
   `id_validacao` int(11) NOT NULL,
   `ajustes` mediumtext,
   `status_ideia` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `validacao`
@@ -461,14 +405,6 @@ ALTER TABLE `ideia`
   ADD KEY `id_validacaofk` (`id_validacaofk`),
   ADD KEY `id_rankingfk` (`id_rankingfk`),
   ADD KEY `id_feedfk` (`id_feedfk`);
-
---
--- Indexes for table `ideiacamp`
---
-ALTER TABLE `ideiacamp`
-  ADD PRIMARY KEY (`id_ideiaCamp`),
-  ADD UNIQUE KEY `id_ideiaCamp` (`id_ideiaCamp`),
-  ADD KEY `id_campanhafk` (`id_campanhafk`);
 
 --
 -- Indexes for table `medalhas`
@@ -688,12 +624,6 @@ ALTER TABLE `ideia`
   ADD CONSTRAINT `ideia_ibfk_3` FOREIGN KEY (`id_feedfk`) REFERENCES `feed` (`id_feed`);
 
 --
--- Limitadores para a tabela `ideiacamp`
---
-ALTER TABLE `ideiacamp`
-  ADD CONSTRAINT `ideiaCamp_ibfk_1` FOREIGN KEY (`id_campanhafk`) REFERENCES `campanha` (`id_campanha`);
-
---
 -- Limitadores para a tabela `medalhas`
 --
 ALTER TABLE `medalhas`
@@ -753,3 +683,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+

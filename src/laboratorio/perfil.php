@@ -6,7 +6,7 @@
         <style>
 			#tabela td{font-size: 15px;}
 		</style>
-        <title>entropia</title>
+        <title>Entropia</title>
 		<?php
 			session_start();
 			if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {

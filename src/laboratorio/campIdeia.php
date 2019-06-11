@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/padrao.css">
 	<script type="text/javascript" src="js/campanha.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
-    <title>entropia</title>
+    <title>Entropia</title>
         <?php
 			session_start();
 			if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {

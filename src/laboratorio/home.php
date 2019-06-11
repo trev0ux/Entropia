@@ -28,7 +28,7 @@
 			}         
 		}
 	</script>
-	<title>entropia</title>
+	<title>Entropia</title>
 
 </head>
 <body>
@@ -184,6 +184,18 @@
 
 					<!-- Post -->
 
+						<?php
+						
+						$conexao = mysqli_connect('localhost', 'root', '', 'entropia');
+						$sql =  "SELECT * FROM ideia ORDER BY id_ideia DESC";
+						$resultado = mysqli_query($conexao, $sql);
+							
+
+						while ($registro = mysqli_fetch_array($resultado)) {
+
+
+							?>
+
 					<div class="card gedf-card">
 						<div class="card-header">
 							<div class="d-flex justify-content-between align-items-center">
@@ -207,7 +219,7 @@
 						</div>
 
 						<div class="card-body">
-							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>Postado ás <?php echo $hora = $registro['hora'];?> de <?php echo $data = $registro['data']; ?></div>
+							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> Postado ás <?php echo $hora = $registro['hora'];?> do <?php echo date("d/m/Y",strtotime($data = $registro['data'])); ?></div>
 							<h5 class="card-title"><?php echo $titulo = $registro['titulo']; ?></h5>
 							<p class="card-text">
 								<?php echo $descricao = $registro['descricao']; ?>
@@ -219,14 +231,14 @@
 						</div>
 						
 						<div class="hidden" id="a">
-							<form class="search" method="post" action="">
-								<input type="text" class="form-control" placeholder="Escreva seu comentário...">
+							<form class="search" method="post" action="addfeed.php">
+									<input type="text" class="form-control" id="comentario" name="comentario" placeholder="Escreva seu comentário..." required>
 								<input id="comentar" type="submit" value="Comentar" class="btn btn-primary btn-sm">
 							</form>
 						</div>
 						
 					</div>
-					<?php ?>
+					<?php }?>
 					<!-- /Post -->
 
 					<!-- Post -->

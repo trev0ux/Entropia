@@ -17,7 +17,7 @@
   <link href="css/index.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/login.css">
   <link rel="shortcut icon" href="img/logo/logo1.png" type="image/x-icon">
-  <title>entropia</title>
+  <title>Entropia</title>
 </head>
 
 <body id="page-top">
