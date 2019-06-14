@@ -29,28 +29,33 @@
     	<img src="../public/img/titulo/sugestao.jpg" class="rounded mx-auto d-block">
     	<div class="row justify-content-center">
     		<div class="col-sm-6">
-    			<form method="post" action="ouvidoria.php">
+    			<form method="post" action="../controller/controller.ouvidoria.php">
 					<p>
 						Assunto
-						<select name="assunto-sug" class="form-control" id="assunto">
-							<option>Sobre o que deseja falar hoje?</option>
-							<option>Sugestão</option>
-							<option>Reclamação</option>
-							<option>Crítica</option>
-							<option>Elogio</option>
-							<option>Solicitação</option>
-							<option>Denúncia</option>
+						<select name="assunto" class="form-control" id="assunto">
+							<option value="0">Sobre o que deseja falar hoje?</option>
+							<option value="Sugestão">Sugestão</option>
+							<option value="reclamação">Reclamação</option>
+							<option value="crítica">Crítica</option>
+							<option value="elogio">Elogio</option>
+							<option value="solicitação">Solicitação</option>
+							<option value="denúncia">Denúncia</option>
 						</select>
 					</p>
 					<p>
 						Setor
-						<select name="setor-sug" class="form-control" id="setor-sug">
-							<option>Selecione para qual setor será a mensagem</option>
-							<option>Administrativo</option>
-							<option>Financeiro</option>
-							<option>Recursos Humanos</option>
-							<option>Comercial</option>
-							<option>Operacional</option>
+						<select name="setor" class="form-control" id="setor-sug">
+							<option value="0">Selecione para qual setor será a mensagem</option>
+							<?php
+								$sql = "SELECT * FROM setor";
+								$resultado = mysqli_query($conn, $sql);
+
+								while ($row = mysqli_fetch_assoc($resultado)) {
+									$id = $row['id_setor'];
+									$titulo = utf8_encode($row['nome']);
+									echo '<option value="'.$id.'">'.$titulo.'</option>';
+								}
+							?>
 						</select>
 					</p>
 					<p>
@@ -59,7 +64,7 @@
 					</p>
 					<p id="arquivo">
 						Adicionar arquivo em anexo
-						<input type="file" id="saida-anexo" name="anexo-projeto" class="form-control-file">
+						<input type="file" id="saida-anexo" name="anexo" class="form-control-file">
 					</p>
 					<div id="enviar">
 						<a name="cancelar" href="home.php" class="btn btn-primary">Cancelar</a>
@@ -69,35 +74,5 @@
     		</div>
     	</div>
     </div>
-         
-    <?php
-		if ($_POST) {
-			include './classes/Conexao.class.php';
-			include './classes/DAO/sugestaoDAO.class.php';
-			include './classes/entidades/sugestao.class.php';
-
-			$sugestaoDAO = new sugestaoDAO();
-			$sugestao = new sugestao();
-
-			$assunto = $_POST['assunto-sug'];
-			$mensagem = $_POST['mensagem'];
-			$setor = $_POST['setor-sug'];
-
-			$sugestao->setAssunto($assunto);
-			$sugestao->setMensagem($mensagem);
-			$sugestao->setSetor($setor);
-
-			$resultado = $sugestaoDAO->inserir($sugestao);
-
-			if ($resultado == TRUE) {
-				echo 'A sugestão ' . $assunto . ' foi inserido com sucesso';
-				return;
-			} else {
-				echo 'A sugestão ' . $assunto . ' não foi inserido';
-				return;
-			}
-		}
-	?>
-	
 </body>
 </html>
