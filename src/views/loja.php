@@ -3,6 +3,7 @@
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="../public/img/logo/logo1.png">
     <?php
+		include_once("../conexao/conexao.php");
         session_start();
         if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
         	unset($_SESSION['login']);
@@ -20,83 +21,26 @@
         }else {
             include 'menu.php';
         }
+	
+		$sql = "SELECT * FROM premios";
+		$resultado = mysqli_query($conn, $sql);
+
+		while ($row = mysqli_fetch_array($resultado)) {
+			$nome = utf8_encode($row['Nome']);
+			$pontos = $row['qtde_pontos_premios'];
+			$premio = $row['fotoPremio'];
     ?>
 
-<center>
-    <div class="card-deck">
-        <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="../public/img/logo/logo1.1.png" alt="Card image cap">
+    <div class="card-deck" style="width: 18rem;">
+        <div class="card text-center">
+            <img class="card-img-top" src="../upload/<?php echo $premio?>">
             <div class="card-body">
-                <h5 class="card-title">Produto 1</h5>
-                <p class="card-text">100 pontos</p>
-                <a href="#" class="btn btn-primary">Trocar</a>
+                <h5 class="card-title"><?php echo $nome?></h5>
+                <p class="card-text"><?php echo $pontos?></p>
+                <input type="submit" value="Trocar" class="btn btn-primary">
             </div>
-        </div>
-
-        <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="../public/img/game.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Produto 2</h5>
-                <p class="card-text">100 pontos</p>
-                <a href="#" class="btn btn-primary">Trocar</a>
-            </div>
-        </div>
-
-        <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="../public/img/logo/logo1.1.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Produto 3</h5>
-                <p class="card-text">100 pontos</p>
-                <a href="#" class="btn btn-primary">Trocar</a>
-            </div>
-        </div>
-
-        <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="../public/img/game.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Produto 4</h5>
-                <p class="card-text">100 pontos</p>
-                <a href="#" class="btn btn-primary">Trocar</a>
-            </div>
-        </div>
+		</div>
     </div>
-    <br>
-    <div class="card-deck">
-        <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="../public/img/logo/logo1.1.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Produto 5</h5>
-                <p class="card-text">100 pontos</p>
-                <a href="#" class="btn btn-primary">Trocar</a>
-            </div>
-        </div>
-
-        <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="../public/img/game.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Produto 6</h5>
-                <p class="card-text">100 pontos</p>
-                <a href="#" class="btn btn-primary">Trocar</a>
-            </div>
-        </div>
-
-        <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="../public/img/logo/logo1.1.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Produto 7</h5>
-                <p class="card-text">100 pontos</p>
-                <a href="#" class="btn btn-primary">Trocar</a>
-            </div>
-        </div>
-        <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="../public/img/game.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Produto 8</h5>
-                <p class="card-text">100 pontos</p>
-                <a href="#" class="btn btn-primary">Trocar</a>
-            </div>
-        </div>
-    </div>
-</center>
+<?php }?>
 </body>
 </html>

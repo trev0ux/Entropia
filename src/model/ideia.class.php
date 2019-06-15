@@ -48,7 +48,7 @@
 			$sql = "INSERT INTO ideia (titulo, descricao, beneficio, participante, anexo, hora, data) VALUES('$this->titulo', '$this->descricao', '$this->beneficio', '$this->participante', '$this->anexo', '$this->hora', '$this->data')";
 	        
 			if (mysqli_query($conn, $sql)) {
-				echo "";
+				header('location:../views/ideia.php');
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 			}

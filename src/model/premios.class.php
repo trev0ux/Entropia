@@ -1,49 +1,48 @@
 <?php
 
-class Premios{
-
+class Premios {
+	private $id;
     private $nome;
     private $pontos;
     private $premioFoto;
-
-
-    public function getNome()
-    {
+	
+	function __construct() {
+		$this->id++;
+	}
+	
+    public function getNome() {
         return $this->nome;
     }
-
- 
-    public function setNome($nome)
-    {
+    function setNome($nome){
         $this->nome = $nome;
-
-        return $this;
     }
 
-    public function getPontos()
-    {
+    function getPontos() {
         return $this->pontos;
     }
-
- 
-    public function setPontos($pontos)
-    {
+    function setPontos($pontos) {
         $this->pontos = $pontos;
-
-        return $this;
     }
 
  
-    public function getPremioFoto()
-    {
+    function getPremioFoto() {
         return $this->premioFoto;
     }
-
-
-    public function setPremioFoto($premioFoto)
-    {
+    function setPremioFoto($premioFoto) {
         $this->premioFoto = $premioFoto;
-
-        return $this;
     }
+	
+	function Cadastrar() {
+		include_once("../conexao/conexao.php");
+			
+			$sql = "INSERT INTO premios VALUES($this->id,'$this->nome', $this->pontos, '$this->premioFoto', null)";
+	        
+			if (mysqli_query($conn, $sql)) {
+				header('location:../views/premios.php');
+			} else {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			}
+
+	        mysqli_close($conn);
+	}
 }

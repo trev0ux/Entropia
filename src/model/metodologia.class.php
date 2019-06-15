@@ -2,76 +2,63 @@
 
 
 class Metodologia {
-
+	private $id;
     private $titulo;
-    private $definição;
+    private $definicao;
     private $descricao;
     private $objetivo;
     private $anexo;
 
+	function __construct() {
+		$this->id++;
+	}
 
-    public function getTitulo()
-    {
+    function getTitulo() {
         return $this->titulo;
     }
-
-    public function setTitulo($titulo)
-    {
+    function setTitulo($titulo) {
         $this->titulo = $titulo;
-
-        return $this;
     }
 
-    public function getDefinição()
-    {
+    function getDefinicao() {
         return $this->definição;
+	}
+    function setDefinicao($definicao) {
+        $this->definicao = $definicao;
     }
 
-    public function setDefinição($definição)
-    {
-        $this->definição = $definição;
-
-        return $this;
-    }
-
-    public function getDescricao()
-    {
+    function getDescricao() {
         return $this->descricao;
     }
-
-
-    public function setDescricao($descricao)
-    {
+    function setDescricao($descricao) {
         $this->descricao = $descricao;
-
-        return $this;
     }
 
-
-    public function getObjetivo()
-    {
+    function getObjetivo() {
         return $this->objetivo;
     }
-
- 
-    public function setObjetivo($objetivo)
-    {
+    function setObjetivo($objetivo) {
         $this->objetivo = $objetivo;
-
-        return $this;
     }
 
-
-    public function getAnexo()
-    {
+    function getAnexo() {
         return $this->anexo;
     }
-
-
-    public function setAnexo($anexo)
-    {
+    function setAnexo($anexo) {
         $this->anexo = $anexo;
-
-        return $this;
     }
+	
+	function Cadastrar() {
+		include_once("../conexao/conexao.php");
+		
+		$sql = "INSERT INTO metodologia VALUES('$this->id','$this->titulo','$this->definicao','$this->descricao','$this->objetivo','$this->anexo',NULL)";
+	        
+		if (mysqli_query($conn, $sql)) {
+			header('location:../views/metodologiaNova.php');
+		} else {
+			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+		}
+
+	    mysqli_close($conn);
+	}
 } 

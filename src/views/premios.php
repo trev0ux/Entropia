@@ -39,7 +39,7 @@
 		<center>
 			<div class="principal">	
 				<img src="../public/img/titulo/premio.jpg" class="rounded mx-auto d-block" id="foto">
-				<form method="post" action="" enctype="multipart/form-data">
+				<form method="post" action="../controller/controller.premio.php" enctype="multipart/form-data">
 					<p>
 						<label for="nome" class="sr-only">Nome</label>
 						<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>

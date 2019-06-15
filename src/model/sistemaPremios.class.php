@@ -5,27 +5,19 @@ class sistemaPremios {
     private $medalhas;
 
 
-    public function getPontos()
-    {
+    public function getPontos() {
         return $this->pontos;
     }
 
-    public function setPontos($pontos)
-    {
+    public function setPontos($pontos) {
         $this->pontos = $pontos;
-
-        return $this;
     }
 
-    public function getMedalhas()
-    {
+    public function getMedalhas() {
         return $this->medalhas;
     }
 
-    public function setMedalhas($medalhas)
-    {
+    public function setMedalhas($medalhas) {
         $this->medalhas = $medalhas;
-
-        return $this;
     }
 }

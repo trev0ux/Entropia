@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <?php 
-        # Para evitar a entrada no site sem login tlgd ------------0-
-        session_start();
-        if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
-        {
-            unset($_SESSION['login']);
-            unset($_SESSION['senha']);
-            header('location:index.php');
-        }
+        <?php
+			include_once("../conexao/conexao.php");
+			# Para evitar a entrada no site sem login tlgd ------------0-
+			session_start();
+			if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+			{
+				unset($_SESSION['login']);
+				unset($_SESSION['senha']);
+				header('location:index.php');
+			}
 
-        $logado = $_SESSION['login'];
-    ?>
+			$logado = $_SESSION['login'];
+		?>
         <link rel="stylesheet" type="text/css" href="../public/css/padrao.css">
         <link rel="shortcut icon" type="image/x-icon" href="../public/img/logo/logo1.png">
     </head>
@@ -60,9 +61,8 @@
 			        			
 			<!-- Modal -->
             <?php
-                $conexao = mysqli_connect('localhost', 'root', '', 'entropia');
                 $sql = "SELECT * FROM metodologia";
-                $resultado = mysqli_query($conexao, $sql);
+                $resultado = mysqli_query($conn, $sql);
 
                 while ($registro = mysqli_fetch_array($resultado)) {
                                                 
@@ -71,22 +71,22 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <h5 class="modal-title" id="exampleModalLabel"><?php echo $registro['titulo'];?></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <form>
                             <div class="modal-body">
-                                <h6>Definição</h6>
+                                <h6 class="font-weight-bold">Definição</h6>
                                     <p><?php echo $registro['definicao'];?></p>
-                                <h6>Descrição</h6>
+                                <h6 class="font-weight-bold">Descrição</h6>
                                     <p><?php echo $registro['descricao'];?></p>
-                                <h6>Objetivo</h6>
+                                <h6 class="font-weight-bold">Objetivo</h6>
                                     <p><?php echo $registro['objetivo'];?></p>
-                                <h6>Saiba Mais</h6>
+                                <h6 class="font-weight-bold">Saiba Mais</h6>
                                     <p>
-                                        [arquivo anexado para download] <br>
+                                        [arquivo para download] <br>
                                     </p>
                             </div>
                         </form>

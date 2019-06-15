@@ -7,7 +7,17 @@
 	$ideia->setDescricao($_POST["descricao"]);
 	$ideia->setBeneficio($_POST["beneficio"]);
 	$ideia->setParticipante($_POST["participante"]);
-	$ideia->setAnexo($_POST["anexo"]);
+	
+	if (isset($_FILES['anexo[]'])) {
+		$extensao = strtolower(substr($_FILES['anexo[]']['name'], -4));
+		$arquivo = md5(time()) . $extensao;
+		$diretorio = "../upload/";
+		
+		move_uploaded_file($_FILES['anexo[]']['tmp_name'], $diretorio.$arquivo);
+		
+		$ideia->setAnexo($arquivo);
+	}
+
 	$hora = $_POST['hora'];
  	$data = $_POST['data'];
 	

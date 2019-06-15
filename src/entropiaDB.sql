@@ -163,7 +163,13 @@ CREATE TABLE `ideiacamp` (
   `id_usuariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- Error reading data for table entropia.ideiacamp: #1064 - Você tem um erro de sintaxe no seu SQL próximo a 'FROM `entropia`.`ideiacamp`' na linha 1
-
+INSERT INTO ideiacamp VALUES 
+(1,'controle de água','diminuir o gasto de água na empresa', 'economia na conta de água', null, 2, null),
+(2,'reutilizar papel', 'imprimir folhas frente e verso','diminuir gastos com papel', null, 3, null),
+(3, 'cidades sensiveis', 'cidades que aumentam a participação do cidadão', 'aumentar o lucro', null, 1, null),
+(4, 'pareceira com empresas de energia','diminuir gastos com a energia da empresa', 'reenvestir na organização', null, 2, null),
+(5, 'realidade aumentada', 'facilitar a elaboração de novas pesquisas', 'lucro imediato para empresa', null, 1, null),
+(6, 'palestras de conscientização', 'promover debates e alavancar o conhecimmento dentro do ambiente de trabalho', 'agregar valor e conhecimento aos funcionários', null, 3, null);
 -- --------------------------------------------------------
 
 --

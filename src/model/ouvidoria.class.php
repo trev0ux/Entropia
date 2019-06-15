@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 	class Ouvidoria {
 		private $id;
 		private $assunto;

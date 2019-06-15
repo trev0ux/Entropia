@@ -1,87 +1,56 @@
 <?php
 
-class Campanha {
-
-private $tema;
-private $descricao;
-private $objetivo;
-private $regras;
-private $premios;
-private $foto_camp;
-        
+	class Campanha {
+		private $tema;
+		private $descricao;
+		private $objetivo;
+		private $regras;
+		private $premios;
+		private $imagem;
 
 
-public function getTema()
-{
-return $this->tema;
-}
 
-public function setTema($tema)
-{
-$this->tema = $tema;
-return $this;
-}
+		function getTema() {
+			return $this->tema;
+		}
+		function setTema($tema) {
+			$this->tema = $tema;
+		}
 
-public function getDescricao()
-{
-return $this->descricao;
-}
+		function getDescricao() {
+			return $this->descricao;
+		}
+		function setDescricao($descricao) {
+			$this->descricao = $descricao;
+		}
 
-public function setDescricao($descricao)
-{
-$this->descricao = $descricao;
-return $this;
-}
+		function getObjetivo() {
+			return $this->objetivo;
+		}
+		function setObjetivo($objetivo) {
+			$this->objetivo = $objetivo;
+		}
 
- 
-public function getObjetivo()
-{
-return $this->objetivo;
-}
+		function getRegras() {
+			return $this->regras;
+		}
+		function setRegras($regras) {
+			$this->regras = $regras;
+		}
 
-public function setObjetivo($objetivo)
-{
-$this->objetivo = $objetivo;
-return $this;
-}
+		function getPremios() {
+			return $this->premios;
+		}
+		function setPremios($premios) {
+			$this->premios = $premios;
+		}
 
+		function getImagem() {
+		return $this->imagem;
+		}
+		function setImagem($imagem) {
+			$this->imagem = $imagem;
+		}
 
-public function getRegras()
-{
-return $this->regras;
-}
+	}
 
-public function setRegras($regras)
-{
-$this->regras = $regras;
-return $this;
-}
-
-public function getPremios()
-{
-return $this->premios;
-}
-
-
-public function setPremios($premios)
-{
-$this->premios = $premios;
-return $this;
-}
-
-
-public function getFoto_camp()
-{
-return $this->foto_camp;
-}
-
-
-public function setFoto_camp($foto_camp)
-{
-$this->foto_camp = $foto_camp;
-return $this;
-}
-
-}
-
-              

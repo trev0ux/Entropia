@@ -7,41 +7,24 @@ class Feed {
     private $curtidas;
 
  
-    public function getPublicacao()
-    {
+    function getPublicacao() {
         return $this->publicacao;
     }
-
- 
-    public function setPublicacao($publicacao)
-    {
+    function setPublicacao($publicacao) {
         $this->publicacao = $publicacao;
-
-        return $this;
     }
 
- 
-    public function getComentarios()
-    {
+    function getComentarios() {
         return $this->comentarios;
     }
-
-    public function setComentarios($comentarios)
-    {
+    function setComentarios($comentarios) {
         $this->comentarios = $comentarios;
-
-        return $this;
     }
 
-    public function getCurtidas()
-    {
+    function getCurtidas() {
         return $this->curtidas;
     }
-
-    public function setCurtidas($curtidas)
-    {
+    function setCurtidas($curtidas) {
         $this->curtidas = $curtidas;
-
-        return $this;
     }
 }
