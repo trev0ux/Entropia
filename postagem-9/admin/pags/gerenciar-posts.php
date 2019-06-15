@@ -8,7 +8,7 @@
 		</tr>
 
 		<?php
-			$query = $con->prepare("SELECT * FROM publicações ORDER BY id_publicacoes DESC");
+			$query = $con->prepare("SELECT * FROM posts ORDER BY id DESC");
 			$query->execute();
 			$get = $query->get_result();
 			$total = $get->num_rows;

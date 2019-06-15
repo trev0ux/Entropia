@@ -1,7 +1,7 @@
 <?php
 	$idPost = addslashes($explode['1']);
 
-	$query = $con->prepare("DELETE FROM publicações WHERE id_publicacoes = ?");
+	$query = $con->prepare("DELETE FROM posts WHERE id = ?");
 	$query->bind_param("s", $idPost);
 	$query->execute();
 
