@@ -289,10 +289,14 @@ INSERT INTO `premios` (`id_premio`, `Nome`, `Descricao`, `qtde_pontos_premios`, 
 --
 
 CREATE TABLE `publicações` (
-  `id_publicacoes` int(11) NOT NULL,
-  `Publicacoes` mediumtext NOT NULL,
-  `Imagens` mediumblob,
-  `qtde_reacoes` int(11) DEFAULT NULL,
+
+  `id_publicacoes` int(11) not null,
+  `titulo` varchar(200),
+  `descricao` text(200),
+  `imagem` varchar(200),
+  `data` varchar (200),
+  `hora` varchar (200),
+  `postador` varchar (200),
   `id_feedfk` int(11) DEFAULT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -19,7 +19,6 @@ return $this->tema;
 public function setTema($tema)
 {
 $this->tema = $tema;
-return $this;
 }
 
 public function getDescricao()
@@ -30,7 +29,6 @@ return $this->descricao;
 public function setDescricao($descricao)
 {
 $this->descricao = $descricao;
-return $this;
 }
 
  
@@ -42,7 +40,6 @@ return $this->objetivo;
 public function setObjetivo($objetivo)
 {
 $this->objetivo = $objetivo;
-return $this;
 }
 
 
@@ -54,7 +51,6 @@ return $this->regras;
 public function setRegras($regras)
 {
 $this->regras = $regras;
-return $this;
 }
 
 public function getPremios()
@@ -66,7 +62,6 @@ return $this->premios;
 public function setPremios($premios)
 {
 $this->premios = $premios;
-return $this;
 }
 
 
@@ -79,7 +74,22 @@ return $this->foto_camp;
 public function setFoto_camp($foto_camp)
 {
 $this->foto_camp = $foto_camp;
-return $this;
+}
+
+function lançarCampanha (){
+    include_once("../conexao/conexao.php");
+			
+    $sql = "INSERT INTO campanha(tema, descricao, objetivo, regra, premio, foto_camp) VALUES('$this->tema', '$this->descricao', '$this->objetivo', '$this->regra', '$this->premio', '$this->foto_camp')";
+    
+    if (mysqli_query($conn, $sql)) {
+        echo "";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    mysqli_close($conn);
+
+
 }
 
 }

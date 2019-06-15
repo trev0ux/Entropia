@@ -7,7 +7,6 @@ class Validacao{
   private $avaliacao;
   private $respons_Tec;
   private $status;
-  private $validar;
 
 
  
