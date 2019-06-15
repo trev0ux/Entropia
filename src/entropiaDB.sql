@@ -1,3 +1,5 @@
+create database entropia;
+use entropia;
 -- phpMyAdmin SQL Dump
 -- version 4.8.2
 -- https://www.phpmyadmin.net/
@@ -307,15 +309,16 @@ INSERT INTO `premios` (`id_premio`, `Nome`, `qtde_pontos_premios`, `fotoPremio`,
 -- Estrutura da tabela `publicações`
 --
 
-CREATE TABLE `publicações` (
+CREATE TABLE `posts` (
 
-  `id_publicacoes` int(11) not null,
-  `titulo` varchar(200),
-  `descricao` text(200),
-  `imagem` varchar(200),
-  `data` varchar (200),
-  `hora` varchar (200),
-  `postador` varchar (200),
+  `id` int(20) NOT NULL,
+  `id_postador` int(20) NOT NULL,
+  `titulo` varchar(200) NOT NULL,
+  `data` varchar(200) NOT NULL,
+  `postagem` text NOT NULL,
+  `visitas` int(200) NOT NULL,
+  `imagem` varchar(200) NOT NULL,
+  `curtidas` int(200) NOT NULL,
   `id_feedfk` int(11) DEFAULT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -324,8 +327,8 @@ CREATE TABLE `publicações` (
 -- Extraindo dados da tabela `publicações`
 --
 
-INSERT INTO `publicações` (`id_publicacoes`, `Publicacoes`, `Imagens`, `qtde_reacoes`, `id_feedfk`, `id_usuariofk`) VALUES
-(1, 'Hoje tem festa na firma', NULL, 1, NULL, NULL);
+INSERT INTO posts (`id`, `id_postador`, `titulo`, `data`, `postagem`, `visitas`, `imagem`, `curtidas`, `id_feedfk`, `id_usuariofk`) VALUES
+(2, 1, 'FÃ³rum com PHP', '30/12/2018 22:46', 'dsadsad', 4, 'images/uploads/aemail.png', 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -515,11 +518,6 @@ ALTER TABLE `premios`
 --
 -- Indexes for table `publicações`
 --
-ALTER TABLE `publicações`
-  ADD PRIMARY KEY (`id_publicacoes`),
-  ADD UNIQUE KEY `id_publicacoes` (`id_publicacoes`),
-  ADD KEY `id_feedfk` (`id_feedfk`),
-  ADD KEY `id_usuariofk` (`id_usuariofk`);
 
 --
 -- Indexes for table `ranking`
@@ -536,6 +534,17 @@ ALTER TABLE `usuario`
   ADD UNIQUE KEY `id_usuario` (`id_usuario`);
 COMMIT;
 
+-- Indexes for table `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`id`);
+  
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
