@@ -37,10 +37,8 @@
 						$sql = "SELECT * FROM campanha";
 						$resultado = mysqli_query($conn, $sql);
 
-						while ($row_camp = mysqli_fetch_assoc($resultado)) {
-							$id_campanha = $row_camp['id_campanha'];
-							$titulo = utf8_encode($row_camp['titulo']);
-							echo '<option value="'.$id_campanha.'">'.$titulo.'</option>';
+						while ($row = mysqli_fetch_array($resultado)) {
+							echo '<option value="'.$row['id_campanha'].'">'.$row['tema'].'</option>';
 						}
 					?>
 				</select>
@@ -98,7 +96,7 @@
 					$.getJSON('../controller/coletar.php?search=',{id_campanha: $(this).val(), ajax: 'true'}, function(j){
 						var options = '<option value="0">Selecione um ideia para ser avaliada...</option>';	
 						for (var i = 0; i < j.length; i++) {
-							options += '<option value="' + j[i].id_ideiaCamp + '">' + j[i].titulo + '</option>';
+							options += '<option value="'+j[i].id_ideiaCamp+'">'+j[i].titulo+'</option>';
 						}	
 						$('#ideiaCamp').html(options).show();
 						$('.carregando').hide();

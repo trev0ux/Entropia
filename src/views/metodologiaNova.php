@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/padrao.css">
-        <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+       	<?php
+			include_once("../conexao/conexao.php");
+			# Para evitar a entrada no site sem login tlgd ------------0-
+			session_start();
+			if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+			{
+				unset($_SESSION['login']);
+				unset($_SESSION['senha']);
+				header('location:index.php');
+			}
+
+			$logado = $_SESSION['login'];
+		?>
+        <link rel="stylesheet" type="text/css" href="../public/css/padrao.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../public/img/logo/logo1.png">
     </head>
     <body>      
-        <?php include'menuSuper.php'?>
+        <?php 
+            if ($_SESSION['tipo'] == 1) {
+                include 'menuSuper.php';
+            }else {
+                include 'menu.php';
+            }
+        ?>
 		
         <div class="container" id="cor">
             <div class="row justify-content-center">
                 <div class="col-sm-6">
                     <h1 class="text-center">Nova Metodologia</h1>
-                        <form name="metodologia" action="metodologias.php" method="POST">
+                        <form action="../controller/controller.metodologia.php" method="POST" enctype="multipart/form-data">
                             <p>
                                 Título
                                 <input type="text" class="form-control" name="nome-metodo" required="required" placeholder="Nome da metodologia">
@@ -33,11 +52,9 @@
                                 <input type="file" name="anexo-metodo" class="form-control-file">
                             </p>
                     </section>
-                    </form>
-                    <div id="enviar">
-                        <a href="metodologiaSuper.php" class="btn btn-primary">Voltar</a>
+                    	<a href="metodologiaSuper.php" class="btn btn-primary">Voltar</a>
                         <input type="submit" value="Salvar" class="btn btn-primary">
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

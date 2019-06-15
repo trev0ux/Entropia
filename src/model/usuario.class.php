@@ -1,12 +1,18 @@
 <?php
 
+	include_once("../conexao/conexao.php");
+
 	class Usuario {
+		private $idCad;
 		private $nome;
 		private $sobrenome;
 		private $nascimento;
 		private $email;
 		private $usuario;
 		private $senha;
+		
+		private idUser;
+		private $tipo;
 		
 		function getNome() {
 			return $this->nome;
@@ -43,13 +49,6 @@
 			$this->usuario = $usuario;
 		}
 		
-		function getTipo() {
-			return $this->tipo;
-		}
-		function setAnexo($tipo) {
-			$this->tipo = $tipo;
-		}
-		
 		function getSenha() {
 			return $this->senha;
 		}
@@ -57,9 +56,19 @@
 			$this->senha = $senha;
 		}
 		
-		function logar() {
-			include_once("../conexao/conexao.php");
+		function Cadastrar() {
+			$cad = "INSERT INTO cadastro VALUES ('$this->idCad','$this->nome','$this->sobrenome','$this->nascimento','$this->email','$this->usuario','$this->senha')";
 			
+			$user = "INSERT INTO usuario VALUES ('$this->idUser','$this->tipo', null, '$this->idCad')";
+			
+			if (mysqli_query($conn, $cad, $user) == FALSE) {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			}
+
+	        mysqli_close($conn);
+		}
+		
+		function logar() {
 			$sql = "SELECT cadastro.usuario, cadastro.senha, usuario.tipo_usuario FROM cadastro JOIN usuario ON cadastro.id_cadastro=usuario.id_cadastrofk WHERE cadastro.usuario ='$this->usuario' AND cadastro.senha = '$this->senha'";
 
 			$consulta = mysqli_query($conn, $sql);

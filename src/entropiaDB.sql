@@ -1,11 +1,22 @@
-CREATE DATABASE entropia;
-USE entropia;
+-- phpMyAdmin SQL Dump
+-- version 4.8.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: 15-Jun-2019 às 06:32
+-- Versão do servidor: 10.1.34-MariaDB
+-- PHP Version: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `entropia`
@@ -65,8 +76,8 @@ CREATE TABLE `cadastro` (
 -- Extraindo dados da tabela `cadastro`
 --
 
-INSERT INTO `cadastro` VALUES
-(1, 'empresa', 'inovação', NULL, 'empresa@empresa', 'admin', 'admin'),
+INSERT INTO `cadastro` (`id_cadastro`, `nome`, `sobrenome`, `data_nasc`, `email`, `usuario`, `senha`) VALUES
+(1, 'empresa', 'inovação', '0000-00-00', 'empresa@empresa', 'admin', 'admin'),
 (2, 'Thaigo', 'Benjamin', '2010-11-03', 'binho.bfb@gmail.com', 'benjamin', '123456'),
 (3, 'Dilton', 'Costa', '2019-04-03', 'dilton@gmail.com', 'dilton', '123456'),
 (4, 'Andreza', 'Vitório', '2000-03-15', 'dezavitorio@gmail.com', 'andreza', '123456'),
@@ -89,15 +100,7 @@ CREATE TABLE `campanha` (
   `foto_camp` varchar(220) DEFAULT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `campanha`
---
-
-INSERT INTO `campanha` (`id_campanha`, `tema`, `descricao`, `objetivo`, `regra`, `premio`, `foto_camp`, `id_usuariofk`) VALUES
-(1, 'Inovacoes tecnologicas', 'Criar rôbos', 'Agilizar processos', '', 'geladeira', 'campanha2.png', NULL),
-(2, 'Consumo Consciente', 'Reduzir consumo de energia', 'Agilizar processos', '', 'fogao', 'campanha3.jpg', NULL),
-(3, 'Desmatamento', 'Aumentar ganho sustentavel', 'Agilizar processos', '', '100 pontos', 'campanha4.png', NULL);
+-- Error reading data for table entropia.campanha: #1064 - Você tem um erro de sintaxe no seu SQL próximo a 'FROM `entropia`.`campanha`' na linha 1
 
 -- --------------------------------------------------------
 
@@ -162,7 +165,18 @@ CREATE TABLE `ideiacamp` (
   `id_campanhafk` int(11) DEFAULT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
--- Error reading data for table entropia.ideiacamp: #1064 - Você tem um erro de sintaxe no seu SQL próximo a 'FROM `entropia`.`ideiacamp`' na linha 1
+
+--
+-- Extraindo dados da tabela `ideiacamp`
+--
+
+INSERT INTO `ideiacamp` (`id_ideiaCamp`, `titulo`, `descricao`, `beneficio`, `anexo`, `id_campanhafk`, `id_usuariofk`) VALUES
+(1, 'controle de água', 'diminuir o gasto de água na empresa', 'economia na conta de água', NULL, 2, NULL),
+(2, 'reutilizar papel', 'imprimir folhas frente e verso', 'diminuir gastos com papel', NULL, 3, NULL),
+(3, 'cidades sensiveis', 'cidades que aumentam a participação do cidadão', 'aumentar o lucro', NULL, 1, NULL),
+(4, 'pareceira com empresas de energia', 'diminuir gastos com a energia da empresa', 'reenvestir na organização', NULL, 2, NULL),
+(5, 'realidade aumentada', 'facilitar a elaboração de novas pesquisas', 'lucro imediato para empresa', NULL, 1, NULL),
+(6, 'palestras de conscientização', 'promover debates e alavancar o conhecimmento dentro do ambiente de trabalho', 'agregar valor e conhecimento aos funcionários', NULL, 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -178,7 +192,6 @@ CREATE TABLE `medalhas` (
   `id_ouvidoriafk` int(11) DEFAULT NULL,
   `id_feedfk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
--- Error reading data for table entropia.medalhas: #1064 - Você tem um erro de sintaxe no seu SQL próximo a 'FROM `entropia`.`medalhas`' na linha 1
 
 -- --------------------------------------------------------
 
@@ -192,10 +205,16 @@ CREATE TABLE `metodologia` (
   `definicao` mediumtext NOT NULL,
   `descricao` mediumtext NOT NULL,
   `objetivo` mediumtext NOT NULL,
-  `anexo` mediumblob,
+  `anexo` varchar(220) DEFAULT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
--- Error reading data for table entropia.metodologia: #1064 - Você tem um erro de sintaxe no seu SQL próximo a 'FROM `entropia`.`metodologia`' na linha 1
+
+--
+-- Extraindo dados da tabela `metodologia`
+--
+
+INSERT INTO `metodologia` (`id_metodologia`, `titulo`, `definicao`, `descricao`, `objetivo`, `anexo`, `id_usuariofk`) VALUES
+(1, 'Diagrama de Ishikawa', 'Ã‰ um grÃ¡fico cuja finalidade Ã© organizar o raciocÃ­nio em discussÃµes de um problema prioritÃ¡rio, em processos diversos, especialmente na produÃ§Ã£o industrial.', 'O Sistema permite estruturar hierarquicamente as causas potenciais de determinado problema ou oportunidade de melhoria, bem como seus efeitos sobre a qualidade dos produtos. Permite tambÃ©m estruturar qualquer sistema que necessite de resposta de forma grÃ¡fica e sintÃ©tica (isto Ã©, com melhor visualizaÃ§Ã£o). O Diagrama pode evoluir de uma estrutura hierÃ¡rquica para um diagrama de relaÃ§Ãµes, uma das sete ferramentas da qualidade desenvolvidas por Ishikawa, que apresentam uma estrutura mais complexa e nÃ£o hierÃ¡rquica.', 'NÃ£o hÃ¡ limites para a utilizaÃ§Ã£o do diagrama de Ishikawa. As empresas que preferem ir alÃ©m dos padrÃµes convencionais podem identificar e demonstrar em diagramas especÃ­ficos a origem de cada uma das causas do efeito, isto Ã©, as causas das causas do efeito. ', '770bd61498b2afa76ac15bddbc7c13c7', NULL);
 
 -- --------------------------------------------------------
 
@@ -270,8 +289,8 @@ INSERT INTO `pontos_medalhas` (`id_pontos_medalhas`, `id_pontosfk`, `id_medalhas
 CREATE TABLE `premios` (
   `id_premio` int(11) NOT NULL,
   `Nome` varchar(45) NOT NULL,
-  `Descricao` mediumtext,
   `qtde_pontos_premios` int(11) NOT NULL,
+  `fotoPremio` varchar(220) NOT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -279,8 +298,8 @@ CREATE TABLE `premios` (
 -- Extraindo dados da tabela `premios`
 --
 
-INSERT INTO `premios` (`id_premio`, `Nome`, `Descricao`, `qtde_pontos_premios`, `id_usuariofk`) VALUES
-(1, 'TV LCD 32\'\'', 'HD', 15000, NULL);
+INSERT INTO `premios` (`id_premio`, `Nome`, `qtde_pontos_premios`, `fotoPremio`, `id_usuariofk`) VALUES
+(1, 'TV LCD 51', 500, '6ee770d6e8de1df512a44b689b32b6d0.png', NULL);
 
 -- --------------------------------------------------------
 
@@ -366,14 +385,14 @@ CREATE TABLE `usuario` (
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` VALUES
+INSERT INTO `usuario` (`id_usuario`, `tipo_usuario`, `id_feedfk`, `id_cadastrofk`) VALUES
 (1, 1, NULL, 1),
-(1, 1, NULL, 2),
-(1, 0, NULL, 3),
-(1, 1, NULL, 4),
-(1, 0, NULL, 5),
-(1, 0, NULL, 6),
-(1, 0, NULL, 7);
+(2, 1, NULL, 2),
+(3, 0, NULL, 3),
+(4, 1, NULL, 4),
+(5, 0, NULL, 5),
+(6, 0, NULL, 6),
+(7, 0, NULL, 7);
 
 -- --------------------------------------------------------
 
@@ -508,6 +527,15 @@ ALTER TABLE `publicações`
 ALTER TABLE `ranking`
   ADD PRIMARY KEY (`id_ranking`),
   ADD UNIQUE KEY `id_ranking` (`id_ranking`);
+
+--
+-- Indexes for table `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD UNIQUE KEY `id_usuario` (`id_usuario`);
 COMMIT;
 
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

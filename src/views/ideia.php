@@ -31,30 +31,27 @@
        		<div class="col-sm-4">
 				<table id="tabela" class="table text-center">
 					<thead class="thead-light">
-								<tr>
-									<th scope="col">Ideias salvas por você</th>
-								</tr>
-								<?php
-									$sql = "SELECT * FROM ideia";
-									$resultado = mysqli_query($conn, $sql);
+						<tr>
+							<th scope="col">Ideias salvas por você</th>
+						</tr>
+						<?php
+							$sql = "SELECT * FROM ideia";
+							$resultado = mysqli_query($conn, $sql);
 
-									while ($registro = mysqli_fetch_array($resultado)) {
-										$titulo = utf8_encode($registro['titulo']);
-										echo "<tr>";
-										echo "<td><a href='#' data-toggle='modal' data-target='#ideia-modal'>" . $titulo . "</a></td>";
-										echo "</tr>";
-									}
-								?>
-					<tr>
-						<td>...</td>
-					</tr>
+							while ($registro = mysqli_fetch_array($resultado)) {
+								$titulo = utf8_encode($registro['titulo']);
+								echo "<tr>";
+								echo "<td><a href='#' data-toggle='modal' data-target='#ideia-modal'>" . $titulo . "</a></td>";
+								echo "</tr>";
+							}
+						?>
 				</table>
 			</div>
 			<div class="col-sm-1"></div>
 			<div class="col-sm-6">
 				<aside>
 					<h4 class="text-center">Mande uma nova Ideia</h4>
-					<form method="post" action="ideiainsert.php">
+					<form method="post" action="../controller/controller.ideia.php">
 						<p>
 							Título
 							<input type="text" name="titulo" required="required" placeholder="Dê um nome para sua ideia" class="form-control">
