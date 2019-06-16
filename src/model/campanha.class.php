@@ -1,14 +1,13 @@
 <?php
 
 	class Campanha {
+		private $id;
 		private $tema;
 		private $descricao;
 		private $objetivo;
 		private $regras;
 		private $premios;
 		private $imagem;
-
-
 
 		function getTema() {
 			return $this->tema;
@@ -32,7 +31,7 @@
 		}
 
 		function getRegras() {
-			return $this->regras;
+			return $this->$regras;
 		}
 		function setRegras($regras) {
 			$this->regras = $regras;
@@ -51,99 +50,25 @@
 		function setImagem($imagem) {
 			$this->imagem = $imagem;
 		}
-
-	}
-
-private $tema;
-private $descricao;
-private $objetivo;
-private $regras;
-private $premios;
-private $foto_camp;
-        
-
-
-public function getTema()
-{
-return $this->tema;
-}
-
-public function setTema($tema)
-{
-$this->tema = $tema;
-}
-
-public function getDescricao()
-{
-return $this->descricao;
-}
-
-public function setDescricao($descricao)
-{
-$this->descricao = $descricao;
-}
-
- 
-public function getObjetivo()
-{
-return $this->objetivo;
-}
-
-public function setObjetivo($objetivo)
-{
-$this->objetivo = $objetivo;
-}
-
-
-public function getRegras()
-{
-return $this->regras;
-}
-
-public function setRegras($regras)
-{
-$this->regras = $regras;
-}
-
-public function getPremios()
-{
-return $this->premios;
-}
-
-
-public function setPremios($premios)
-{
-$this->premios = $premios;
-}
-
-
-public function getFoto_camp()
-{
-return $this->foto_camp;
-}
-
-
-public function setFoto_camp($foto_camp)
-{
-$this->foto_camp = $foto_camp;
-}
-
-function lançarCampanha (){
-    include_once("../conexao/conexao.php");
+		
+		function lançarCampanha (){
+			include_once("../conexao/conexao.php");
 			
-    $sql = "INSERT INTO campanha(tema, descricao, objetivo, regra, premio, foto_camp) VALUES('$this->tema', '$this->descricao', '$this->objetivo', '$this->regra', '$this->premio', '$this->foto_camp')";
-    
-    if (mysqli_query($conn, $sql)) {
-        echo "";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+			$incrementar = "select id_campanha FROM campanha";
+			$resultado = mysqli_query($conn, $incrementar);
 
-    mysqli_close($conn);
+                while ($row = mysqli_fetch_array($resultado)) {
+                	$this->id = $row['id_campanha'] + 1;
+                }
+			
+			$sql = "INSERT INTO campanha VALUES('$this->id','$this->tema', '$this->descricao', '$this->objetivo', '$this->regras', '$this->premios', '$this->imagem',7)";
 
-
-}
-
-}
-
-              
+			if (mysqli_query($conn, $sql)) {
+				header('location:../views/campNova.php');
+			} else {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			}
+			
+			mysqli_close($conn);
+		}
+	}

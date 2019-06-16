@@ -328,7 +328,7 @@
                     <div class="logo">CONECTE-SE</div>
                     <!-- Main Form -->
                     <div class="login-form-1">
-                      <form id="login-form" class="text-left" action="../controller/controller.usuario.php" method="post">
+                      <form id="login-form" class="text-left" action="../controller/controller.login.php" method="post">
                         <div class="login-form-main-message"></div>
                         <div class="main-login-form">
                           <div class="login-group">

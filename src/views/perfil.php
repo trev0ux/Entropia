@@ -8,6 +8,7 @@
 		</style>
         <title>entropia</title>
 		<?php
+			include_once("../conexao/conexao.php");
 			session_start();
 			if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
 				unset($_SESSION['login']);
@@ -33,18 +34,29 @@
 			<div class="col-md-3">
 				<div class="card">
 					<div class="card-body">
-						<img src="../public/img/avatares/melo-avatar.png" class="rounded mx-auto d-block">
-						<div class="h5">
-							@
-							<?php 
-								echo $_SESSION['login'];
+						<?php
+							$sql = "SELECT * FROM cadastro JOIN usuario JOIN avatar JOIN setor ON cadastro.id_cadastro=usuario.id_cadastrofk AND avatar.id_avatar=usuario.id_avatarfk AND setor.id_setor=cadastro.id_setorfk WHERE cadastro.usuario='$logado'";
+								
+							$resultado = mysqli_query($conn, $sql);
+							while ($row = mysqli_fetch_array($resultado)){
+						?>
+						<img src="../public/img/avatares/<?php echo $row['nome_avatar'] ?>" class="rounded mx-auto d-block">
+						<h4>
+							<?php echo utf8_encode($row['nome']); echo " "; echo utf8_encode($row['sobrenome']); ?>
+						</h4>
+						<h5><?php echo "@".$logado; ?></h5>
+						<p class="text-muted text-justify">
+							<?php
+								echo "Data de Nascimento: ".date("d/m/Y", strtotime($row['data_nasc']))."<br>";
+								echo "E-mail: ".utf8_encode($row['email'])."<br>";
+								echo "Setor de trabalho: <br>".utf8_encode($row['setor'])."<br>";
 							?>
-						</div>
-							<h4>Andreza Vitório</h4>
-							<p>[Dados referentes ao colaborador]</p>
-							<form>
-								<input type="text" name="descricao" id="descricao" placeholder="Adicionar descrição de perfil">
-							</form>
+						</p>
+						<form>
+							<input type="text" name="descricao" id="descricao" placeholder="Adicionar descrição de perfil">
+							<center><input type="submit" value="Publicar" class="btn btn-primary btn-sm"></center>
+						</form>
+						<?php } ?>
 							<br>
 							<img src="../public/img/moeda.png"><div class="h7 text-muted">100 pontos</div>
 						</div>

@@ -9,10 +9,6 @@ class Metodologia {
     private $objetivo;
     private $anexo;
 
-	function __construct() {
-		$this->id++;
-	}
-
     function getTitulo() {
         return $this->titulo;
     }
@@ -50,6 +46,13 @@ class Metodologia {
 	
 	function Cadastrar() {
 		include_once("../conexao/conexao.php");
+		
+		$incrementar = "select id_metodologia FROM metodologia";
+		$resultado = mysqli_query($conn, $incrementar);
+
+		while ($row = mysqli_fetch_array($resultado)) {
+			$this->id = $row['id_metodologia'] + 1;
+		}
 		
 		$sql = "INSERT INTO metodologia VALUES('$this->id','$this->titulo','$this->definicao','$this->descricao','$this->objetivo','$this->anexo',NULL)";
 	        

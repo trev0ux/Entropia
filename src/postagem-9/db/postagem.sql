@@ -1,11 +1,6 @@
--- phpMyAdmin SQL Dump
--- version 4.8.3
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: 31-Dez-2018 às 01:51
--- Versão do servidor: 10.1.36-MariaDB
--- versão do PHP: 7.2.11
+
+CREATE DATABASE postagem;
+USE postagem;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;

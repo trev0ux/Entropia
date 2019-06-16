@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
 	<?php 
+		include_once("../conexao/conexao.php");
 		# Para evitar a entrada no site sem login tlgd ------------0-
 		session_start();
 		if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
@@ -67,22 +68,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>Campanha 1.1</td>
-							<td><button class="btn btn-danger mb-2" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times"></i></button></td>
-						</tr>
-						<tr>
-							<td>Campanha 2.1</td>
-							<td><button class="btn btn-danger" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times" aria-hidden="true"></i></button></td>
-						</tr>
-						<tr>
-							<td>Campanha 3.1</td>
-							<td><button class="btn btn-danger" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times" aria-hidden="true"></i></button></td>
-						</tr>
-						<tr>
-							<td>Campanha 4.1</td>
-							<td><button class="btn btn-danger" data-toggle="modal" data-target="#fim-camp"><i class="fa fa-times" aria-hidden="true"></i></button></td>
-						</tr>
+						<?php
+							$sql = "SELECT * FROM campanha";
+							$resultado = mysqli_query($conn, $sql);
+
+							while ($row = mysqli_fetch_array($resultado)) {
+								echo "<tr>";
+								echo "<td>".utf8_encode($row['tema'])."</td>";
+								echo "<td><button class='btn btn-danger mb-2' data-toggle='modal' data-target='#fim-camp'><i class='fa fa-times'></i></button></td>";
+								echo "</tr>";
+							}
+						?>
 					</tbody>
 				</table>
     		</div>

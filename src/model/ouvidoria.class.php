@@ -1,15 +1,12 @@
 <?php
 
 	class Ouvidoria {
+		
 		private $id;
 		private $assunto;
 		private $setor;
 		private $mensagem;
 		private $anexo;
-
-		function __construct() {
-			$this->id++;
-		}
 		
 		function getAssunto() {
 			return $this->assunto;
@@ -42,6 +39,13 @@
 		function Cadastrar() {
 			include_once("../conexao/conexao.php");
 			
+			$incrementar = "select id_ouvidoria FROM ouvidoria";
+			$resultado = mysqli_query($conn, $incrementar);
+
+			while ($row = mysqli_fetch_array($resultado)) {
+				$this->id = $row['id_ouvidoria'] + 1;
+			}
+			
 			$sql = "INSERT INTO ouvidoria VALUES('$this->id','$this->assunto', '$this->mensagem', '$this->mensagem', '$this->mensagem', '$this->anexo')";
 	        
 			if (mysqli_query($conn, $sql)) {
@@ -53,53 +57,3 @@
 	        mysqli_close($conn);
 		}
 	}
-=======
-class Ouvidoria {
-
-    private $assunto;
-    private $setor;
-    private $mensagem;
-
- 
-    public function getAssunto()
-    {
-        return $this->assunto;
-    }
-
-
-    public function setAssunto($assunto)
-    {
-        $this->assunto = $assunto;
-
-        return $this;
-    }
-
-  
-    public function getSetor()
-    {
-        return $this->setor;
-    }
-
-  
-    public function setSetor($setor)
-    {
-        $this->setor = $setor;
-
-        return $this;
-    }
-
- 
-    public function getMensagem()
-    {
-        return $this->mensagem;
-    }
-
-
-    public function setMensagem($mensagem)
-    {
-        $this->mensagem = $mensagem;
-
-        return $this;
-    }
-}
->>>>>>> 4897726b165f2d52bec59de242944d901428805e

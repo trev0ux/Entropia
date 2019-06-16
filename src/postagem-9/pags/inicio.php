@@ -1,5 +1,13 @@
 <?php
-	$sql = $con->prepare("SELECT * FROM posts ORDER BY id DESC");
+	
+$server = "127.0.0.1";
+	$user = "root";
+	$password = "";
+	$database = "postagem";
+
+	$conn = mysqli_connect($server, $user, $password, $database);
+
+	$sql = $conn->prepare("SELECT * FROM posts ORDER BY id DESC");
 	$sql->execute();
 	$get = $sql->get_result();
 	$total = $get->num_rows;
@@ -9,7 +17,7 @@
 	}else{
 		while($dados = $get->fetch_array()){
 		$idPostador = $dados['id_postador'];
-		$query = $con->prepare("SELECT * FROM usuarios WHERE id = ?");
+		$query = $conn->prepare("SELECT * FROM usuarios WHERE id = ?");
 		$query->bind_param("s", $idPostador);
 		$query->execute();
 		$dadosU = $query->get_result()->fetch_assoc();
@@ -22,7 +30,7 @@
 	  <img class="mr-3 img-fluid" src="<?php echo $dados['imagem'];?>">
 	  <div class="media-body">
 	    <?php echo substr_replace($dados['postagem'], (strlen($dados['postagem']) > 225 ? '...' : ''), 225);?>
-	    <p class="button"><a href="p/<?php echo $dados['id'];?>" class="btn btn-info">Leia Mais</a></p>
+	    <p class="button"><a href="entropia-alfa/src/postagem-9/p/<?php echo $dados['id'];?>" class="btn btn-info">Leia Mais</a></p>
 	  </div>
 	</div>
 	</div>

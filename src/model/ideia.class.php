@@ -45,7 +45,14 @@
 		function Cadastrar() {
 			include_once("../conexao/conexao.php");
 			
-			$sql = "INSERT INTO ideia (titulo, descricao, beneficio, participante, anexo, hora, data) VALUES('$this->titulo', '$this->descricao', '$this->beneficio', '$this->participante', '$this->anexo', '$this->hora', '$this->data')";
+			$incrementar = "select id_ideia FROM ideia";
+			$resultado = mysqli_query($conn, $incrementar);
+
+			while ($row = mysqli_fetch_array($resultado)) {
+				$this->id = $row['id_ideia'] + 1;
+			}
+			
+			$sql = "INSERT INTO ideia VALUES($this->id,'$this->titulo', '$this->descricao', '$this->beneficio', '$this->participante', '$this->anexo', '$this->hora', '$this->data')";
 	        
 			if (mysqli_query($conn, $sql)) {
 				header('location:../views/ideia.php');

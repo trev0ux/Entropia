@@ -1,17 +1,16 @@
 <?php
 
-	include_once("../conexao/conexao.php");
-
 	class Usuario {
-		private $idCad;
+		
+		private $id;
 		private $nome;
 		private $sobrenome;
 		private $nascimento;
+		private $setor;
 		private $email;
 		private $usuario;
 		private $senha;
-		
-		private idUser;
+		private $avatar;
 		private $tipo;
 		
 		function getNome() {
@@ -35,6 +34,13 @@
 			$this->nascimento = $nascimento;
 		}
 		
+		function getSetor() {
+			return $this->setor;
+		}
+		function setSetor($setor) {
+			$this->setor = $setor;
+		}
+		
 		function getEmail() {
 			return $this->email;
 		}
@@ -56,27 +62,52 @@
 			$this->senha = $senha;
 		}
 		
-		function Cadastrar() {
-			$cad = "INSERT INTO cadastro VALUES ('$this->idCad','$this->nome','$this->sobrenome','$this->nascimento','$this->email','$this->usuario','$this->senha')";
-			
-			$user = "INSERT INTO usuario VALUES ('$this->idUser','$this->tipo', null, '$this->idCad')";
-			
-			if (mysqli_query($conn, $cad, $user) == FALSE) {
-				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-			}
-
-	        mysqli_close($conn);
+		function getAvatar() {
+			return $this->avatar;
+		}
+		function setAvatar($avatar) {
+			$this->avatar = $avatar;
 		}
 		
-		function logar() {
-			$sql = "SELECT cadastro.usuario, cadastro.senha, usuario.tipo_usuario FROM cadastro JOIN usuario ON cadastro.id_cadastro=usuario.id_cadastrofk WHERE cadastro.usuario ='$this->usuario' AND cadastro.senha = '$this->senha'";
+		function Cadastrar() {
+			include_once("../conexao/conexao.php");
+			
+			$incrementar = "select id_cadastro FROM cadastro";
+			$resultado = mysqli_query($conn, $incrementar);
+
+			while ($row = mysqli_fetch_array($resultado)) {
+				$this->id = $row['id_cadastro'] + 1;
+			}
+			
+			$sql = "INSERT INTO cadastro VALUES('$this->id','$this->nome','$this->sobrenome','$this->nascimento','$this->email','$this->usuario','$this->senha','$this->setor')";
+			
+			if(mysqli_query($conn, $sql)) {
+				echo "";
+			}else {
+				 die (mysqli_error($conn));
+			}
+
+			$query = "INSERT INTO usuario VALUES($this->id,0,'$this->avatar',$this->id)";
+			if(mysqli_query($conn, $query)) {
+				header('location:../views/preloader.php');
+			}else {
+				 die (mysqli_error($conn));
+			}
+
+			mysqli_close($conn);
+		}
+		
+		function Logar() {
+			include_once("../conexao/conexao.php");
+			
+			$sql = "SELECT * FROM cadastro JOIN usuario ON cadastro.id_cadastro = usuario.id_cadastrofk WHERE cadastro.usuario ='$this->usuario' AND cadastro.senha = '$this->senha'";
 
 			$consulta = mysqli_query($conn, $sql);
 
 			if (mysqli_num_rows($consulta) == 1) {  
 				while ($percorrer = mysqli_fetch_array($consulta)) {
 
-					$tipo = $percorrer['tipo_usuario'];
+					$tipo = $percorrer['nivel'];
 
 					session_start();  #Criar sessão
 
@@ -85,8 +116,8 @@
 					$_SESSION['tipo'] = $tipo;
 
 					header('location:../views/preloader.php');
-
 				}
+				
 			 }else {
 				unset ($_SESSION['login']);
 				unset ($_SESSION['senha']);
@@ -95,4 +126,5 @@
 
 			 }
 		}
+		
 	}

@@ -31,6 +31,15 @@
 						<a class="nav-link" href="metodologiaSuper.php"><i class="fa fa-book"></i>Metodologias</a>
 					</li>
 					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bar-chart"></i>Central de Supervisão</a>
+						<div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
+							<a class="dropdown-item" href="premios.php">Prêmios da Loja</a>
+							<a class="dropdown-item" href="validacao.php">Validação de Ideias</a>
+							<a class="dropdown-item" href="comite.php">Comitê</a>
+							<a class="dropdown-item" href="campanha.php">Campanhas</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i>
 							<?php 
 								echo $_SESSION['login'];
@@ -45,15 +54,6 @@
                                		echo $_SESSION['login'];
                                 ?>
 							</a>
-						</div>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bar-chart"></i>Central de Supervisão</a>
-						<div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
-							<a class="dropdown-item" href="premios.php">Prêmios da Loja</a>
-							<a class="dropdown-item" href="validacao.php">Validação de Ideias</a>
-							<a class="dropdown-item" href="comite.php">Comitê</a>
-							<a class="dropdown-item" href="campanha.php">Campanhas</a>
 						</div>
 					</li>
 				</ul>

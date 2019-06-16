@@ -1,4 +1,4 @@
-<?php include_once("lib/includes.php");?>
+<?php include_once("includes.php");?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title><?php echo gera_titulo("Sistema de postagem", false, $con);?></title>
+    <title><?php echo gera_titulo("Sistema de postagem", false, $conn);?></title>
   </head>
   <body>
 <br>
     <div class="row">
       <div class="col-sm-6 offset-md-3">
 
-        <?php echo carrega_pagina($con, $data, false);?>
+        <?php echo carrega_pagina($conn, $data, false);?>
 
       </div>
     </div>

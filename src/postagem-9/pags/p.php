@@ -1,6 +1,13 @@
 <?php
+$server = "127.0.0.1";
+	$user = "root";
+	$password = "";
+	$database = "postagem";
+
+	$conn = mysqli_connect($server, $user, $password, $database);
+
 	$idPost = addslashes($explode['1']);
-	$sql = $con->prepare("SELECT * FROM posts WHERE id = ?");
+	$sql = $conn->prepare("SELECT * FROM posts WHERE id = ?");
 	$sql->bind_param("s", $idPost);
 	$sql->execute();
 	$get = $sql->get_result();
@@ -11,7 +18,7 @@
 	}else{
 		while($dados = $get->fetch_array()){
 		$idPostador = $dados['id_postador'];
-		$query = $con->prepare("SELECT * FROM usuarios WHERE id = ?");
+		$query = $conn->prepare("SELECT * FROM usuarios WHERE id = ?");
 		$query->bind_param("s", $idPostador);
 		$query->execute();
 		$dadosU = $query->get_result()->fetch_assoc();
