@@ -110,8 +110,8 @@ CREATE TABLE `campanha` (
 -- Estrutura da tabela `feed`
 --
 
-CREATE TABLE `feed` (
-  `id_feed` int(11) NOT NULL,
+CREATE TABLE `comentario` (
+  `id_comentario` int(11) NOT NULL,
   `comentario` mediumtext NOT NULL,
   `comentario_data` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -120,7 +120,7 @@ CREATE TABLE `feed` (
 -- Extraindo dados da tabela `feed`
 --
 
-INSERT INTO `feed` (`id_feed`, `comentario`, `comentario_data`) VALUES
+INSERT INTO `comentario` (`id_comentario`, `comentario`, `comentario_data`) VALUES
 (1, 'KKKKKK', '2019-04-07 00:00:00');
 
 -- --------------------------------------------------------
@@ -137,7 +137,7 @@ CREATE TABLE `ideia` (
   `beneficio` mediumtext NOT NULL,
   `participante` varchar(45) DEFAULT NULL,
   `anexo` mediumblob,
-  `id_feedfk` int(11) DEFAULT NULL,
+  `id_comentariofk` int(11) DEFAULT NULL,
   `id_rankingfk` int(11) DEFAULT NULL,
   `id_validacaofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -146,7 +146,7 @@ CREATE TABLE `ideia` (
 -- Extraindo dados da tabela `ideia`
 --
 
-INSERT INTO `ideia` (`id_ideia`, `qtde_reacoes_ideias`, `titulo`, `descricao`, `beneficio`, `participante`, `anexo`, `id_feedfk`, `id_rankingfk`, `id_validacaofk`) VALUES
+INSERT INTO `ideia` (`id_ideia`, `qtde_reacoes_ideias`, `titulo`, `descricao`, `beneficio`, `participante`, `anexo`, `id_comentariofk`, `id_rankingfk`, `id_validacaofk`) VALUES
 (1, NULL, 'Economizar água', 'Trazer garrafinha', 'Menos dinheiro', ' ', NULL, NULL, NULL, NULL),
 (2, NULL, 'Som de fundo', 'TOPDEMAIS', 'Bem-estar ao chegar no local criando uma boa ancora', '@dilton, @andreza', '', NULL, NULL, NULL),
 (25, NULL, 'dasd', 'dasdas', 'dasdas', 'saddsa', '', NULL, NULL, NULL),
@@ -192,7 +192,7 @@ CREATE TABLE `medalhas` (
   `tipo_medalha` varchar(220) DEFAULT NULL,
   `id_ideiafk` int(11) DEFAULT NULL,
   `id_ouvidoriafk` int(11) DEFAULT NULL,
-  `id_feedfk` int(11) DEFAULT NULL
+  `id_comentariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -253,14 +253,14 @@ CREATE TABLE `pontos` (
   `id_ideiafk` int(11) DEFAULT NULL,
   `id_ouvidoriafk` int(11) DEFAULT NULL,
   `id_premiofk` int(11) DEFAULT NULL,
-  `id_feedfk` int(11) DEFAULT NULL
+  `id_comentariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `pontos`
 --
 
-INSERT INTO `pontos` (`id_pontos`, `qtde_pontos`, `id_ideiafk`, `id_ouvidoriafk`, `id_premiofk`, `id_feedfk`) VALUES
+INSERT INTO `pontos` (`id_pontos`, `qtde_pontos`, `id_ideiafk`, `id_ouvidoriafk`, `id_premiofk`, `id_comentariofk`) VALUES
 (1, 0, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -310,16 +310,13 @@ INSERT INTO `premios` (`id_premio`, `Nome`, `qtde_pontos_premios`, `fotoPremio`,
 --
 
 CREATE TABLE `posts` (
-
   `id` int(20) NOT NULL,
   `id_postador` int(20) NOT NULL,
-  `titulo` varchar(200) NOT NULL,
   `data` varchar(200) NOT NULL,
   `postagem` text NOT NULL,
-  `visitas` int(200) NOT NULL,
   `imagem` varchar(200) NOT NULL,
   `curtidas` int(200) NOT NULL,
-  `id_feedfk` int(11) DEFAULT NULL,
+  `id_comentariofk` int(11) DEFAULT NULL,
   `id_usuariofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -327,8 +324,8 @@ CREATE TABLE `posts` (
 -- Extraindo dados da tabela `publicações`
 --
 
-INSERT INTO posts (`id`, `id_postador`, `titulo`, `data`, `postagem`, `visitas`, `imagem`, `curtidas`, `id_feedfk`, `id_usuariofk`) VALUES
-(2, 1, 'FÃ³rum com PHP', '30/12/2018 22:46', 'dsadsad', 4, 'images/uploads/aemail.png', 2, NULL, NULL);
+INSERT INTO posts (`id`, `id_postador`, `data`, `postagem`, `imagem`, `curtidas`, `id_comentariofk`, `id_usuariofk`) VALUES
+(2, 1, '30/12/2018 22:46', 'dsadsad', 4, 'images/uploads/aemail.png', 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -377,10 +374,10 @@ INSERT INTO `setor` (`id_setor`, `nome`) VALUES
 -- Estrutura da tabela `usuario`
 --
 
-CREATE TABLE `usuario` (
-  `id_usuario` int(11) NOT NULL,
-  `tipo_usuario` tinyint(1) DEFAULT NULL,
-  `id_feedfk` int(11) DEFAULT NULL,
+CREATE TABLE `usuarios` (
+`id` int(20) NOT NULL,
+  `nivel` int(20) NOT NULL DEFAULT '1',
+  `id_comentariofk` int(11) DEFAULT NULL,
   `id_cadastrofk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -388,14 +385,9 @@ CREATE TABLE `usuario` (
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `tipo_usuario`, `id_feedfk`, `id_cadastrofk`) VALUES
-(1, 1, NULL, 1),
-(2, 1, NULL, 2),
-(3, 0, NULL, 3),
-(4, 1, NULL, 4),
-(5, 0, NULL, 5),
-(6, 0, NULL, 6),
-(7, 0, NULL, 7);
+INSERT INTO `usuarios` (`id`,  `nivel`, `id_comentariofk`, `id_cadastrofk`) VALUES
+(1, 1, NULL, NULL);
+
 
 -- --------------------------------------------------------
 
@@ -447,9 +439,9 @@ ALTER TABLE `campanha`
 --
 -- Indexes for table `feed`
 --
-ALTER TABLE `feed`
-  ADD PRIMARY KEY (`id_feed`),
-  ADD UNIQUE KEY `id_feed` (`id_feed`);
+ALTER TABLE `comentario`
+  ADD PRIMARY KEY (`id_comentario`),
+  ADD UNIQUE KEY `id_comentario` (`id_comentario`);
 
 --
 -- Indexes for table `ideia`
@@ -459,7 +451,7 @@ ALTER TABLE `ideia`
   ADD UNIQUE KEY `id_ideia` (`id_ideia`),
   ADD KEY `id_validacaofk` (`id_validacaofk`),
   ADD KEY `id_rankingfk` (`id_rankingfk`),
-  ADD KEY `id_feedfk` (`id_feedfk`);
+  ADD KEY `id_comentariofk` (`id_comentariofk`);
 
 --
 -- Indexes for table `ideiacamp`
@@ -477,7 +469,7 @@ ALTER TABLE `medalhas`
   ADD UNIQUE KEY `id_medalha` (`id_medalha`),
   ADD KEY `id_ideiafk` (`id_ideiafk`),
   ADD KEY `id_ouvidoriafk` (`id_ouvidoriafk`),
-  ADD KEY `id_feedfk` (`id_feedfk`);
+  ADD KEY `id_comentariofk` (`id_comentariofk`);
 
 --
 -- Indexes for table `metodologia`
@@ -496,7 +488,7 @@ ALTER TABLE `pontos`
   ADD KEY `id_ideiafk` (`id_ideiafk`),
   ADD KEY `id_ouvidoriafk` (`id_ouvidoriafk`),
   ADD KEY `id_premiofk` (`id_premiofk`),
-  ADD KEY `id_feedfk` (`id_feedfk`);
+  ADD KEY `id_comentariofk` (`id_comentariofk`);
 
 --
 -- Indexes for table `pontos_medalhas`
@@ -529,9 +521,9 @@ ALTER TABLE `ranking`
 --
 -- Indexes for table `usuario`
 --
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_usuario`),
-  ADD UNIQUE KEY `id_usuario` (`id_usuario`);
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
 COMMIT;
 
 -- Indexes for table `posts`
@@ -547,4 +539,3 @@ ALTER TABLE `posts`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-

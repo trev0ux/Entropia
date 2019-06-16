@@ -181,6 +181,25 @@
 						</div>
 					</div>
 					<!-- /Post -->
+                       
+					<!--- /Organização de publicações -->
+					<?php
+					$sql = $con->prepare("SELECT * FROM posts ORDER BY id DESC");
+					$sql->execute();
+					$get = $sql->get_result();
+					$total = $get->num_rows;
+
+						if($total <= 0){
+							echo "<div class='alert alert-danger'>Nenhuma publicação encontrada!</div>";
+								}else{
+									while($dados = $get->fetch_array()){
+									$idPostador = $dados['id_postador'];
+									$query = $con->prepare("SELECT * FROM usuarios WHERE id = ?");
+									$query->bind_param("s", $idPostador);
+									$query->execute();
+									$dadosU = $query->get_result()->fetch_assoc();
+									?>
+					<?php }}?>
 
 					<!-- Post -->
 

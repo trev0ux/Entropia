@@ -10,8 +10,6 @@
 		private $email;
 		private $usuario;
 		private $senha;
-		
-		private idUser;
 		private $tipo;
 		
 		function getNome() {
@@ -95,4 +93,41 @@
 
 			 }
 		}
+
+		function editarPerfil (){
+	    if(isset($_POST['alt']) && $_POST['alt'] == "cad"){
+		if($_POST['nome'] && $_POST['usuario'] && $_POST['senha']){
+			$nome = addslashes($_POST['nome']);
+			$usuario = addslashes($_POST['usuario']);
+			$senha = addslashes($_POST['senha']);
+
+			$sql = $con->prepare("UPDATE usuarios SET nome = ?, usuario = ?, senha = ? WHERE id = ?");
+			$sql->bind_param("ssss", $nome, $usuario, $senha, $idUser);
+			$sql->execute();
+
+			if($sql->affected_rows > 0){
+				redireciona('perfil', 'success', 2, 'Dados alterado com sucesso!');
+			}else if($sql->affected_rows == 0){
+				echo "<div class='alert alert-warning'>Você não atualizou nada!</div>";
+			}else if($sql->affected_rows < 0){
+				echo "<div class='alert alert-danger'>Erro ao atualizar os dados!</div>";
+			}
+
+
+		}else{
+			echo "<div class='alert alert-danger'>Preencha todos os campos!</div>";
+		}
+	}
+		}
+
+	function exibirPosts{
+			$query = $con->prepare("SELECT * FROM posts ORDER BY id DESC");
+			$query->execute();
+			$get = $query->get_result();
+			$total = $get->num_rows;
+			if($total > 0){
+				while($dados = $get->fetch_array()){
+	}
+	}	
+	 }
 	}
