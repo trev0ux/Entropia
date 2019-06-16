@@ -73,7 +73,7 @@
 		function publicarIdeia (){
 			if(isset($_POST['env']) && $_POST['env'] == "post"){
 				if($_POST['titulo'] && $_POST['descricao'] && $_POST['beneficio'] && $_POST['participante']){
-					$idCad = $_SESSION['usuarioID'];
+					$idUser = $_SESSION['id_user'];
 					$titulo = $_POST['titulo'];
 					$descricao = $_POST['descricao'];
 					$beneficio = $_POST['beneficio'];
@@ -88,7 +88,7 @@
 		
 		
 					$query = $con->prepare("INSERT INTO ideia (id_ideia, titulo, descricao, beneficio, participante, anexo, data) VALUES (?, ?, ?, ?, ?)");
-					$query->bind_param("sssss", $idCad, $data, $post, $uploadfileN);
+					$query->bind_param("sssss", $idCad, $data, $ideia, $uploadfileN);
 					$query->execute();
 		
 					if($query->affected_rows > 0 && move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)){
@@ -107,7 +107,7 @@
 			function editarIdeia (){
 				if(isset($_POST['env']) && $_POST['env'] == "post"){
 						if($_POST['titulo'] && $_POST['descricao'] && $_POST['beneficio'] && $_POST['participante']){
-							$idCad = $_SESSION['usuarioID'];
+							$idUser = $_SESSION['id_user'];
 							$titulo = $_POST['titulo'];
 							$descricao = $_POST['descricao'];
 							$beneficio = $_POST['beneficio'];
@@ -115,7 +115,7 @@
 							$anexo = $_POST['anexo'];
 			
 						$sql = $con->prepare("UPDATE ideia SET ideia = ? WHERE id_ideia = ?");
-						$sql->bind_param("sss", $post, $idÌdeia);
+						$sql->bind_param("sss", $ideia, $idÌdeia);
 						$sql->execute();
 			
 						if($sql->affected_rows > 0){

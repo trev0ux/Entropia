@@ -112,7 +112,7 @@ class Posts {
 	function Publicar (){
 	if(isset($_POST['env']) && $_POST['env'] == "post"){
 		if($_POST['post']){
-			$idCad = $_SESSION['usuarioID'];
+			$idUser = $_SESSION['id_user'];
 			$post = $_POST['post'];
 
 			$uploaddir = '../images/uploads/';
@@ -121,8 +121,8 @@ class Posts {
 			$uploadfileN = $uploaddirN.basename($_FILES['userfile']['name']);
 
 
-			$query = $con->prepare("INSERT INTO posts (id_postador, data, postagem, imagem) VALUES (?, ?, ?, ?, ?)");
-			$query->bind_param("sssss", $idCad, $data, $post, $uploadfileN);
+			$query = $con->prepare("INSERT INTO posts (id, data, postagem, imagem) VALUES (?, ?, ?, ?, ?)");
+			$query->bind_param("sssss", $idUser, $data, $postagem, $uploadfileN);
 			$query->execute();
 
 			if($query->affected_rows > 0 && move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)){
@@ -142,7 +142,7 @@ class Posts {
 		$curtidasAtualizadas = ($totalCurtidas) +1;
 
 		$query = $con->prepare("UPDATE posts SET curtidas = ? WHERE id = ?");
-		$query->bind_param("ss", $curtidasAtualizadas, $idCad);
+		$query->bind_param("ss", $curtidasAtualizadas, $idUser);
 		$query->execute();
 		if($query->affected_rows > 0){
 			echo "<script>window.history.back(-1);</script>";
@@ -172,7 +172,7 @@ class Posts {
 			$post = $_POST['post'];
 
 			$sql = $con->prepare("UPDATE posts SET postagem = ? WHERE id = ?");
-			$sql->bind_param("sss", $post, $idPost);
+			$sql->bind_param("sss", $postagem, $idPost);
 			$sql->execute();
 
 			if($sql->affected_rows > 0){
