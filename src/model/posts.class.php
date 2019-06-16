@@ -3,15 +3,11 @@
 
 class Posts {
     private $idPost;
-    private $titulo;
     private $data;
     private $postagem;
-    private $visitas;
     private $imagem;
     private $curtidas;
-
-
- 
+    private $comentario;
  
     public function getIdPost()
     {
@@ -22,20 +18,6 @@ class Posts {
     public function setIdPost($idPost)
     {
         $this->idPost = $idPost;
-
-        return $this;
-    }
-
- 
-    public function getTitulo()
-    {
-        return $this->titulo;
-    }
-
-  
-    public function setTitulo($titulo)
-    {
-        $this->titulo = $titulo;
 
         return $this;
     }
@@ -68,19 +50,6 @@ class Posts {
         return $this;
     }
 
-  
-    public function getVisitas()
-    {
-        return $this->visitas;
-    }
-
- 
-    public function setVisitas($visitas)
-    {
-        $this->visitas = $visitas;
-
-        return $this;
-    }
 
   
     public function getImagem()
@@ -108,6 +77,18 @@ class Posts {
 
         return $this;
     }
+
+    public function getComentario()
+    {
+        return $this->comentario;
+    }
+
+    public function setComentario($comentario)
+    {
+        $this->comentario = $comentario;
+
+        return $this;
+    }
 	
 	function Publicar (){
 	if(isset($_POST['env']) && $_POST['env'] == "post"){
@@ -117,15 +98,15 @@ class Posts {
 
 			$uploaddir = '../images/uploads/';
 			$uploaddirN = 'images/uploads/';
-			$uploadfile = $uploaddir.basename($_FILES['userfile']['name']);
-			$uploadfileN = $uploaddirN.basename($_FILES['userfile']['name']);
+			$uploadfile = $uploaddir.basename($_FILES['imagem']['name']);
+			$uploadfileN = $uploaddirN.basename($_FILES['imagem']['name']);
 
 
-			$query = $con->prepare("INSERT INTO posts (id, data, postagem, imagem) VALUES (?, ?, ?, ?, ?)");
+			$query = $con->prepare("INSERT INTO posts (id, data, postagem, imagem) VALUES ($this->id, $this-data, $this->postagem, $this->imagem)");
 			$query->bind_param("sssss", $idUser, $data, $postagem, $uploadfileN);
 			$query->execute();
 
-			if($query->affected_rows > 0 && move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)){
+			if($query->affected_rows > 0 && move_uploaded_file($_FILES['imagem']['name'], $uploadfile)){
 				echo "<div class='alert alert-success'>Publicação enviada com sucesso!</div>";
 			}else{
 				echo "<div class='alert alert-danger'>Erro ao enviar a publicação!</div>";
@@ -152,18 +133,13 @@ class Posts {
 	}
 }
 
-	function deletarPublicacao (){
+	function deletarPost (){
 	$idPost = addslashes($explode['1']);
 
 	$query = $con->prepare("DELETE FROM posts WHERE id = ?");
 	$query->bind_param("s", $idPost);
 	$query->execute();
-
-	if($query->affected_rows > 0){
-		redireciona('gerenciar-posts', false, 0, false);
-	}else{
-		echo "<div class='alert alert-danger'>Erro ao deletar a publicação.</div>";
-	}
+	
 	}
 
 	function editarPost (){
@@ -183,6 +159,13 @@ class Posts {
 		  }else{
 			echo "<div class='alert alert-danger'>Preencha todos os campos</div>";
 		}
-	}
+    }
+    
+    function Comentar (){
+        $comentario=$_POST['comentario'];
+        $sql = "INSERT INTO comentario VALUES(id_comentario, comentario, data)($this->id_comentario,'$this->comentario)";
+
+    }
+
 
 	}
