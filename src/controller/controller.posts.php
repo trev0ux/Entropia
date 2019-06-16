@@ -5,7 +5,7 @@
 	$posts = new Posts;
 	$posts->setIdPost($_POST['id-post']);
 	$posts->setTitulo($_POST['titulo']);
-	$posts->setPostagem($_POST['postagem']);
+	$posts->setPostagem($_POST['posts']);
     $posts->setImagem($_POST['imagem']);
     $posts->setCurtidas($_POST['curtir']);
     $posts->setComentario($_POST['comentario']);
