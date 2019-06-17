@@ -26,3 +26,8 @@
 	$data = date("Y-m-d");
 
 	$ideia->Cadastrar();
+	$ideia->publicarIdeia();
+	$ideia->editarIdeia();
+	$ideia->deletarIdeia();
+	$ideia->curtir();
+	$ideia->Comentar();

@@ -14,16 +14,8 @@
 
 		$logado = $_SESSION['login'];
 	?>
-	<style>
-		.imagem {
-			width: 610px;
-			height: 400px;
-		}
-	</style>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
+
 	<link rel="stylesheet" type="text/css" href="../public/css/home.min.css">
-	<link rel="stylesheet" type="text/css" href="../public/css/teste.home.css">
 	<link rel="shortcut icon" type="image/x-icon" href="../public/img/logo/logo1.png">
 	<script type="text/javascript">
 		$('.carousel').carousel({interval: 1000});
@@ -53,28 +45,18 @@
 			<div class="col-md-3">
 				<div class="card">
 					<div class="card-body">
-						<?php
-							$sql = "SELECT * FROM cadastro JOIN usuario JOIN avatar ON cadastro.id_cadastro=usuario.id_cadastrofk AND avatar.id_avatar=usuario.id_avatarfk WHERE cadastro.usuario='$logado'";
-							//$sql = "SELECT * FROM ideia";
-							$resultado = mysqli_query($conn, $sql);
-							while ($row = mysqli_fetch_array($resultado)){
-									 ?>
-										<img src="../public/img/avatares/<?php echo $row['nome_avatar'] ?>" class="rounded mx-auto d-block">
-										<div class="h5">
-											@
-											<?php 
-											echo $logado;
-											?>
-										</div>
-											<div class="h7 text-muted">
-												Nome Completo: <?php echo utf8_encode($row['nome']); echo " "; echo utf8_encode($row['sobrenome']); ?>
-											</div>
-											<div class="h7">Estudante de Desenvolvimento de Sistemas.</div>
-						<?php 
-									
-								
-							}
-						?>
+						<img src="../public/img/avatares/melo-avatar.png" class="rounded mx-auto d-block">
+						<div class="h5">
+							@
+							<?php 
+							echo $_SESSION['login'];
+							?>
+						</div>
+							<div class="h7 text-muted">
+							Nome Completo: Lucas Amorim Lopes
+
+							</div>
+							<div class="h7">Estudante de Desenvolvimento de Sistemas e Gestor do Projeto de Laboratório de Inovação.</div>
 							<hr>
 							<img src="../public/img/moeda.png"><div class="h7 text-muted">100 pontos</div>
 						</div>
@@ -132,12 +114,9 @@
 										while($row_carousel = mysqli_fetch_assoc($resultado_carousel)){ 
 											if($controle_ativo == 2){ ?>
 												<div class="carousel-item active">
-													<div class="imagem">
-														<img src="../public/img/campanhas/<?php echo $row_carousel['fotoCamp'];?>" class="img-fluid d-block w-100">
-													</div>
-													
+													<img src="../public/img/campanhas/<?php echo $row_carousel['foto_camp'];?>" class="img-fluid d-block w-100">
 													<div class="carousel-caption d-none d-md-block">
-														<h3><?php echo utf8_encode($row_carousel['tema']); ?></h3>
+														<h3><?php echo $row_carousel['tema']; ?></h3>
 														<p><?php echo utf8_encode($row_carousel['descricao']); ?></p>
 														<a class="btn btn-info label label-primary" href="campIdeia.php">Mande sua Ideia</a>
 													</div>
@@ -146,12 +125,10 @@
 												$controle_ativo = 1;
 											}else{ ?>
 												<div class="carousel-item">
-													<div class="imagem">
-														<img src="../public/img/campanhas/<?php echo $row_carousel['fotoCamp'];?>" class="img-fluid d-block w-100">
-													</div>
+													<img src="../public/img/campanhas/<?php echo $row_carousel['foto_camp'];?>" class="img-fluid d-block w-100">
 													<div class="carousel-caption d-none d-md-block">
-														<h3><?php echo utf8_encode($row_carousel['tema']); ?></h3>
-														<p><?php echo utf8_encode($row_carousel['descricao']); ?></p>
+														<h3><?php echo $row_carousel['tema']; ?></h3>
+														<p><?php echo $row_carousel['descricao']; ?></p>
 														<a class="btn btn-info label label-primary" href="campIdeia.php">Mande sua Ideia</a>
 													</div>
 												</div> 
@@ -173,49 +150,56 @@
 						</div>
 					</div>
 					<!-- /Carousel -->
-					
-					
-					<!--- \\\\\\\Post-->
-                <div class="card gedf-card">
-                    <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Deixe uma mensagem</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="images-tab" data-toggle="tab" role="tab" aria-controls="images" aria-selected="false" href="#images">Envie fotos</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <form>
+
+					<!-- Post -->
+					<div class="card gedf-card">
+						<div class="card-header">
+							<ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" id="posts-tab" data-toggle="tab" role="tab" aria-controls="posts" aria-selected="true">Faça uma Publicação</a>
+								</li>
+							</ul>
+						</div>
 						<div class="card-body">
 							<div class="tab-content" id="myTabContent">
 								<div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
 									<div class="form-group">
-										<label class="sr-only" for="postagem">Postagem</label>
-										<textarea class="form-control" id="postagem" placeholder="Interaja com seus colegas de trabalho..."></textarea>
+										<label class="sr-only" for="message"></label>
+										<textarea class="form-control" id="message" rows="3" placeholder="Interaja com seus colegas de trabalho..."></textarea>
 									</div>
-
 								</div>
 								<div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
-									<div class="form-group">
-										<label for="arquivo" class="text-primary font-weight-bold">Selecionar uma imagem</label>
-										<input type="file" class="form-control-file" name="arquivo" id="arquivo">
-									</div>
+									<div class="form-group"></div>
 								</div>
 							</div>
 							<div class="btn-toolbar justify-content-between">
 								<div class="btn-group">
-									<input type="submit" value="Publicar" class="btn btn-primary">
+									<button type="submit" class="btn btn-primary">Publicar</button>
 								</div>
+								<div class="btn-group"></div>
 							</div>
-                        </form>
-                    </div>
-                </div>
-                <!-- /Post -->
+						</div>
+					</div>
+					<!-- /Post -->
+                       
+					<!--- /Organização de publicações -->
+					<?php
+					$sql = $con->prepare("SELECT * FROM posts ORDER BY id DESC");
+					$sql->execute();
+					$get = $sql->get_result();
+					$total = $get->num_rows;
 
-                
-               
+						if($total <= 0){
+							echo "<div class='alert alert-danger'>Nenhuma publicação encontrada!</div>";
+								}else{
+									while($dados = $get->fetch_array()){
+									$idPostador = $dados['id_postador'];
+									$query = $con->prepare("SELECT * FROM usuarios WHERE id = ?");
+									$query->bind_param("s", $idPostador);
+									$query->execute();
+									$dadosU = $query->get_result()->fetch_assoc();
+									?>
+					<?php }}?>
 
 					<!-- Post -->
 
@@ -233,33 +217,28 @@
 								</div>
 								<div>
 									<div class="dropdown">
-										<a class="text-dark btn-lg" id="editar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i></a>
-									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="editar">
-                                        <div class="h6 dropdown-header">Configurações</div>
-                                        <a class="dropdown-item" href="#">Editar</a>
-                                        <a class="dropdown-item" href="#">Excluir</a>
-                                    </div>
-											
-										
+										<button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<i class="fa fa-ellipsis-h"></i>
+										</button>
 									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="card-body">
-							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>Postado ás <?php echo $hora = $registro['hora'];?> de <?php echo $data = $registro['data']; ?></div>
-							<h5 class="card-title"><?php echo $titulo = $registro['titulo']; ?></h5>
+							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>Postado ás <?php echo $hora = $data['hora'];?> de <?php echo $data['data']; ?></div>
+							<h5 class="card-title"><?php echo $titulo = $comentario['titulo']; ?></h5>
 							<p class="card-text">
-								<?php echo $descricao = $registro['descricao']; ?>
+								<?php echo $descricao = $comentario['descricao']; ?>
 							</p>
 						</div>
 						<div class="card-footer">
-							<a href="#" class="card-link text-primary"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Curtir</a>
-							<a class="card-link text-primary" onclick="mostrar('a')"><i class="fa fa-comment"></i>Comentar</a>
+							<a href="#" class="card-link"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Curtir</a>
+							<a class="card-link" onclick="Comentar()"><i class="fa fa-comment"></i>Comentar</a>
 						</div>
 						
 						<div class="hidden" id="a">
-							<form class="search" method="post" action="">
+							<form class="search" method="post" action="../controller/controller.posts.php">
 								<input type="text" class="form-control" placeholder="Escreva seu comentário...">
 								<input id="comentar" type="submit" value="Comentar" class="btn btn-primary btn-sm">
 							</form>
@@ -345,4 +324,4 @@
 			</div>
 		</div>
 	</body>
-	</html>
+	</html> 

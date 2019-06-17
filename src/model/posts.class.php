@@ -93,7 +93,7 @@ class Posts {
 	function Publicar (){
 	if(isset($_POST['env']) && $_POST['env'] == "post"){
 		if($_POST['post']){
-			$idUser = $_SESSION['id_user'];
+			$idUser = $_SESSION['login'];
 			$post = $_POST['post'];
 
 			$uploaddir = '../images/uploads/';
@@ -113,7 +113,7 @@ class Posts {
 			}
 
 
-		}else{
+		    }else{
 			echo "<div class='alert alert-danger'>Preencha todos os campos</div>";
 		}
 	}
