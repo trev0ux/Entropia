@@ -9,7 +9,7 @@
 	if (isset($_FILES['premio-foto'])) {
 		$extensao = strtolower(substr($_FILES['premio-foto']['name'], -4));
 		$arquivo = md5(time()) . $extensao;
-		$diretorio = "../upload/";
+		$diretorio = "../upload/premios/";
 		
 		move_uploaded_file($_FILES['premio-foto']['tmp_name'], $diretorio.$arquivo);
 		
