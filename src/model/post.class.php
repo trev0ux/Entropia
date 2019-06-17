@@ -1,95 +1,56 @@
 <?php
 
+	class Post {
+		private $idPost;
+		private $data;
+		private $postagem;
+		private $imagem;
+		private $curtidas;
+		private $comentario;
 
-class Posts {
-    private $idPost;
-    private $data;
-    private $postagem;
-    private $imagem;
-    private $curtidas;
-    private $comentario;
- 
-    public function getIdPost()
-    {
-        return $this->idPost;
-    }
+		public function getIdPost() {
+			return $this->idPost;
+		}
+		public function setIdPost($idPost) {
+			$this->idPost = $idPost;
+		}
 
+		public function getData() {
+			return $this->data;
+		}
+		public function setData($data) {
+			$this->data = $data;
+		}
 
-    public function setIdPost($idPost)
-    {
-        $this->idPost = $idPost;
+		public function getPostagem() {
+			return $this->postagem;
+		}
+		public function setPostagem($postagem) {
+			$this->postagem = $postagem;
+		}
 
-        return $this;
-    }
+		public function getImagem() {
+			return $this->imagem;
+		}
+		public function setImagem($imagem) {
+			$this->imagem = $imagem;
+		}
 
+		public function getCurtidas() {
+			return $this->curtidas;
+		}
+		public function setCurtidas($curtidas) {
+			$this->curtidas = $curtidas;
+		}
 
-    public function getData()
-    {
-        return $this->data;
-    }
+		public function getComentario() {
+			return $this->comentario;
+		}
 
-  
-    public function setData($data)
-    {
-        $this->data = $data;
+		public function setComentario($comentario) {
+			$this->comentario = $comentario;
+		}
 
-        return $this;
-    }
-
- 
-    public function getPostagem()
-    {
-        return $this->postagem;
-    }
-
- 
-    public function setPostagem($postagem)
-    {
-        $this->postagem = $postagem;
-
-        return $this;
-    }
-
-
-  
-    public function getImagem()
-    {
-        return $this->imagem;
-    }
-
- 
-    public function setImagem($imagem)
-    {
-        $this->imagem = $imagem;
-
-        return $this;
-    }
-
- 
-    public function getCurtidas()
-    {
-        return $this->curtidas;
-    }
-
-    public function setCurtidas($curtidas)
-    {
-        $this->curtidas = $curtidas;
-
-        return $this;
-    }
-
-    public function getComentario()
-    {
-        return $this->comentario;
-    }
-
-    public function setComentario($comentario)
-    {
-        $this->comentario = $comentario;
-
-        return $this;
-    }
-	
 	function Publicar (){
 	if(isset($_POST['env']) && $_POST['env'] == "post"){
 		if($_POST['post']){
@@ -111,9 +72,13 @@ class Posts {
 			}else{
 				echo "<div class='alert alert-danger'>Erro ao enviar a publicação!</div>";
 			}
+<<<<<<< HEAD:src/model/posts.class.php
 
 
 		    }else{
+=======
+		}else{
+>>>>>>> d1c1415d0f47e78d3000960103f6fb20f1e30122:src/model/post.class.php
 			echo "<div class='alert alert-danger'>Preencha todos os campos</div>";
 		}
 	}
@@ -122,7 +87,7 @@ class Posts {
 	function curtir($con, $idPost, $totalCurtidas){
 		$curtidasAtualizadas = ($totalCurtidas) +1;
 
-		$query = $con->prepare("UPDATE posts SET curtidas = ? WHERE id = ?");
+		$query = $con->prepare("UPDATE post SET curtidas = ? WHERE id = ?");
 		$query->bind_param("ss", $curtidasAtualizadas, $idUser);
 		$query->execute();
 		if($query->affected_rows > 0){
@@ -161,11 +126,18 @@ class Posts {
 		}
     }
     
-    function Comentar (){
-        $comentario=$_POST['comentario'];
-        $sql = "INSERT INTO comentario VALUES(id_comentario, comentario, data)($this->id_comentario,'$this->comentario)";
-
-    }
+		function Comentar() {
+			include_once("../conexao/conexao.php");
+			
+			$sql = "INSERT INTO comentario VALUES('$this->id_comentario','$this->comentario', '$this->data',null,$this->usuario,null)";
+			
+			if(mysqli_query($conn, $sql)){
+				header('Refresh:0');
+				header('location:../views/home.php');
+			} else {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			}
+    	}
 
 
 	}

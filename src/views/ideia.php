@@ -51,7 +51,7 @@
 			<div class="col-sm-6">
 				<aside>
 					<h4 class="text-center">Mande uma nova Ideia</h4>
-					<form method="post" action="../controller/controller.ideia.php">
+					<form method="post" action="../controller/controller.ideia.php" enctype="multipart/form-data">
 						<p>
 							Título
 							<input type="text" name="titulo" required="required" placeholder="Dê um nome para sua ideia" class="form-control">
