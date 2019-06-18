@@ -1,11 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.8.2
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: 18-Jun-2019 às 05:28
--- Versão do servidor: 10.1.34-MariaDB
--- PHP Version: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -18,25 +10,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `entropia`
---
-
-DELIMITER $$
---
--- Procedures
---
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Aquisição_de_prêmios` (INOUT `qtde_pontos` INT, INOUT `qtde_pontos_premios` INT)  BEGIN
-    SET qtde_pontos= qtde_pontos - qtde_pontos_premios; 
-END$$
-
-DELIMITER ;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `avatar`
---
 
 CREATE TABLE `avatar` (
   `id_avatar` bigint(20) NOT NULL,
