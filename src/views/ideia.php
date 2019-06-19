@@ -4,8 +4,6 @@
     <link rel="stylesheet" type="text/css" href="../public/css/padrao.css">
     <link rel="shortcut icon" type="image/x-icon" href="../public/img/logo/logo1.png">
     <?php
-		include_once("../conexao/conexao.php");
-	
         session_start();
         if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
             unset($_SESSION['login']);
@@ -23,6 +21,10 @@
         }else {
             include 'menu.php';
         }
+
+        include_once("../conexao/conexao.php");
+		
+		
     ?>
     
     <div class="container" id="cor">
@@ -35,15 +37,15 @@
 							<th scope="col">Ideias salvas por você</th>
 						</tr>
 						<?php
-							$sql = "SELECT * FROM ideia";
-							$resultado = mysqli_query($conn, $sql);
+							$select = "SELECT * FROM cadastro JOIN usuario JOIN ideia ON cadastro.id_cadastro=usuario.id_cadastrofk AND usuario.id_usuario=ideia.id_usuariofk WHERE ideia.permissao = 1 AND usuario.id_usuario=ideia.id_usuariofk AND cadastro.usuario='$logado'";
 
-							while ($registro = mysqli_fetch_array($resultado)) {
-								$titulo = utf8_encode($registro['titulo']);
+							$result = mysqli_query($conn, $select);
+							while ($row = mysqli_fetch_array($result)){
+								$identificar = $row['id_usuario'];
+
 								echo "<tr>";
-								echo "<td><a href='#' data-toggle='modal' data-target='#ideia-modal'>" . $titulo . "</a></td>";
+								echo "<td><a href='#' data-toggle='modal' data-target='#ideia-modal'>".utf8_encode($row['titulo'])."</a></td>";
 								echo "</tr>";
-								
 							}
 						?>
 				</table>
@@ -51,18 +53,13 @@
 			<div class="col-sm-1"></div>
 			<div class="col-sm-6">
 				<aside>
-				<?php
-					$select = "SELECT * FROM cadastro JOIN usuario JOIN avatar ON cadastro.id_cadastro=usuario.id_cadastrofk AND avatar.id_avatar=usuario.id_avatarfk WHERE cadastro.usuario='$logado'";
-
-					$result = mysqli_query($conn, $select);
-						while ($row = mysqli_fetch_array($result)){
-							$identificar = $row['id_usuario'];
-						}
-				?>
+				
 					<h4 class="text-center">Mande uma nova Ideia</h4>
 					<form method="post" action="../controller/controller.ideia.php" enctype="multipart/form-data">
+						
 						<p>
 							Título
+							
 							<input type="text" name="titulo" required="required" placeholder="Dê um nome para sua ideia" class="form-control">
 						</p>
 						<p>
@@ -81,7 +78,6 @@
 							Adicionar arquivo em anexo<br>
 							<input type="file" id="saida-anexo" name="anexo[]" multiple="multiple" class="form-control-file">
 						</p>
-						<input type="hidden" name="usuario" value="<?php echo $identificar; ?>">
 						<div id="enviar">
 							<button id="cancela"class="btn btn-primary mb-2">Cancelar</button>
 							<input type="submit" id="salva" value="Salvar" class="btn btn-primary mb-2">
