@@ -52,7 +52,11 @@
 
 								while ($row = mysqli_fetch_assoc($resultado)) {
 									$id = $row['id_setor'];
+<<<<<<< HEAD
 									$titulo = utf8_encode($row['nome']);
+=======
+									$titulo = utf8_encode($row['setor']);
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 									echo '<option value="'.$id.'">'.$titulo.'</option>';
 								}
 							?>

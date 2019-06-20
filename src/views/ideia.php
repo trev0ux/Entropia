@@ -43,6 +43,10 @@
 								echo "<tr>";
 								echo "<td><a href='#' data-toggle='modal' data-target='#ideia-modal'>" . $titulo . "</a></td>";
 								echo "</tr>";
+<<<<<<< HEAD:src/views/ideia.php
+=======
+								
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099:src/views/ideia.php
 							}
 						?>
 				</table>
@@ -50,6 +54,14 @@
 			<div class="col-sm-1"></div>
 			<div class="col-sm-6">
 				<aside>
+				<?php
+					$select = "SELECT * FROM cadastro JOIN usuario JOIN avatar ON cadastro.id_cadastro=usuario.id_cadastrofk AND avatar.id_avatar=usuario.id_avatarfk WHERE cadastro.usuario='$logado'";
+
+					$result = mysqli_query($conn, $select);
+						while ($row = mysqli_fetch_array($result)){
+							$identificar = $row['id_usuario'];
+						}
+				?>
 					<h4 class="text-center">Mande uma nova Ideia</h4>
 					<form method="post" action="../controller/controller.ideia.php" enctype="multipart/form-data">
 						<p>
@@ -72,6 +84,7 @@
 							Adicionar arquivo em anexo<br>
 							<input type="file" id="saida-anexo" name="anexo[]" multiple="multiple" class="form-control-file">
 						</p>
+						<input type="hidden" name="usuario" value="<?php echo $identificar; ?>">
 						<div id="enviar">
 							<button id="cancela"class="btn btn-primary mb-2">Cancelar</button>
 							<input type="submit" id="salva" value="Salvar" class="btn btn-primary mb-2">

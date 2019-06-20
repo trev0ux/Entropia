@@ -47,22 +47,22 @@
 				<select id="ideiaCamp" name="ideiaCamp" class="form-control"></select>				
 
 				<div class="mudar">
-					<form method="post" action="">
+					<form method="post" action="../controller/controller.ideia.php">
 						<p>
 							<label for="titulo-ic" class="sr-only">Título</label>
-							<input type="text" class="form-control" id="titulo-ic" name="titulo-ic" placeholder="<?php echo $titulo ?>" disabled>
+							<input type="text" class="form-control" id="titulo-ic" name="titulo-ic" placeholder="<?php echo $linha['titulo'] ?>" disabled>
 						</p>
 						<p>
 							<label for="descricao-ic" class="sr-only">Descrição</label>
-							<textarea class="form-control" id="descricao-ic" name="descricao-ic" placeholder="<?php echo $descricao ?>" disabled></textarea>
+							<textarea class="form-control" id="descricao-ic" name="descricao-ic" placeholder="<?php echo $linha['descricao'] ?>" disabled></textarea>
 						</p>
 						<p>
 							<label for="beneficio-ic" class="sr-only">Benefícios</label>
-							<input type="text" class="form-control" id="beneficio-ic" name="beneficio-ic" placeholder="<?php echo $beneficio ?>" disabled>
+							<input type="text" class="form-control" id="beneficio-ic" name="beneficio-ic" placeholder="<?php echo $linha['beneficio'] ?>" disabled>
 						</p>
 						<p>
 							<label for="ajustes" class="sr-only">Ajustes</label>
-							<textarea class="form-control" id="ajustes" name="ajustes" placeholder="Sugerir melhorias a ideia"></textarea>
+							<textarea class="form-control" id="ajustes" name="ajustes" placeholder="<?php echo $ajustes ?>"></textarea>
 						</p>
 						<div class="modal-footer">
 							<button type="submit" class="btn btn-primary">Enviar Ajustes</button>

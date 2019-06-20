@@ -54,10 +54,17 @@ class Metodologia {
 			$this->id = $row['id_metodologia'] + 1;
 		}
 		
+<<<<<<< HEAD
 		$sql = "INSERT INTO metodologia VALUES('$this->id','$this->titulo','$this->definicao','$this->descricao','$this->objetivo','$this->anexo',NULL)";
 	        
 		if (mysqli_query($conn, $sql)) {
 			header('location:../views/metodologiaNova.php');
+=======
+		$sql = "INSERT INTO metodologia VALUES('$this->id','$this->titulo','$this->definicao','$this->descricao','$this->objetivo','$this->anexo')";
+	        
+		if (mysqli_query($conn, $sql)) {
+			header('location:../views/metodologiaSuper.php');
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 		} else {
 			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 		}

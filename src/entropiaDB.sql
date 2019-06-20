@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 create database entropia;
 use entropia;
+=======
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -13,6 +16,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 
+<<<<<<< HEAD
 DELIMITER $$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Aquisição_de_prêmios` (INOUT `qtde_pontos` INT, INOUT `qtde_pontos_premios` INT)  BEGIN
@@ -22,6 +26,8 @@ END$$
 DELIMITER ;
 
 
+=======
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 CREATE TABLE `avatar` (
   `id_avatar` bigint(20) NOT NULL,
   `avatar` varchar(220) NOT NULL,
@@ -30,8 +36,16 @@ CREATE TABLE `avatar` (
   `head_avatar` varchar(220) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 
 INSERT INTO `avatar` VALUES
+=======
+--
+-- Extraindo dados da tabela `avatar`
+--
+
+INSERT INTO `avatar` (`id_avatar`, `avatar`, `nome_avatar`, `mini_avatar`, `head_avatar`) VALUES
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 (1, 'esteves.png', 'esteves-avatar.png', 'esteves-mini.png', 'esteves1.png'),
 (2, 'muriel.png', 'muriel-avatar.png', 'muriel-mini.png', 'muriel1.png'),
 (3, 'melo.png', 'melo-avatar.png', 'melo-mini.png', 'melo1.png'),
@@ -40,6 +54,14 @@ INSERT INTO `avatar` VALUES
 (6, 'james.png', 'james-avatar.png', 'james-mini.png', 'james1.png'),
 (7, 'logo-icon.png', 'logo-icon.png', 'logo-icon.png', 'logo-icon.png');
 
+<<<<<<< HEAD
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cadastro`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 
 CREATE TABLE `cadastro` (
   `id_cadastro` bigint(20) NOT NULL,
@@ -52,8 +74,16 @@ CREATE TABLE `cadastro` (
   `id_setorfk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 
 INSERT INTO `cadastro` VALUES
+=======
+--
+-- Extraindo dados da tabela `cadastro`
+--
+
+INSERT INTO `cadastro` (`id_cadastro`, `nome`, `sobrenome`, `data_nasc`, `email`, `usuario`, `senha`, `id_setorfk`) VALUES
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 (1, 'empresa', 'inovação', '0000-00-00', 'empresa@empresa', 'admin', 'admin', NULL),
 (2, 'Thiago', 'Benjamin', '2010-11-03', 'binho.bfb@gmail.com', 'benjamin', '123456', 1),
 (3, 'Dilton', 'Costa', '2019-04-03', 'dilton@gmail.com', 'dilton', '123456', 2),
@@ -62,6 +92,15 @@ INSERT INTO `cadastro` VALUES
 (7, 'Ruan', 'Felipe', '2019-04-20', 'ruan@gmail.com', 'ruan', '123456', 5),
 (8, 'Lucas', 'Amorim', '28/03/2001', 'lucas@lucas.com', 'trev0ux', '123456', 4);
 
+<<<<<<< HEAD
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `campanha`
+--
+
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 CREATE TABLE `campanha` (
   `id_campanha` bigint(20) NOT NULL,
   `tema` varchar(45) NOT NULL,
@@ -73,12 +112,44 @@ CREATE TABLE `campanha` (
   `id_usuariofk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 INSERT INTO `campanha` VALUES
+=======
+--
+-- Extraindo dados da tabela `campanha`
+--
+
+INSERT INTO `campanha` (`id_campanha`, `tema`, `descricao`, `objetivo`, `regra`, `premio`, `fotoCamp`, `id_usuariofk`) VALUES
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 (1, 'Novas tecnologias', 'Métodos que melhoram o ambiente de trabalho usando tecnologia', 'Transformar o ambiente de trabalho mais dinâmico e atrativo para colaboradores', 'Tecnologias de baixo custo e fácil implantação', '450 pontos', '3f121a8209d46d4f73ac56c1b5f2964f.png', 7),
 (2, 'Consumo Consciente', 'Os gastos com água, luz e papéis (todos os tipos) estão causando prejuízo a organização', 'Diminuir gastos de água e luz e colaborar com o meio ambiente', 'Ideias sustentáveis de fácil implantação', '1000 pontos', '3a45cf2bf0eb9f3930a9de69f6b182ba.jpg', 7),
 (3, 'Contra o desmatamento', 'A ideia é trazer formar de conscientizar os nossos colaboradores', 'Tornar nosso corpo colaborativo mais engajado e consciente', 'Medidas de facil implantação', '350 pontos', 'abad8713508567782eadd58326e2ae57.png', 7),
 (4, 'Ambiente Organizacional', 'Melhorar a dinâmica organizacional', 'Melhorar a dinamica organizacional', 'Melhorar a dinamica organizacional', '150 pontos', '7b310093c80fa9343f95f77bd1531ee2.jpg', 7);
 
+<<<<<<< HEAD
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `comentario`
+--
+
+CREATE TABLE `comentario` (
+  `id_comentario` bigint(20) NOT NULL,
+  `comentario` mediumtext NOT NULL,
+  `comentario_data` datetime DEFAULT NULL,
+  `id_ideiafk` bigint(20) DEFAULT NULL,
+  `id_usuariofk` bigint(20) DEFAULT NULL,
+  `id_postfk` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `ideia`
+--
+
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 CREATE TABLE `ideia` (
   `id_ideia` bigint(20) NOT NULL,
   `qtde_reacoes_ideias` int(11) DEFAULT NULL,
@@ -87,9 +158,32 @@ CREATE TABLE `ideia` (
   `beneficio` mediumtext NOT NULL,
   `participante` varchar(45) DEFAULT NULL,
   `anexo` varchar(220) DEFAULT NULL,
+<<<<<<< HEAD
   `id_usuariofk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+=======
+  `data` date NOT NULL,
+  `hora` time NOT NULL,
+  `permissao` int(11) NOT NULL,
+  `id_usuariofk` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `ideia`
+--
+
+INSERT INTO `ideia` (`id_ideia`, `qtde_reacoes_ideias`, `titulo`, `descricao`, `beneficio`, `participante`, `anexo`, `data`, `hora`, `permissao`, `id_usuariofk`) VALUES
+(0, 0, 'inovação', 'ideia revolucionária', 'mundança no mercado financeiro', 'Lucas', '', '2019-06-17', '20:43:42', 1, 4),
+(1, 0, 'análise de requisitos', 'Forma de facilitar o desenvolvimento organizacional', 'tem varios beneficios', 'Andreza', '', '2019-06-17', '21:00:25', 1, 7),
+(2, 0, 'Falta de interesse', 'Se a nossa equipe tivesse interesse conseguia desenvolver ', 'tristeza', 'Andreza ', '', '2019-06-17', '21:06:47', 1, 8);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `ideiacamp`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 
 CREATE TABLE `ideiacamp` (
   `id_ideiaCamp` bigint(20) NOT NULL,
@@ -101,8 +195,16 @@ CREATE TABLE `ideiacamp` (
   `id_usuariofk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 
 INSERT INTO `ideiacamp` VALUES
+=======
+--
+-- Extraindo dados da tabela `ideiacamp`
+--
+
+INSERT INTO `ideiacamp` (`id_ideiaCamp`, `titulo`, `descricao`, `beneficio`, `anexo`, `id_campanhafk`, `id_usuariofk`) VALUES
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 (1, 'controle de água', 'diminuir o gasto de água na empresa', 'economia na conta de água', NULL, 2, NULL),
 (2, 'reutilizar papel', 'imprimir folhas frente e verso', 'diminuir gastos com papel', NULL, 3, NULL),
 (3, 'cidades sensiveis', 'cidades que aumentam a participação do cidadão', 'aumentar o lucro', NULL, 1, NULL),
@@ -110,6 +212,7 @@ INSERT INTO `ideiacamp` VALUES
 (5, 'realidade aumentada', 'facilitar a elaboração de novas pesquisas', 'lucro imediato para empresa', NULL, 1, NULL),
 (6, 'palestras de conscientização', 'promover debates e alavancar o conhecimmento dentro do ambiente de trabalho', 'agregar valor e conhecimento aos funcionários', NULL, 3, NULL);
 
+<<<<<<< HEAD
 CREATE TABLE `comentario` (
   `id_comentario` bigint(20) NOT NULL,
   `comentario` mediumtext NOT NULL,
@@ -118,6 +221,13 @@ CREATE TABLE `comentario` (
   `id_usuariofk` bigint(20) DEFAULT NULL,
   `id_postfk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `medalhas`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 
 CREATE TABLE `medalhas` (
   `id_medalha` bigint(20) NOT NULL,
@@ -125,6 +235,15 @@ CREATE TABLE `medalhas` (
   `tipo_medalha` varchar(220) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `metodologia`
+--
+
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 CREATE TABLE `metodologia` (
   `id_metodologia` bigint(20) NOT NULL,
   `titulo` varchar(45) NOT NULL,
@@ -134,6 +253,22 @@ CREATE TABLE `metodologia` (
   `anexo` varchar(220) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
+=======
+--
+-- Extraindo dados da tabela `metodologia`
+--
+
+INSERT INTO `metodologia` (`id_metodologia`, `titulo`, `definicao`, `descricao`, `objetivo`, `anexo`) VALUES
+(0, 'Diagrama de Ishikawa', 'TambÃ©m conhecido como Diagrama de Causa e Efeito ou Diagrama Espinha de peixe, Ã© um grÃ¡fico cuja finalidade Ã© organizar o raciocÃ­nio em discussÃµes de um problema prioritÃ¡rio, em processos diversos, especialmente na produÃ§Ã£o industrial.', 'Originalmente proposto pelo engenheiro quÃ­mico Kaoru Ishikawa em 1943 e aperfeiÃ§oado nos anos seguintes. O diagrama foi desenvolvido com o objetivo de representar a relaÃ§Ã£o entre um â€œefeitoâ€ e suas possÃ­veis â€œcausasâ€.', 'Esta tÃ©cnica Ã© utilizada para descobrir, organizar e resumir conhecimento de um grupo a respeito das possÃ­veis causas que contribuem para um determinado efeito.', 'e3518714352b6072c5b66caf2f5da6ef.pdf'),
+(1, 'Scrum', 'Scrum Ã© uma metodologia Ã¡gil para gestÃ£o e planejamento de projetos de software.', 'No Scrum, os projetos sÃ£o dividos em ciclos (tipicamente mensais) chamados de Sprints. O Sprint representa um Time Box dentro do qual um conjunto de atividades deve ser executado. Metodologias Ã¡geis de desenvolvimento de software sÃ£o iterativas, ou seja, o trabalho Ã© dividido em iteraÃ§Ãµes, que sÃ£o chamadas de Sprints no caso do Scrum.', 'As funcionalidades a serem implementadas em um projeto sÃ£o mantidas em uma lista que Ã© conhecida como Product Backlog. No inÃ­cio de cada Sprint, faz-se um Sprint Planning Meeting, ou seja, uma reuniÃ£o de planejamento na qual o Product Owner prioriza os itens do Product Backlog e a equipe seleciona as atividades que ela serÃ¡ capaz de implementar durante o Sprint que se inicia. As tarefas alocadas em um Sprint sÃ£o transferidas do Product Backlog para o Sprint Backlog.', 'd287eadf2cb3ff2c3b0ca6abe9484974.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `ouvidoria`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 
 CREATE TABLE `ouvidoria` (
   `id_ouvidoria` bigint(20) NOT NULL,
@@ -144,17 +279,41 @@ CREATE TABLE `ouvidoria` (
   `id_usuariofk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 
 INSERT INTO `ouvidoria` VALUES
 (1, 'reclamação', 0, 'Problemas técnicos', NULL, NULL),
 (2, 'reclamação', 2, 'Minha equipe de PFC não faz nada', NULL, 0);
 
+=======
+--
+-- Extraindo dados da tabela `ouvidoria`
+--
+
+INSERT INTO `ouvidoria` (`id_ouvidoria`, `assunto`, `id_setorfk`, `mensagem`, `anexo`, `id_usuariofk`) VALUES
+(1, 'reclamação', 0, 'Problemas técnicos', NULL, NULL),
+(2, 'reclamação', 2, 'Minha equipe de PFC não faz nada', NULL, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `pontos`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 
 CREATE TABLE `pontos` (
   `id_pontos` bigint(20) NOT NULL,
   `qtde_pontos` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `pontos_medalhas`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 
 CREATE TABLE `pontos_medalhas` (
   `id_pontos_medalhas` bigint(20) NOT NULL,
@@ -167,17 +326,46 @@ CREATE TABLE `pontos_medalhas` (
   `id_comentariofk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 
 CREATE TABLE `post` (
   `id_post` bigint(20) NOT NULL,
   `titulo` varchar(200) NOT NULL,
   `data` datetime DEFAULT NULL,
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `post`
+--
+
+CREATE TABLE `post` (
+  `id_post` bigint(20) NOT NULL,
+  `data` date DEFAULT NULL,
+  `hora` time NOT NULL,
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
   `postagem` text NOT NULL,
   `imagem` varchar(200) DEFAULT NULL,
   `curtidas` bigint(20) NOT NULL,
   `id_usuariofk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
+=======
+--
+-- Extraindo dados da tabela `post`
+--
+
+INSERT INTO `post` (`id_post`, `data`, `hora`, `postagem`, `imagem`, `curtidas`, `id_usuariofk`) VALUES
+(0, '2019-06-17', '23:53:47', 'É muito gratificante saber que finalmente esse projeto está acontecendo!', '356e78d7e477eb7884cb09e23f8e0bb8.png', 0, 8),
+(1, '2019-06-17', '23:55:46', 'oiiiiiii', NULL, 0, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `premios`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 
 CREATE TABLE `premios` (
   `id_premio` bigint(20) NOT NULL,
@@ -186,22 +374,52 @@ CREATE TABLE `premios` (
   `fotoPremio` varchar(220) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
+=======
+--
+-- Extraindo dados da tabela `premios`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 
 INSERT INTO `premios` (`id_premio`, `Nome`, `qtde_pontos_premios`, `fotoPremio`) VALUES
 (1, 'TV LCD 51', 500, '6ee770d6e8de1df512a44b689b32b6d0.png');
 
+<<<<<<< HEAD
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `ranking`
+--
+
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 CREATE TABLE `ranking` (
   `id_ranking` bigint(20) NOT NULL,
   `id_ideiafk` bigint(20) DEFAULT NULL,
   `id_postfk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `setor`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 
 CREATE TABLE `setor` (
   `id_setor` bigint(20) NOT NULL,
   `setor` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
+=======
+--
+-- Extraindo dados da tabela `setor`
+--
+
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 INSERT INTO `setor` (`id_setor`, `setor`) VALUES
 (1, 'Administrativo'),
 (2, 'Comercial'),
@@ -209,6 +427,15 @@ INSERT INTO `setor` (`id_setor`, `setor`) VALUES
 (4, 'Recursos Humanos'),
 (5, 'Operacional');
 
+<<<<<<< HEAD
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario`
+--
+
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 CREATE TABLE `usuario` (
   `id_usuario` bigint(20) NOT NULL,
   `nivel` int(11) DEFAULT '0',
@@ -216,6 +443,13 @@ CREATE TABLE `usuario` (
   `id_cadastrofk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
+=======
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 INSERT INTO `usuario` (`id_usuario`, `nivel`, `id_avatarfk`, `id_cadastrofk`) VALUES
 (1, 1, 7, 1),
 (2, 1, 1, 2),
@@ -226,6 +460,15 @@ INSERT INTO `usuario` (`id_usuario`, `nivel`, `id_avatarfk`, `id_cadastrofk`) VA
 (7, 0, 6, 7),
 (8, 0, 2, 8);
 
+<<<<<<< HEAD
+=======
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `validacao`
+--
+
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 CREATE TABLE `validacao` (
   `id_validacao` bigint(20) NOT NULL,
   `ajustes` mediumtext,
@@ -233,7 +476,17 @@ CREATE TABLE `validacao` (
   `id_ideiafk` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 
+=======
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `avatar`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 ALTER TABLE `avatar`
   ADD PRIMARY KEY (`id_avatar`),
   ADD UNIQUE KEY `id_avatar` (`id_avatar`);
@@ -254,12 +507,23 @@ ALTER TABLE `campanha`
   ADD UNIQUE KEY `id_campanha` (`id_campanha`),
   ADD KEY `id_usuariofk` (`id_usuariofk`);
 
+<<<<<<< HEAD
+=======
+--
+-- Indexes for table `comentario`
+--
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 ALTER TABLE `comentario`
   ADD PRIMARY KEY (`id_comentario`),
   ADD UNIQUE KEY `id_comentario` (`id_comentario`),
   ADD KEY `id_usuariofk` (`id_usuariofk`),
   ADD KEY `id_ideiafk` (`id_ideiafk`),
+<<<<<<< HEAD
   ADD KEY id_postfk (id_postfk);
+=======
+  ADD KEY `id_postfk` (`id_postfk`);
+
+>>>>>>> 3f093ed6a2c8413cb783f327dba164d5bc82a099
 --
 -- Indexes for table `ideia`
 --
