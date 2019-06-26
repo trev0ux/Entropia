@@ -71,16 +71,16 @@
 							<table class="d-flex justify-content-between align-items-center text-center" id="tabela">
 								<tbody>
 									<tr>
-										<td><a href="#" data-toggle="modal" data-target="#acesso"><img src="../public/img/medalhas/primeiro-acesso.png"><small>medalha de Primeiro Acesso</small></a></td>
-										<td><a href="#" data-toggle="modal" data-target="#criativo"><img src="../public/img/medalhas/criatividade.png"><small>medalha de Criatividade</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#acesso"><img src="../public/img/medalhas/primeiro-acesso.png"><small>Parabéns! Essa medalha é para você que vai participar de decisões importantes na sua empresa!</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#criativo"><img src="../public/img/medalhas/criatividade.png"><small>Criativo</small></a></td>
 									</tr>
 									<tr>
-										<td><a href="#" data-toggle="modal" data-target="#assertivo"><img src="../public/img/medalhas/assertividade.png"><small>medalha de Assertividade</small></a></td>
-										<td><a href="#" data-toggle="modal" data-target="#equipe"><img src="../public/img/medalhas/trabalho-equipe.png"><small>medalha de Trabalho em Equipe</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#assertivo"><img src="../public/img/medalhas/assertividade.png"><small>Assertivo</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#equipe"><img src="../public/img/medalhas/trabalho-equipe.png"><small>Participativo</small></a></td>
 									</tr>
 									<tr>
-										<td><a href="#" data-toggle="modal" data-target="#inovador"><img src="../public/img/medalhas/inovacao.png"><small>medalha de Inovação</small></a></td>
-										<td><a href="#" data-toggle="modal" data-target="#empreendedor"><img src="../public/img/medalhas/empreendedorismo.png"><small>medalha de Empreendedorismo</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#inovador"><img src="../public/img/medalhas/inovacao.png"><small>Inovador!</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#empreendedor"><img src="../public/img/medalhas/empreendedorismo.png"><small>Empreendedor!</small></a></td>
 									</tr>
 								</tbody>
 							</table>
@@ -100,64 +100,26 @@
 						
 	    				<table class="table table-borderless">
 	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">Clarice acabou de comentar na sua publicação</a></td>
 	    					</tr>
 	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">Precisa de uma descrição mais coesa, utilize o Diagrama de Ishikawa para melhorar suas informações</a></td>
 	    					</tr>
 	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">A ideia Tomar meios de produção: foi enviada para a Comissão! Parabéns, é um grande passo. </a></td>
 	    					</tr>
 	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">Utilize a metodologia de brainstorm na ideia: ar bombinas para melhorar as máquinas </a></td>
 	    					</tr>
 	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">A resposta da reclamação: conserto de ar condicionado da sala 3 foi enviada para o seu e-mail.</a></td>
 	    					</tr>
 	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
+	    						<td><a href="#" data-toggle="modal" data-target="#update">Andreza curtiu a sua foto!</a></td>
 	    					</tr>
 	    					<tr>
-								<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
+								<td><a href="#" data-toggle="modal" data-target="#update">Gabriel curtiu sua ideia!</a></td>
 	    					</tr>
-	    					<tr>
-								<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
 	    					</tr>	
 	    				</table>
 					</div>	
@@ -173,22 +135,22 @@
 						<table class="d-flex justify-content-between align-items-center text-center" id="tabela">
 							<tbody>
 								<tr>
-									<td>IDEIA A</td>
+									<td>Melhoria na gestão de projetos: Utilizem metodologia scrum</td>
 								</tr>
 								<tr>
-									<td>IDEIA B</td>
+									<td>Futebol no clube</td>
 								</tr>
 								<tr>
-									<td>IDEIA C</td>
+									<td>Reduza os copos descartavéis e dê uma caneca para cada funcionário</td>
 								</tr>
 								<tr>
-									<td> IDEIA D</td>
+									<td>Café da manhã no dia 06/06, diálogo sobre o processo produtivo</td>
 								</tr>
 								<tr>
-									<td>IDEIA F</td>
+									<td>Aulas de Taekwondo</td>
 								</tr>
 								<tr>
-									<td>IDEIA G</td>
+									<td>Acompanhe tecnologias chinesa</td>
 								</tr>	
 							</tbody>
 						</table>
@@ -203,7 +165,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title text-warning" id="exampleModalLabel">Medalha de Primeiro Acesso</h5>
+						<h5 class="modal-title text-warning" id="exampleModalLabel">Primeiro Acesso</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -211,7 +173,7 @@
 					<div class="modal-body">
 						<center>
 							<img src="../public/img/medalhas/primeiro-acesso.png">
-							<p>Seja Bem-Vindo! Você ganhou essa medalha no seu primeiro acesso ao nosso sistema. Parabéns!</p>
+							<p>Seja bem-vindo! Essa medalhas é para você que vai participar de decisões importantes na sua empresa. Parabéns!</p>
 							<small>TOTAL: 1</small>
 						</center>
 					</div>
@@ -225,7 +187,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title text-warning" id="exampleModalLabel">Medalha de Criatividade</h5>
+						<h5 class="modal-title text-warning" id="exampleModalLabel">Criativo</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -247,7 +209,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title text-warning" id="exampleModalLabel">Medalha de Assertividade</h5>
+						<h5 class="modal-title text-warning" id="exampleModalLabel">Assertivo</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -269,7 +231,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title text-warning" id="exampleModalLabel">Medalha de Trabalho em Equipe</h5>
+						<h5 class="modal-title text-warning" id="exampleModalLabel">Participativo</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -291,7 +253,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title text-warning" id="exampleModalLabel">Medalha de Inovação</h5>
+						<h5 class="modal-title text-warning" id="exampleModalLabel">Inovador</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -313,7 +275,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title text-warning" id="exampleModalLabel">Medalha de Empreendedorismo</h5>
+						<h5 class="modal-title text-warning" id="exampleModalLabel">Empreendedor</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>

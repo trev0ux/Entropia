@@ -34,7 +34,7 @@
 				<table id="tabela" class="table text-center">
 					<thead class="thead-light">
 						<tr>
-							<th scope="col">Ideias salvas por você</th>
+							<th scope="col">Suas ideias</th>
 						</tr>
 						<?php
 							$select = "SELECT * FROM cadastro JOIN usuario JOIN ideia ON cadastro.id_cadastro=usuario.id_cadastrofk AND usuario.id_usuario=ideia.id_usuariofk WHERE ideia.permissao = 1 AND usuario.id_usuario=ideia.id_usuariofk AND cadastro.usuario='$logado'";
@@ -54,7 +54,7 @@
 			<div class="col-sm-6">
 				<aside>
 				
-					<h4 class="text-center">Mande uma nova Ideia</h4>
+					<h4 class="text-center">Envie uma nova ideia</h4>
 					<form method="post" action="../controller/controller.ideia.php" enctype="multipart/form-data">
 						
 						<p>
@@ -75,7 +75,7 @@
 							<textarea name="participante" class="form-control"></textarea>
 						</p>
 						<p id="arquivo">
-							Adicionar arquivo em anexo<br>
+							Adicionar anexo<br>
 							<input type="file" id="saida-anexo" name="anexo[]" multiple="multiple" class="form-control-file">
 						</p>
 						<div id="enviar">

@@ -29,7 +29,7 @@
 		<div class="container" >
 		<div class="row justify-content-center" id="cor" style="padding: 20px;">
 			<div class="col-sm-6">
-				<h4 class="text-primary font-weight-bold text-center">Metotodologias Disponíveis</h4>
+				<h4 class="text-primary font-weight-bold text-center">Metodologias Disponíveis</h4>
                 <table class="table text-center" id="minhaTabela1">
                     <thead class="thead-light">
                         <tr>

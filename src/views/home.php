@@ -65,8 +65,8 @@
 					<!-- Ranking -->
 					<div class="card gedf-card" id="rankin-colab">
 						<div class="card-body" id="rank">
-							<h5 class="card-title">Ranking dos Colaboradores</h5>
-							<h6 class="card-subtitle mb-2 text-muted">Interaja e suba de posição</h6>
+							<h5 class="card-title">Destaques do mês:</h5>
+							<h6 class="card-subtitle mb-2 text-muted">Interaja, inove e destaque-se na empresa!</h6>
 
 							<table class="d-flex justify-content-between align-items-center" id="tabela1">
 								<tr>
@@ -120,7 +120,7 @@
 													<div class="carousel-caption d-none d-md-block">
 														<h3><?php echo utf8_encode($row_carousel['tema']); ?></h3>
 														<p><?php echo utf8_encode($row_carousel['descricao']); ?></p>
-														<a class="btn btn-info label label-primary" href="campIdeia.php">Mande sua Ideia</a>
+														<a class="btn btn-info label label-primary" href="campIdeia.php">Envie a sua ideia!</a>
 													</div>
 												</div>
 												<?php
@@ -133,7 +133,7 @@
 													<div class="carousel-caption d-none d-md-block">
 														<h3><?php echo utf8_encode($row_carousel['tema']); ?></h3>
 														<p><?php echo utf8_encode($row_carousel['descricao']); ?></p>
-														<a class="btn btn-info label label-primary" href="campIdeia.php">Mande sua Ideia</a>
+														<a class="btn btn-info label label-primary" href="campIdeia.php">Envie a sua ideia!</a>
 													</div>
 												</div> 
 											<?php
@@ -363,7 +363,7 @@
 						<div class="card-body">
 							<h5 class="card-title">BEM-VINDO!!!</h5>
 							<p class="card-text">
-								SEJA BEM-VINDO AO SEU LABORATÓRIO DE INOVAÇÃO PREFERIDO!
+								Inove, avance e colabore com o Entropia, o laboratório de inovação da sua empresa!
 							</p>
 						</div>
 						<div class="card-footer">
@@ -378,7 +378,7 @@
 					<div class="card" id="rankin-ideia">
 						<div class="card-body" id="rankin">
 							<h5 class="card-title">Ranking de Ideias</h5>
-							<h6 class="card-subtitle mb-2 text-muted">Seja criativo e suba de posição</h6>
+							<h6 class="card-subtitle mb-2 text-muted">Seja inovador e suba de posição</h6>
 							<table class="d-flex justify-content-between align-items-center" id="tabela">
 								<tr>
 									<td class="esquerdo">1º</td>

@@ -39,22 +39,22 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 1</a></td>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Outubro Rosa</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 2</a></td>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Melhoria de processos produtivos</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 3</a></td>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Conquistar novos ramos</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 4</a></td>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Quem você votaria para gestor?</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 5</a></td>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Copos descartáveis são eficientes?</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 6</a></td>
+							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Ambiente Limpo: Quais suas propostas?</a></td>
 						</tr>
 					</tbody>
 				</table>

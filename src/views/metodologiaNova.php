@@ -48,7 +48,7 @@
                                 <textarea class="form-control" name="objetivo-metodo" placeholder="Para que serve"></textarea>
                             </p>
                             <p>
-                                Anexar Exemplo
+                                Anexar documento
                                 <input type="file" name="anexo-metodo" class="form-control-file">
                             </p>
                     </section>

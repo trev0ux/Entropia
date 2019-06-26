@@ -41,27 +41,27 @@
 						<tbody>
 							<tr>
 								<td>Supervisor A</td>
-								<td>Dilton Costa</td>
+								<td>Cheli Mendes</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
 							<tr>
-								<td>Supervisor A</td>
-								<td>Dilton Costa</td>
+								<td>Supervisor B</td>
+								<td>Elaine Andrade</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
 							<tr>
-								<td>Supervisor A</td>
-								<td>Dilton Costa</td>
+								<td>Supervisor C</td>
+								<td>Rafael Levi</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
 							<tr>
-								<td>Supervisor A</td>
-								<td>Dilton Costa</td>
+								<td>Supervisor D</td>
+								<td>Washington Anunciação</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
 							<tr>
-								<td>Supervisor A</td>
-								<td>Dilton Costa</td>
+								<td>Supervisor E</td>
+								<td>Leandro</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
 							<tr>
@@ -87,7 +87,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						Deseja mesmo implementar essa ideia como um projeto na sua empresa?
+						A ideia obteve resultados? Torne-a um projeto e premie o funcionário inovador!
 					</div>
 						<div class="modal-footer">
 							<input type="submit" id="finalizar" value="Implementar" class="btn btn-primary mb-2">
