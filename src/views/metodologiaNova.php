@@ -29,7 +29,7 @@
         <div class="container" id="cor">
             <div class="row justify-content-center">
                 <div class="col-sm-6">
-                    <h1 class="text-center">Nova Metodologia</h1>
+                    <h1 class="text-primary font-weight-bold text-center" style="margin-top:10px;">Nova Metodologia</h1>
                         <form action="../controller/controller.metodologia.php" method="POST" enctype="multipart/form-data">
                             <p>
                                 Título

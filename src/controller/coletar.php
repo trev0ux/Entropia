@@ -1,5 +1,5 @@
 <?php 
-	$conexao = mysqli_connect('localhost', 'root', '', 'entropia');
+	include_once("../conexao/conexao.php");
 
 	$id_campanha = $_REQUEST['id_campanha'];
 	

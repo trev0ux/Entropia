@@ -50,62 +50,67 @@
 			
 			$incrementar = "select id_post FROM post";
 			$resultado = mysqli_query($conn, $incrementar);
-
 			
-				while ($row = mysqli_fetch_array($resultado)) {
-					$this->id = $row['id_post'] + 1;
-				}
+			while ($row = mysqli_fetch_array($resultado)) {
+				$this->id = $row['id_post'] + 1;
+			}
 				
-				$sql = "INSERT INTO post VALUES('$this->id','$this->data','$this->hora', '$this->postagem', '$this->imagem', 0, '$this->usuario')";
+			$sql = "INSERT INTO post VALUES('$this->id','$this->data','$this->hora', '$this->postagem', '$this->imagem', 0, '$this->usuario')";
 	        
-				if (mysqli_query($conn, $sql)) {
-					header('location:../views/home.php');				
-				} else {
-					echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-				}
+			if (mysqli_query($conn, $sql)) {
+				header('location:../views/home.php');				
+			} else {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			}
 
-				mysqli_close($conn);
+			mysqli_close($conn);
 		}
 
-		function curtir($con, $idPost, $totalCurtidas){
-			$curtidasAtualizadas = ($totalCurtidas) + 1;
-
-			$query = $con->prepare("UPDATE post SET curtidas = ? WHERE id = ?");
-			$query->bind_param("ss", $curtidasAtualizadas, $idUser);
-			$query->execute();
-			if($query->affected_rows > 0){
-				echo "<script>window.history.back(-1);</script>";
-			}else{
-				echo "<script>window.history.back(-1);</script>";
+		function Curtir(){
+			include_once("../conexao/conexao.php");
+			
+			$incrementar = "select curtidas FROM post";
+			$resultado = mysqli_query($conn, $incrementar);
+			
+			while ($row = mysqli_fetch_array($resultado)) {
+				$this->id = $row['curtidas'] + 1;
 			}
+				
+			$curtir = "UPDATE post SET curtidas = '$this->curtidas' WHERE id_post = '$this->id'";
+	        
+			if (mysqli_query($conn, $curtir)) {
+				echo "";				
+			} else {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			}
+
+			mysqli_close($conn);
 		}
 		
-		function deletarPost (){
-			$idPost = addslashes($explode['1']);
-			
-			$query = $con->prepare("DELETE FROM posts WHERE id = ?");
-			$query->bind_param("s", $idPost);
-			$query->execute();
+		function Deletar() {
+			include_once("../conexao/conexao.php");
+			$deletar = "DELETE FROM post WHERE id_post = '$this->id'";
+			if (mysqli_query($conn, $deletar)) {
+				echo "";				
+			} else {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			}
+
+			mysqli_close($conn);
 		}
 
-		function editarPost (){
-			if(isset($_POST['env']) && $_POST['env'] == "post"){
-				if($_POST['post']){
-					$post = $_POST['post'];
-
-					$sql = $con->prepare("UPDATE posts SET postagem = ? WHERE id = ?");
-					$sql->bind_param("sss", $postagem, $idPost);
-					$sql->execute();
-
-					if($sql->affected_rows > 0){
+		function Editar() {
+			include_once("../conexao/conexao.php");
+			
+			$editar = "UPDATE post SET postagem = '$this->postagem' WHERE id_post = '$this->id'";
+			if(mysqli_query($conn,$editar)) {
+				header('location:../views/home.php');
 				echo "<div class='alert alert-success'>Publicação alterada com sucesso!</div>";
-					}else{
-						echo "<div class='alert alert-danger'>Erro ao alterar a publicação!</div>";
-					}
-				}else{
-					echo "<div class='alert alert-danger'>Preencha todos os campos</div>";
-				}
+			}else{
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 			}
+			
+			mysqli_close($conn);
 		}
     
 		function Comentar() {
@@ -114,7 +119,6 @@
 			$sql = "INSERT INTO comentario VALUES('$this->id_comentario','$this->comentario', '$this->data',null,$this->usuario,null)";
 			
 			if(mysqli_query($conn, $sql)){
-				header('Refresh:0');
 				header('location:../views/home.php');
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn);

@@ -62,115 +62,53 @@
 						</div>
 					</div>
 					<br>
-
-					<!-- Ranking -->
-					<div class="card gedf-card">
-						<div class="card-body">
-							<h5 class="card-title text-warning font-weight-bold text-center" id="texto">MEDALHAS</h5>
-
-							<table class="d-flex justify-content-between align-items-center text-center" id="tabela">
-								<tbody>
-									<tr>
-										<td><a href="#" data-toggle="modal" data-target="#acesso"><img src="../public/img/medalhas/primeiro-acesso.png"><small>medalha de Primeiro Acesso</small></a></td>
-										<td><a href="#" data-toggle="modal" data-target="#criativo"><img src="../public/img/medalhas/criatividade.png"><small>medalha de Criatividade</small></a></td>
-									</tr>
-									<tr>
-										<td><a href="#" data-toggle="modal" data-target="#assertivo"><img src="../public/img/medalhas/assertividade.png"><small>medalha de Assertividade</small></a></td>
-										<td><a href="#" data-toggle="modal" data-target="#equipe"><img src="../public/img/medalhas/trabalho-equipe.png"><small>medalha de Trabalho em Equipe</small></a></td>
-									</tr>
-									<tr>
-										<td><a href="#" data-toggle="modal" data-target="#inovador"><img src="../public/img/medalhas/inovacao.png"><small>medalha de Inovação</small></a></td>
-										<td><a href="#" data-toggle="modal" data-target="#empreendedor"><img src="../public/img/medalhas/empreendedorismo.png"><small>medalha de Empreendedorismo</small></a></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
 				</div>
-				
+	
 			<!-- Notificações -->	
 			<div class="col-md-6 gedf-main">
+				<div class="card-header" style="background-color:#cecece;">
+					<div class="text-center" style="margin-top:10px;">
+						<h5 class="card-title text-primary font-weight-bold" id="texto">NOTIFICAÇÕES</h5>
+					</div>
+				</div> 
+				<br>
 				<div class="card gedf-card">
-					<div class="card-header">
-							<div class="text-center" style="margin-top:10px;">
-								<h5 class="card-title text-primary font-weight-bold" id="texto">NOTIFICAÇÕES</h5>
-							</div>
-						</div>
-					<div class="card-body">
-						
-	    				<table class="table table-borderless">
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-								<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-								<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">alterar ideia A</a></td>
-	    					</tr>
-	    					<tr>
-	    						<td><a href="#" data-toggle="modal" data-target="#update">adicionar metodologia a ideia B</a></td>
-	    					</tr>	
-	    				</table>
-					</div>	
+					<div class="card-body text-center">
+						<h5 class="card-title">Fazer alteração na descrição da ideia</h5>
+					</div>
+				</div> 
+				<br>
+				<div class="card gedf-card">
+					<div class="card-body text-center">
+						<h5 class="card-title">Utilizar diagrama para análise de ideia</h5>
+					</div>
+				</div>
+				<br>
+				<div class="card gedf-card">
+					<div class="card-body text-center">
+						<h5 class="card-title">Fazer uma pesquisa sobre modelos de négocio</h5>
+					</div>
+				</div>
+				<br>
+				<div class="card gedf-card">
+					<div class="card-body text-center">
+						<h5 class="card-title">Análise mais crítica sobre o tema</h5>
+					</div>
+				</div>
+				<br>
+				<div class="card gedf-card">
+					<div class="card-body text-center">
+						<h5 class="card-title">Desvio do conceito abordado na ideia</h5>
+					</div>
 				</div>
 			</div>
-			
 			<br>
 			
 			<div class="col-md-3">
-				<div class="card">
+				<div class="card gedf-card">
 					<div class="card-body">
-						<h5 class="card-title text-warning font-weight-bold text-center" id="texto">IDEIAS ENVIADAS</h5>
-						<table class="d-flex justify-content-between align-items-center text-center" id="tabela">
+						<h5 class="card-title text-secondary font-weight-bold text-center" id="texto">IDEIAS ENVIADAS</h5>
+						<table class="d-flex justify-content-between align-items-center" id="tabela">
 							<tbody>
 								<tr>
 									<td>IDEIA A</td>
@@ -192,12 +130,35 @@
 								</tr>	
 							</tbody>
 						</table>
-					</div>
+                    </div>
 				</div>
-			</div>
+                
+                <br>
+                
+                <div class="card gedf-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning font-weight-bold text-center" id="texto">MEDALHAS</h5>
 
-
-		
+							<table class="d-flex justify-content-between align-items-center text-center" id="tabela">
+								<tbody>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#acesso"><img src="../public/img/medalhas/primeiro-acesso.png"><small>medalha de Primeiro Acesso</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#criativo"><img src="../public/img/medalhas/criatividade.png"><small>medalha de Criatividade</small></a></td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#assertivo"><img src="../public/img/medalhas/assertividade.png"><small>medalha de Assertividade</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#equipe"><img src="../public/img/medalhas/trabalho-equipe.png"><small>medalha de Trabalho em Equipe</small></a></td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#inovador"><img src="../public/img/medalhas/inovacao.png"><small>medalha de Inovação</small></a></td>
+										<td><a href="#" data-toggle="modal" data-target="#empreendedor"><img src="../public/img/medalhas/empreendedorismo.png"><small>medalha de Empreendedorismo</small></a></td>
+									</tr>
+								</tbody>
+							</table>
+                        </div>
+                    </div>
+            </div>
+	</div>
 		<!-- Modal Acesso -->
 		<div class="modal fade" id="acesso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
@@ -329,7 +290,7 @@
 			</div>
 		</div>
 		<!-- /Modal -->
-	</div>	
+			
 		<!-- Modal alterar ideia -->
 		<div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
@@ -342,7 +303,7 @@
 					</div>
 					<div class="modal-body">
 						<center>
-							<p>Ao confirmar você será redirecionado a uma tela de alteração ou atualização de ideia</p>
+							<p>Ao confirmar você será redirecionado a uma tela atualização de ideia</p>
 							<a href="" class="btn btn-info">Confirmar</a>
 						</center>
 					</div>

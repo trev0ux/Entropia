@@ -30,40 +30,12 @@
     <div class="container" id="cor">
     	<img src="../public/img/titulo/campanha.jpg" class="rounded mx-auto d-block" id="foto">
     	<div class="row justify-content-center">
-    		<div class="col-sm-5">
-    			<table class="table text-center" id="minhaTabela">
-					<thead class="thead-light">
-						<tr>
-							<th scope="col">Campanhas Salvas</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 1</a></td>
-						</tr>
-						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 2</a></td>
-						</tr>
-						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 3</a></td>
-						</tr>
-						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 4</a></td>
-						</tr>
-						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 5</a></td>
-						</tr>
-						<tr>
-							<td><a href="#" data-toggle="modal" data-target="#camp-modal">Campanha 6</a></td>
-						</tr>
-					</tbody>
-				</table>
-    		</div>
     		<div class="col-sm-6">
     			<table class="table text-center" id="minhaTabela1">
 					<thead class="thead-light">
 						<tr>
 							<th scope="col">Campanhas Publicadas</th>
+							<th scope="col">Editar</th>
 							<th scope="col">Finalizar</th>
 						</tr>
 					</thead>
@@ -75,6 +47,7 @@
 							while ($row = mysqli_fetch_array($resultado)) {
 								echo "<tr>";
 								echo "<td>".utf8_encode($row['tema'])."</td>";
+								echo "<td><button class='btn btn-success mb-2' data-toggle='modal' data-target='#camp-modal'><i class='fa fa-pencil'></i></button></td>";
 								echo "<td><button class='btn btn-danger mb-2' data-toggle='modal' data-target='#fim-camp'><i class='fa fa-times'></i></button></td>";
 								echo "</tr>";
 							}

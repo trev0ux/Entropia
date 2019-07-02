@@ -42,12 +42,13 @@
 							$resultado = mysqli_query($conn, $sql);
 
 							while ($registro = mysqli_fetch_array($resultado)) {
+							
 								$titulo = utf8_encode($registro['titulo']);
-								echo "<tr>";
-								echo "<td><a href='#' data-toggle='modal' data-target='#metodo-modal'>" . $titulo . "</a></td>";
-								echo "</tr>";
-							}
 						?>
+						<tr>
+							<td><a href="#" data-toggle="modal" data-target="#metodo<?php echo $registro['id_metodologia'] ?>"><?php echo $titulo; ?></a></td>
+						</tr>
+						<?php } ?>
 					</tbody>
 				</table>
 			</div>
@@ -67,7 +68,7 @@
                 while ($registro = mysqli_fetch_array($resultado)) {
                                                 
             ?>
-            <div class="modal fade" id="metodo-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="metodo<?php echo $registro['id_metodologia'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">

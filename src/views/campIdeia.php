@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/padrao.css">
-	<script type="text/javascript" src="js/campanha.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+    <link rel="stylesheet" type="text/css" href="../public/css/padrao.css">
+  	<script type="text/javascript" src="../public/js/campanha.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../public/img/logo/logo1.png">
     <title>entropia</title>
         <?php
 			session_start();
@@ -26,7 +26,7 @@
     ?>
 
     <div class="container" id="cor">
-    	<img src="img/titulo-c-ideia.jpg" class="rounded mx-auto d-block" id="foto">
+    	<img src="../public/img/titulo/campanha-ideia.jpg" class="rounded mx-auto d-block" id="foto">
     	<div class="row justify-content-center">
     		<div class="col-sm-6">
     			<form action="ideiacampanhasalvar.php" method="post">

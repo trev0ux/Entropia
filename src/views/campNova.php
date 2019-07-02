@@ -57,7 +57,6 @@
     					<input type="file" class="form-control-file" id="foto-campanha" name="foto-campanha" required>
     				</p>
     				<a href="campanha.php" class="btn btn-primary" id="botao">Voltar</a>
-                	<button type="submit" class="btn btn-primary" id="botao">Salvar</button>
                 	<input type="submit" value="Publicar" class="btn btn-primary" id="botao">
     			</form>
     		</div>

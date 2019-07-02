@@ -21,26 +21,115 @@
         }else {
             include 'menu.php';
         }
-	
-		$sql = "SELECT * FROM premios";
-		$resultado = mysqli_query($conn, $sql);
-
-		while ($row = mysqli_fetch_array($resultado)) {
-			$nome = utf8_encode($row['Nome']);
-			$pontos = $row['qtde_pontos_premios'];
-			$premio = $row['fotoPremio'];
     ?>
-
-    <div class="card-deck" style="width: 18rem;">
-        <div class="card text-center">
-            <img class="card-img-top" src="../upload/<?php echo $premio?>">
-            <div class="card-body">
-                <h5 class="card-title"><?php echo $nome?></h5>
-                <p class="card-text"><?php echo $pontos?></p>
-                <input type="submit" value="Trocar" class="btn btn-primary">
-            </div>
-		</div>
+    
+    <div class="row">
+    	<div class="col-sm-3">
+    		<div class="card-deck" style="width: 18rem;">
+				<div class="card text-center">
+					<img class="card-img-top" src="../public/img/logo/logo1.1.png">
+					<div class="card-body">
+						<h5 class="card-title">PRÊMIO</h5>
+						<p class="card-text">100PTS</p>
+						<input type="submit" value="Trocar" class="btn btn-primary">
+					</div>
+				</div>
+			</div>
+    	</div>
+    	
+    	<div class="col-sm-3">
+    		<div class="card-deck" style="width: 18rem;">
+				<div class="card text-center">
+					<img class="card-img-top" src="../public/img/game.png">
+					<div class="card-body">
+						<h5 class="card-title">PRÊMIO</h5>
+						<p class="card-text">100PTS</p>
+						<input type="submit" value="Trocar" class="btn btn-primary">
+					</div>
+				</div>
+			</div>
+    	</div>
+    	
+    	<div class="col-sm-3">
+    		<div class="card-deck" style="width: 18rem;">
+				<div class="card text-center">
+					<img class="card-img-top" src="../public/img/logo/logo1.1.png">
+					<div class="card-body">
+						<h5 class="card-title">PRÊMIO</h5>
+						<p class="card-text">100PTS</p>
+						<input type="submit" value="Trocar" class="btn btn-primary">
+					</div>
+				</div>
+			</div>
+    	</div>
+    	
+    	<div class="col-sm-3">
+    		<div class="card-deck" style="width: 18rem;">
+				<div class="card text-center">
+					<img class="card-img-top" src="../public/img/game.png">
+					<div class="card-body">
+						<h5 class="card-title">PRÊMIO</h5>
+						<p class="card-text">100PTS</p>
+						<input type="submit" value="Trocar" class="btn btn-primary">
+					</div>
+				</div>
+			</div>
+    	</div>
     </div>
-<?php }?>
+<br>
+    <div class="row">
+    	<div class="col-sm-3">
+    		<div class="card-deck" style="width: 18rem;">
+				<div class="card text-center">
+					<img class="card-img-top" src="../public/img/game.png">
+					<div class="card-body">
+						<h5 class="card-title">PRÊMIO</h5>
+						<p class="card-text">100PTS</p>
+						<input type="submit" value="Trocar" class="btn btn-primary">
+					</div>
+				</div>
+			</div>
+    	</div>
+    	
+    	<div class="col-sm-3">
+    		<div class="card-deck" style="width: 18rem;">
+				<div class="card text-center">
+					<img class="card-img-top" src="../public/img/logo/logo1.1.png">
+					<div class="card-body">
+						<h5 class="card-title">PRÊMIO</h5>
+						<p class="card-text">100PTS</p>
+						<input type="submit" value="Trocar" class="btn btn-primary">
+					</div>
+				</div>
+			</div>
+    	</div>
+    	
+    	<div class="col-sm-3">
+    		<div class="card-deck" style="width: 18rem;">
+				<div class="card text-center">
+					<img class="card-img-top" src="../public/img/game.png">
+					<div class="card-body">
+						<h5 class="card-title">PRÊMIO</h5>
+						<p class="card-text">100PTS</p>
+						<input type="submit" value="Trocar" class="btn btn-primary">
+					</div>
+				</div>
+			</div>
+    	</div>
+    	
+    	<div class="col-sm-3">
+    		<div class="card-deck" style="width: 18rem;">
+				<div class="card text-center">
+					<img class="card-img-top" src="../public/img/logo/logo1.1.png">
+					<div class="card-body">
+						<h5 class="card-title">PRÊMIO</h5>
+						<p class="card-text">100PTS</p>
+						<input type="submit" value="Trocar" class="btn btn-primary">
+					</div>
+				</div>
+			</div>
+    	</div>
+    </div>
+
 </body>
 </html>

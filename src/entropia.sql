@@ -1,5 +1,11 @@
-CREATE DATABASE entropia;
-USE entropia;
+-- phpMyAdmin SQL Dump
+-- version 4.8.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: 01-Jul-2019 às 22:44
+-- Versão do servidor: 10.1.34-MariaDB
+-- PHP Version: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -12,6 +18,15 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Database: `entropia`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `avatar`
+--
 
 CREATE TABLE `avatar` (
   `id_avatar` bigint(20) NOT NULL,
@@ -56,13 +71,14 @@ CREATE TABLE `cadastro` (
 --
 
 INSERT INTO `cadastro` (`id_cadastro`, `nome`, `sobrenome`, `data_nasc`, `email`, `usuario`, `senha`, `id_setorfk`) VALUES
-(1, 'empresa', 'inovação', '0000-00-00', 'empresa@empresa', 'admin', 'admin', NULL),
+(1, 'Entropia', 'inovações', '2018-07-18', 'entropia@inovacao', 'entropia', '123456', NULL),
 (2, 'Thiago', 'Benjamin', '2010-11-03', 'binho.bfb@gmail.com', 'benjamin', '123456', 1),
 (3, 'Dilton', 'Costa', '2019-04-03', 'dilton@gmail.com', 'dilton', '123456', 2),
 (4, 'Andreza', 'Vitório', '2000-03-15', 'dezavitorio@gmail.com', 'andreza', '123456', 4),
 (6, 'Andre', 'Luís', '2019-04-24', 'andre@gmail.com', 'andre', '123456', 5),
 (7, 'Ruan', 'Felipe', '2019-04-20', 'ruan@gmail.com', 'ruan', '123456', 5),
-(8, 'Lucas', 'Amorim', '28/03/2001', 'lucas@lucas.com', 'trev0ux', '123456', 4);
+(8, 'Lucas', 'Amorim', '28/03/2001', 'lucas@lucas.com', 'lucas', '123456', 4),
+(9, 'Entropia', 'inovações', '1993', 'entropia@inovacoes', 'colaborador', '123456', NULL);
 
 -- --------------------------------------------------------
 
@@ -131,9 +147,9 @@ CREATE TABLE `ideia` (
 --
 
 INSERT INTO `ideia` (`id_ideia`, `qtde_reacoes_ideias`, `titulo`, `descricao`, `beneficio`, `participante`, `anexo`, `data`, `hora`, `permissao`, `id_usuariofk`) VALUES
-(0, 0, 'inovação', 'ideia revolucionária', 'mundança no mercado financeiro', 'Lucas', '', '2019-06-17', '20:43:42', 1, 4),
-(1, 0, 'análise de requisitos', 'Forma de facilitar o desenvolvimento organizacional', 'tem varios beneficios', 'Andreza', '', '2019-06-17', '21:00:25', 1, 7),
-(2, 0, 'Falta de interesse', 'Se a nossa equipe tivesse interesse conseguia desenvolver ', 'tristeza', 'Andreza ', '', '2019-06-17', '21:06:47', 1, 8);
+(0, 0, 'inovação', 'ideia revolucionária', 'mundança no mercado financeiro', 'Lucas', '', '2019-06-17', '20:43:42', 1, 1),
+(1, 0, 'análise de requisitos', 'Forma de facilitar o desenvolvimento organizacional', 'tem varios beneficios', 'Andreza', '', '2019-06-17', '21:00:25', 1, 9),
+(2, 0, 'Falta de interesse', 'Se a nossa equipe tivesse interesse conseguia desenvolver ', 'tristeza', 'Andreza ', '', '2019-06-17', '21:06:47', 1, 4);
 
 -- --------------------------------------------------------
 
@@ -352,7 +368,8 @@ INSERT INTO `usuario` (`id_usuario`, `nivel`, `id_avatarfk`, `id_cadastrofk`) VA
 (5, 0, 2, 5),
 (6, 0, 4, 6),
 (7, 0, 6, 7),
-(8, 0, 2, 8);
+(8, 0, 2, 8),
+(9, 0, 7, 9);
 
 -- --------------------------------------------------------
 

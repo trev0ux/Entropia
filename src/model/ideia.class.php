@@ -85,7 +85,7 @@
 				$this->id = $row['id_ideia'] + 1;
 			}
 			
-			$sql = "INSERT INTO ideia VALUES($this->id,'$this->titulo', '$this->descricao', '$this->beneficio', '$this->participante', '$this->anexo', '$this->hora', '$this->data',0)";
+			$sql = "INSERT INTO ideia VALUES($this->id,0,'$this->titulo', '$this->descricao', '$this->beneficio', '$this->participante', '$this->anexo', '$this->hora', '$this->data',0,'$this->usuario')";
 	        
 			if (mysqli_query($conn, $sql)) {
 				header('location:../views/ideia.php');
@@ -107,11 +107,13 @@
 					$this->id = $row['id_ideia'] + 1;
 				}
 				
-				$sql = "INSERT INTO ideia VALUES($this->id,0,'$this->titulo', '$this->descricao', '$this->beneficio', '$this->participante', '$this->anexo', '$this->hora', '$this->data',1,4)";
+				$sql = "INSERT INTO ideia VALUES($this->id,0,'$this->titulo', '$this->descricao', '$this->beneficio', '$this->participante', '$this->anexo', '$this->hora', '$this->data',1,'$this->usuario')";
 	        
 				if (mysqli_query($conn, $sql)) {
-					header('location:../views/ideia.php');
+					
 					echo "<div class='alert alert-primary text-center' role='alert'><strong>YEAH!</strong> Sua ideia foi publicada com sucesso!</div>";
+					header('location:../views/ideia.php');
+					
 				} else {
 					echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 				}

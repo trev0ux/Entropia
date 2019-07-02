@@ -40,32 +40,32 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Supervisor A</td>
-								<td>Dilton Costa</td>
+								<td>Aprovado</td>
+								<td>Andreza Vitório</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
 							<tr>
-								<td>Supervisor A</td>
-								<td>Dilton Costa</td>
+								<td>Aprovado</td>
+								<td>Lucas Amorim</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
 							<tr>
-								<td>Supervisor A</td>
-								<td>Dilton Costa</td>
+								<td>Aprovado</td>
+								<td>Thiago Benjamin</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
 							<tr>
-								<td>Supervisor A</td>
-								<td>Dilton Costa</td>
+								<td>Aprovado</td>
+								<td>Carolina Freitas</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
 							<tr>
-								<td>Supervisor A</td>
-								<td>Dilton Costa</td>
+								<td>Aprovado</td>
+								<td>Giovana Almeida</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>
 							<tr>
-								<td>Supervisor A</td>
+								<td>Aprovado</td>
 								<td>Dilton Costa</td>
 								<td><a href="" class="btn btn-info" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-check-circle"></i></a></td>
 							</tr>

@@ -14,12 +14,6 @@
 
 		$logado = $_SESSION['login'];
 	?>
-	<style>
-		.imagem {
-			max-width: 610px;
-			max-height: 400px;
-		}
-	</style>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="../public/css/home.min.css">
@@ -113,9 +107,7 @@
 										while($row_carousel = mysqli_fetch_assoc($resultado_carousel)){ 
 											if($controle_ativo == 2){ ?>
 												<div class="carousel-item active">
-													<div class="imagem">
-														<img src="../public/img/campanhas/<?php echo $row_carousel['fotoCamp'];?>" class="img-fluid d-block w-100">
-													</div>
+													<img src="../public/img/campanhas/<?php echo $row_carousel['fotoCamp'];?>" class="img-fluid d-block w-100">
 													
 													<div class="carousel-caption d-none d-md-block">
 														<h3><?php echo utf8_encode($row_carousel['tema']); ?></h3>
@@ -127,9 +119,7 @@
 												$controle_ativo = 1;
 											}else{ ?>
 												<div class="carousel-item">
-													<div class="imagem">
-														<img src="../public/img/campanhas/<?php echo $row_carousel['fotoCamp'];?>" class="img-fluid d-block w-100">
-													</div>
+													<img src="../public/img/campanhas/<?php echo $row_carousel['fotoCamp'];?>" class="img-fluid d-block w-100">
 													<div class="carousel-caption d-none d-md-block">
 														<h3><?php echo utf8_encode($row_carousel['tema']); ?></h3>
 														<p><?php echo utf8_encode($row_carousel['descricao']); ?></p>
@@ -254,7 +244,7 @@
 						}
 					</script>
 						
-							<a href="#" class="card-link text-primary"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Curtir</a>
+							<a href="" onclick="chamarPhpAjax();" class="card-link text-primary"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Curtir</a>
 							<a class="card-link text-primary" onclick="mostrar('<?php echo $id; ?>')"><i class="fa fa-comment"></i>Comentar</a>
 							<a class="card-link pull-right">total de curtidas</a>
 						</div>
@@ -271,7 +261,7 @@
                
                 <!--- /Organização de publicações -->
 				<?php
-					$select = "SELECT * FROM cadastro JOIN usuario JOIN avatar JOIN ideia ON cadastro.id_cadastro=usuario.id_cadastrofk AND avatar.id_avatar=usuario.id_avatarfk AND usuario.id_usuario=ideia.id_usuariofk WHERE ideia.permissao = 1 AND usuario.id_usuario=ideia.id_usuariofk ORDER BY id_ideia DESC";
+					$select = "SELECT * FROM cadastro JOIN usuario JOIN avatar JOIN ideia ON cadastro.id_cadastro=usuario.id_cadastrofk AND avatar.id_avatar=usuario.id_avatarfk AND usuario.id_usuario=ideia.id_usuariofk WHERE ideia.permissao = 1 AND usuario.id_usuario=ideia.id_usuariofk ORDER BY ideia.hora ASC";
 					
 					$resposta = mysqli_query($conn, $select);
 							while ($linha = mysqli_fetch_array($resposta)){
