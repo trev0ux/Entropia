@@ -87,7 +87,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						Deseja mesmo implementar essa ideia como um projeto na sua empresa?
+						A ideia obteve resultados? Torne-a um projeto e premie o funcionário inovador!
 					</div>
 						<div class="modal-footer">
 							<input type="submit" id="finalizar" value="Implementar" class="btn btn-primary mb-2">

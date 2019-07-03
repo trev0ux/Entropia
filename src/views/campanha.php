@@ -35,7 +35,6 @@
 					<thead class="thead-light">
 						<tr>
 							<th scope="col">Campanhas Publicadas</th>
-							<th scope="col">Editar</th>
 							<th scope="col">Finalizar</th>
 						</tr>
 					</thead>
@@ -45,13 +44,45 @@
 							$resultado = mysqli_query($conn, $sql);
 
 							while ($row = mysqli_fetch_array($resultado)) {
-								echo "<tr>";
-								echo "<td>".utf8_encode($row['tema'])."</td>";
-								echo "<td><button class='btn btn-success mb-2' data-toggle='modal' data-target='#camp-modal'><i class='fa fa-pencil'></i></button></td>";
-								echo "<td><button class='btn btn-danger mb-2' data-toggle='modal' data-target='#fim-camp'><i class='fa fa-times'></i></button></td>";
-								echo "</tr>";
-							}
 						?>
+								<tr>
+								<td><a data-toggle="modal" data-target="#campanha<?php echo $row['id_campanha'];?>"><?php echo utf8_encode($row['tema']);?></a></td>
+								<td><button class='btn btn-danger mb-2' data-toggle="modal" data-target="#fim-camp"><i class='fa fa-times'></i></button></td>
+								</tr>
+								
+								<!-- Modal -->
+		<div class="modal fade" id="campanha<?php echo $row['id_campanha'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title font-weight-bold" id="exampleModalLabel"><?php echo utf8_encode($row['tema']);?></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<form>
+						<div class="modal-body">
+							<h6 class="font-weight-bold">Descrição</h6>
+								<p><?php echo utf8_encode($row['descricao']);?></p>
+							<h6 class="font-weight-bold">Objetivo</h6>
+								<p><?php echo utf8_encode($row['objetivo']);?></p>
+							<h6 class="font-weight-bold">Regras</h6>
+								<p><?php echo utf8_encode($row['regra']);?></p>
+							<h6 class="font-weight-bold">Prêmio</h6>
+								<p><?php echo utf8_encode($row['premio']);?></p>	
+							<h6 class="font-weight-bold">Foto da Campanha</h6>
+								<img src="../public/img/campanhas/<?php echo $row['fotoCamp'];?>" class="img-fluid d-block w-100">
+						</div>
+						<div class="modal-footer">
+							<a href="campEdita.php" class="btn btn-success">Editar<i class="fa fa-pencil"></i></a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /Modal -->
+						
+							<?php }?>
 					</tbody>
 				</table>
     		</div>
@@ -63,37 +94,6 @@
     	</div>
     </div>
 
-		<!-- Modal -->
-		<div class="modal fade" id="camp-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Título</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<form>
-						<div class="modal-body">
-							<h6>Descrição</h6>
-								<p>...</p>
-							<h6>Objetivo</h6>
-								<p>...</p>
-							<h6>Benefícios</h6>
-								<p>...</p>
-							<h6>Desafio Proposto</h6>
-								<p>...</p>
-						</div>
-						<div class="modal-footer">
-							<a href="campEdita.php" class="btn btn-success">Editar<i class="fa fa-pencil"></i></a>
-							<input type="submit" id="publica" value="Publicar" class="btn btn-primary">
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- /Modal -->
-		
 		<!-- Modal -->
 			<div class="modal fade" id="fim-camp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">

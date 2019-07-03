@@ -44,21 +44,21 @@
 						<tr>
 							<td>358</td>
 							<td>Concluída</td>
-							<td>Dilton Costa</td>
+							<td>Clarice</td>
 							<td>Enviado ao comitê</td>
 							<td><a href="" class="btn btn-success disabled" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
 						</tr>
 						<tr>
 							<td>362</td>
 							<td>Em andamento</td>
-							<td>André Luís</td>
+							<td>Andreza Vitório</td>
 							<td>Em análise</td>
 							<td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
 						</tr>
 						<tr>
 							<td>417</td>
 							<td>Em andamento</td>
-							<td>Thiago Benjamin</td>
+							<td>Lucas Amorim</td>
 							<td>Em análise</td>
 							<td><a href="" class="btn btn-success" data-toggle='modal' data-target='#vali-modal'><i class="fa fa-pencil"></i></a></td>
 						</tr>
@@ -101,7 +101,7 @@
 									<p>
 										Metodologias
 										<select class="form-control">
-											<option>Sugerir metodologia para estudo?</option>
+											<option>Sugira uma metodologia para estudo</option>
 										</select>
 									</p>
 								</form>

@@ -49,7 +49,7 @@
 						<input type="text" class="form-control" id="pontos" name="pontos" placeholder="Pontos para troca do prêmio" required>
 					</p>
 					<p>
-						<label for="premio-foto">Imagem do Prêmio</label><br>
+						<label for="premio-foto">Inserir imagem</label><br>
 						<input type="file" id="premio-foto" name="premio-foto" class="form-control-file" required>
 					</p>
 				<a class="btn btn-primary" href="home.php">Voltar</a>

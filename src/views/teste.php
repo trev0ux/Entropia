@@ -13,7 +13,7 @@
     </head>
     <body>
     	<div class="alert alert-light text-center" id="teste" role="alert">
-			  <strong>Parabéns!</strong> Você acaba de ganhar uma Medalha!
+			  <strong>Parabéns!</strong> Você acaba de ganhar uma medalha!
 		  </div>
     </body>
 </html>

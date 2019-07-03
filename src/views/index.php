@@ -128,7 +128,7 @@
       <hr class="star-light mb-5">
       <div class="row">
         <div class="col-lg-4 ml-auto">
-          <p class="lead">Como o próprio nome já diz, o laboratório de inovação é um espaço empresarial projetado para criar condições favoráveis para que a inovação ocorra. Através do estabelecimento de um ambiente criativo e colaborativo, novos conhecimentos podem ser facilmente compartilhados e ideias podem ser desenvolvidas.</p>
+          <p class="lead">O laboratório de inovação é um espaço empresarial projetado para criar condições favoráveis para que a inovação ocorra. Através do estabelecimento de um ambiente criativo e colaborativo, novos conhecimentos podem ser facilmente compartilhados e ideias podem ser desenvolvidas.</p>
         </div>
         <div class="col-lg-4 mr-auto">
           <p class="lead">Um laboratório de inovação irá servir como um espaço lúdico para adquirir uma visão holística dos desafios a serem enfrentados, permitindo que as soluções possam ser pensadas por ângulos diferentes, mantendo sempre o usuário final no centro de todo o processo.</p>
@@ -219,7 +219,7 @@
                 <h2 class="text-secondary text-uppercase mb-0">Muriel</h2>
                 <hr class="star-dark mb-5">
                 <img class="img-fluid mb-5" src="../public/img/avatares/muriel-mini.png" class="rounded mx-auto d-block">
-                <p class="mb-5">Esse é Muriel, o personagem do Entropia. Suas características mais marcantes são: flexibilidade, simpatia e empatia, Muriel também se destaca por ser bastante comunicativo. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
+                <p class="mb-5">Essa é Muriel, o personagem do Entropia. Suas características mais marcantes são: flexibilidade, simpatia e empatia, Muriel também se destaca por ser bastante comunicativo. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
                 FECHAR</a>
@@ -263,7 +263,7 @@
                 <h2 class="text-secondary text-uppercase mb-0">Ariel</h2>
                 <hr class="star-dark mb-5">
                 <img class="img-fluid mb-5" src="../public/img/avatares/ariel-mini.png" class="rounded mx-auto d-block">
-                <p class="mb-5">Esse é Ariel, o personagem do Entropia. Suas qualidades mais marcantes são: pensamento crítico, paciência e persistência, também destaca-se por ser planejador. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
+                <p class="mb-5">Essa é Ariel, o personagem do Entropia. Suas qualidades mais marcantes são: pensamento crítico, paciência e persistência, também destaca-se por ser planejador. Se for escolhido, será sua identidade no mais novo laboratório de inovações da sua empresa. Com base nas suas características, obterá seus primeiros pontos no sistema, venha já conhecer!</p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
                 FECHAR</a>

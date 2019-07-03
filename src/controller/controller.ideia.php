@@ -3,17 +3,15 @@
 	require_once '../model/ideia.class.php';
 	
 	$ideia = new Ideia;
+	$ideia->setTitulo($_POST["titulo"]);
+	$ideia->setDescricao($_POST["descricao"]);
+	$ideia->setBeneficio($_POST["beneficio"]);
+	$ideia->setParticipante($_POST["participante"]);
 
 	date_default_timezone_set('America/Bahia');
 	$ideia->setData(date("H:i:s"));
 	$ideia->setHora(date("Y-m-d"));
 
-	$ideia->setTitulo($_POST["titulo"]);
-	$ideia->setDescricao($_POST["descricao"]);
-	$ideia->setBeneficio($_POST["beneficio"]);
-	$ideia->setParticipante($_POST["participante"]);
-	$ideia->setUsuario($_POST['usuario']);
-	
 	$diretorio = "../upload/ideias/";
 
 	if(!is_dir($diretorio)){ 
@@ -32,16 +30,6 @@
 		}
 	}
 
-	$funcao = $_REQUEST["action"];
-
-	if (function_exists($funcao)) {
-		call_user_func($funcao);
-	}
+	$ideia->setUsuario($_POST['usuario']);
 
 	$ideia->Publicar();
-
-	//$ideia->editarIdeia();
-	//$ideia->deletarIdeia();
-	//$ideia->curtir();
-	//$ideia->Comentar();
-
