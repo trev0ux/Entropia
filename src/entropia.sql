@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01-Jul-2019 às 22:44
+-- Generation Time: 03-Jul-2019 às 06:37
 -- Versão do servidor: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -71,14 +71,14 @@ CREATE TABLE `cadastro` (
 --
 
 INSERT INTO `cadastro` (`id_cadastro`, `nome`, `sobrenome`, `data_nasc`, `email`, `usuario`, `senha`, `id_setorfk`) VALUES
-(1, 'Entropia', 'inovações', '2018-07-18', 'entropia@inovacao', 'entropia', '123456', NULL),
+(1, 'Entropia', 'inovações', '2018-07-18', 'entropia@inovacao', 'entropia', '123456', 1),
 (2, 'Thiago', 'Benjamin', '2010-11-03', 'binho.bfb@gmail.com', 'benjamin', '123456', 1),
 (3, 'Dilton', 'Costa', '2019-04-03', 'dilton@gmail.com', 'dilton', '123456', 2),
 (4, 'Andreza', 'Vitório', '2000-03-15', 'dezavitorio@gmail.com', 'andreza', '123456', 4),
 (6, 'Andre', 'Luís', '2019-04-24', 'andre@gmail.com', 'andre', '123456', 5),
 (7, 'Ruan', 'Felipe', '2019-04-20', 'ruan@gmail.com', 'ruan', '123456', 5),
 (8, 'Lucas', 'Amorim', '28/03/2001', 'lucas@lucas.com', 'lucas', '123456', 4),
-(9, 'Entropia', 'inovações', '1993', 'entropia@inovacoes', 'colaborador', '123456', NULL);
+(9, 'Entropia', 'inovações', '1993', 'entropia@inovacoes', 'colaborador', '123456', 5);
 
 -- --------------------------------------------------------
 
@@ -148,8 +148,8 @@ CREATE TABLE `ideia` (
 
 INSERT INTO `ideia` (`id_ideia`, `qtde_reacoes_ideias`, `titulo`, `descricao`, `beneficio`, `participante`, `anexo`, `data`, `hora`, `permissao`, `id_usuariofk`) VALUES
 (0, 0, 'inovação', 'ideia revolucionária', 'mundança no mercado financeiro', 'Lucas', '', '2019-06-17', '20:43:42', 1, 1),
-(1, 0, 'análise de requisitos', 'Forma de facilitar o desenvolvimento organizacional', 'tem varios beneficios', 'Andreza', '', '2019-06-17', '21:00:25', 1, 9),
-(2, 0, 'Falta de interesse', 'Se a nossa equipe tivesse interesse conseguia desenvolver ', 'tristeza', 'Andreza ', '', '2019-06-17', '21:06:47', 1, 4);
+(1, 0, 'análise de requisitos', 'Forma de facilitar o desenvolvimento organizacional', 'tem varios beneficios', 'Andreza', '', '2019-06-17', '21:00:25', 1, 4),
+(2, 0, 'Falta de interesse', 'Se a nossa equipe tivesse interesse conseguia desenvolver ', 'tristeza', 'Andreza ', '', '2019-06-17', '21:06:47', 1, 9);
 
 -- --------------------------------------------------------
 
@@ -172,12 +172,12 @@ CREATE TABLE `ideiacamp` (
 --
 
 INSERT INTO `ideiacamp` (`id_ideiaCamp`, `titulo`, `descricao`, `beneficio`, `anexo`, `id_campanhafk`, `id_usuariofk`) VALUES
-(1, 'controle de água', 'diminuir o gasto de água na empresa', 'economia na conta de água', NULL, 2, NULL),
-(2, 'reutilizar papel', 'imprimir folhas frente e verso', 'diminuir gastos com papel', NULL, 3, NULL),
-(3, 'cidades sensiveis', 'cidades que aumentam a participação do cidadão', 'aumentar o lucro', NULL, 1, NULL),
-(4, 'pareceira com empresas de energia', 'diminuir gastos com a energia da empresa', 'reenvestir na organização', NULL, 2, NULL),
-(5, 'realidade aumentada', 'facilitar a elaboração de novas pesquisas', 'lucro imediato para empresa', NULL, 1, NULL),
-(6, 'palestras de conscientização', 'promover debates e alavancar o conhecimmento dentro do ambiente de trabalho', 'agregar valor e conhecimento aos funcionários', NULL, 3, NULL);
+(1, 'controle de água', 'diminuir o gasto de água na empresa', 'economia na conta de água', NULL, 2, 2),
+(2, 'reutilizar papel', 'imprimir folhas frente e verso', 'diminuir gastos com papel', NULL, 3, 5),
+(3, 'cidades sensiveis', 'cidades que aumentam a participação do cidadão', 'aumentar o lucro', NULL, 1, 3),
+(4, 'pareceira com empresas de energia', 'diminuir gastos com a energia da empresa', 'reenvestir na organização', NULL, 2, 4),
+(5, 'realidade aumentada', 'facilitar a elaboração de novas pesquisas', 'lucro imediato para empresa', NULL, 1, 8),
+(6, 'palestras de conscientização', 'promover debates e alavancar o conhecimmento dentro do ambiente de trabalho', 'agregar valor e conhecimento aos funcionários', NULL, 3, 6);
 
 -- --------------------------------------------------------
 
@@ -205,14 +205,7 @@ CREATE TABLE `metodologia` (
   `objetivo` mediumtext NOT NULL,
   `anexo` varchar(220) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `metodologia`
---
-
-INSERT INTO `metodologia` (`id_metodologia`, `titulo`, `definicao`, `descricao`, `objetivo`, `anexo`) VALUES
-(0, 'Diagrama de Ishikawa', 'TambÃ©m conhecido como Diagrama de Causa e Efeito ou Diagrama Espinha de peixe, Ã© um grÃ¡fico cuja finalidade Ã© organizar o raciocÃ­nio em discussÃµes de um problema prioritÃ¡rio, em processos diversos, especialmente na produÃ§Ã£o industrial.', 'Originalmente proposto pelo engenheiro quÃ­mico Kaoru Ishikawa em 1943 e aperfeiÃ§oado nos anos seguintes. O diagrama foi desenvolvido com o objetivo de representar a relaÃ§Ã£o entre um â€œefeitoâ€ e suas possÃ­veis â€œcausasâ€.', 'Esta tÃ©cnica Ã© utilizada para descobrir, organizar e resumir conhecimento de um grupo a respeito das possÃ­veis causas que contribuem para um determinado efeito.', 'e3518714352b6072c5b66caf2f5da6ef.pdf'),
-(1, 'Scrum', 'Scrum Ã© uma metodologia Ã¡gil para gestÃ£o e planejamento de projetos de software.', 'No Scrum, os projetos sÃ£o dividos em ciclos (tipicamente mensais) chamados de Sprints. O Sprint representa um Time Box dentro do qual um conjunto de atividades deve ser executado. Metodologias Ã¡geis de desenvolvimento de software sÃ£o iterativas, ou seja, o trabalho Ã© dividido em iteraÃ§Ãµes, que sÃ£o chamadas de Sprints no caso do Scrum.', 'As funcionalidades a serem implementadas em um projeto sÃ£o mantidas em uma lista que Ã© conhecida como Product Backlog. No inÃ­cio de cada Sprint, faz-se um Sprint Planning Meeting, ou seja, uma reuniÃ£o de planejamento na qual o Product Owner prioriza os itens do Product Backlog e a equipe seleciona as atividades que ela serÃ¡ capaz de implementar durante o Sprint que se inicia. As tarefas alocadas em um Sprint sÃ£o transferidas do Product Backlog para o Sprint Backlog.', 'd287eadf2cb3ff2c3b0ca6abe9484974.pdf');
+-- Error reading data for table entropia.metodologia: #1064 - Você tem um erro de sintaxe no seu SQL próximo a 'FROM `entropia`.`metodologia`' na linha 1
 
 -- --------------------------------------------------------
 
